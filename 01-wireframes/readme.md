@@ -6,6 +6,8 @@ Vendemos solo minorista
 
 Y nosotros, quienes somos?
 
+Elena con 29 años sigue sufriendo por el estudio pero tiene un buen optimismo para seguir adelante y seguir estudiando 10 años mas.
+
 Aldana, dejando su trabajo en relación de dependencia apuesta al camino emprendedor con ganas de darle un giro a su vida y aprovechar el tiempo a seguir sus sueños.
 
 Melina, autodenominada eterna estudiante.  En un mundo pandemico deja atrás los viajes que tanto la inspiran para volver a su país a crear.
