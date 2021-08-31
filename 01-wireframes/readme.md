@@ -11,3 +11,5 @@ Aldana, dejando su trabajo en relación de dependencia apuesta al camino emprend
 Melina, autodenominada eterna estudiante.  En un mundo pandemico deja atrás los viajes que tanto la inspiran para volver a su país a crear.
 
 Pablo, pisando los 40 entra en crisis y busca un nuevo rumbo, sin jefes autoritarios ni horarios rígidos, busca la pasión perdida sumergiéndose en nuevos emprendimientos y desafíos!
+
+Elena con 29 años sigue sufriendo por el estudio pero tiene un buen optimismo para seguir adelante y seguir estudiando 10 años mas;
