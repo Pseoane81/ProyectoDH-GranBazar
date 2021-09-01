@@ -1,4 +1,4 @@
-#**TU BAZAR**
+**TU BAZAR**
 
 Somos cuatro emprendedores con una visión de simplicidad y estilo para tu casa :house:
 Nos inspiran los espacios y las personas que los habitan.  Y queremos que el confort y el diseño sea norma cotidiana para todos.
@@ -6,7 +6,7 @@ Elegimos cada pieza en base a su funcionalidad y su belleza para que hagas de tu
 Vendemos solo minorista
 
 
-##Y nosotros, quienes somos? :busts_in_silhouette:
+Y nosotros, quienes somos? :busts_in_silhouette:
 
 Elena con 29 años sigue sufriendo por el estudio pero tiene un buen optimismo para seguir adelante y seguir estudiando 10 años mas.
 
@@ -16,7 +16,7 @@ Melina, autodenominada eterna estudiante.  En un mundo pandemico deja atrás los
 
 Pablo, pisando los 40 entra en crisis y busca un nuevo rumbo, sin jefes autoritarios ni horarios rígidos, busca la pasión perdida sumergiéndose en nuevos emprendimientos y desafíos!
 
-##Nos inspiramos
+Nos inspiramos
 
 ``````
 https://www.dexter.com.ar
