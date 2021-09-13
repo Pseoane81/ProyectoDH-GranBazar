@@ -20,7 +20,7 @@ Autodenominada eterna estudiante.  En un mundo pandemico deja atrás los viajes 
 ## Pablo ## 
 Pisando los 40 entra en crisis y busca un nuevo rumbo, sin jefes autoritarios ni horarios rígidos, busca la pasión perdida sumergiéndose en nuevos emprendimientos y desafíos!
 
-**Nos inspiramos** 
+### **Nos inspiramos** :rocket:
 
 ``````
 https://www.dexter.com.ar
@@ -45,4 +45,24 @@ Nos pareció muy bien la descripción de producto, donde fácilmente podes elegi
 https://www.asos.com/
 ``````
 De igual forma que los sitios anteriores, ASOS es super intuitivo, y te guia a los productos de interés, desde un principio divide en ropa femenina o masculina, luego te lleva al “segundo” Home, donde de una te presenta lo que esta de oferta y el resto es igualmente fácil de navegar que otras tiendas online.
+
+### **Estilos** :art:
+
+La paleta de colores elegida es la siguiente: 
+F4F1DE
+E07A5F
+3D405B
+81B29A
+F2CC8F
+
+### **Tipografias** :pencil2:
+
+Tendremos en cuenta las siguientes tipografias de acuerdo a cual queda mejor en la vista del navegador:
+* Roboto
+* Source Sans Pro
+* PT Sans Narrow
+* Dosis
+* Hind
+* Nunito
+
 
