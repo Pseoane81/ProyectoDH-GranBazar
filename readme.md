@@ -65,4 +65,6 @@ Tendremos en cuenta las siguientes tipografias de acuerdo a cual queda mejor en 
 * Hind
 * Nunito
 
+### **Trello** 
 
+https://trello.com/b/c72HQtHb/equipo-3 

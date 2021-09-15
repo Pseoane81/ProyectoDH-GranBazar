@@ -1,0 +1,22 @@
+{
+  "name": "grupo_3_tubazar",
+  "version": "1.0.0",
+  "description": "Somos cuatro emprendedores con una visión de simplicidad y estilo para tu casa :house:\r Nos inspiran los espacios y las personas que los habitan.  Y queremos que el confort y el diseño sea norma cotidiana para todos.\r Elegimos cada pieza en base a su funcionalidad y su belleza para que hagas de tu casa un HOGAR.\r Vendemos solo minorista",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melibass/grupo_3_tubazar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melibass/grupo_3_tubazar/issues"
+  },
+  "homepage": "https://github.com/melibass/grupo_3_tubazar#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
