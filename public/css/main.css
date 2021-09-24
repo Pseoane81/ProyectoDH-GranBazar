@@ -1,0 +1,98 @@
+/* ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans pro';
+}
+
+/*HEADER*/
+
+.main-header {
+    background-color: #3D405B;
+    padding: 20px;
+}
+
+/*menus*/
+nav {
+    display: none;
+}
+.logo {
+    width: 150px;
+    height: 40px;
+   
+}
+/*incluye logo y barra de busqueda*/
+.main-header-top-bar{
+    display: flex;
+    justify-content: space-between;
+}
+.burger-button i {
+    color: #F4F1DE;
+    display: block;
+    max-width: 50px;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin: auto;
+    border: solid 2px #F4F1DE;
+    border-radius: 7px;
+}
+/*barra de busqueda*/
+.search-bar {
+    display:flex;
+    align-items: center;
+}
+.search-bar input {
+    width: 100%;
+}
+/*lupita */
+.search-bar i{
+    background-color: #eaeaea;
+    color: black;
+    text-align: right;
+    align-self:center ; 
+    display: inline-block;
+    padding: 3px;
+
+
+}
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+@media(min-width: 361px) {
+    
+}
+
+@media(min-width:769px) {
+    .burger-button i{
+        display: none;
+    }
+    .header-navbar{
+        display:flex;
+        justify-content:space-between; /*con esta linea puse un menu d cada lado */
+    }
+    .header-navbar ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .header-navbar a {
+        text-decoration: none;
+        color: #F4F1DE;   
+    }
+    .right-navbar {
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .left-navbar{
+        width: 40%;
+    }
+
+
+}

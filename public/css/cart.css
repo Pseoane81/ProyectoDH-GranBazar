@@ -1,0 +1,110 @@
+/*Pantalla menor a 480px */
+
+/*propio carrito de compras*/
+.border-top {
+    border-top: solid 2px #273746;
+}
+
+.column-title{
+    display: none;
+}
+
+/*contenedor de cada producto*/
+
+.product {
+    width: 100%;
+    margin: 5px 5px;
+}
+/* imagenes dentro del carrito*/
+.product img {
+    width: 30%;
+}
+
+/*detalles al costado de imagen */
+.product .prod-name, .product .unit-price {
+    display: none;
+}
+
+/*cupon y total*/
+.discount-total {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/*apartado de total */
+.total-order{
+    display: flex;
+    justify-content: space-between;
+
+}
+.suma-pedido {
+    align-self: center;
+}
+.total-shopping {
+    display: flex;
+    flex-direction: column;
+}
+.total-shopping .border-top {
+    border-top: solid 2px #273746;
+    padding: 5px;
+    width: 144px;
+}
+
+/*botones*/
+
+.cupon, .button-order, .button-cal {
+    padding: 5px;
+    border-radius: 5px;
+}
+.cupon:hover, .button-order:hover, .button-cal:hover {
+    color:#F4F1DE;
+    background-color:#273746 ;
+}
+
+@media(min-width: 361px) {
+    /*cupon y total*/
+    .discount-total {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+       justify-content: space-between;
+}
+    .total-shopping {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+}
+
+@media(min-width:769px) {
+/*titulos en las columas*/
+    .column-title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .top-list-right {
+        display: inline-block;
+        width: 30%;
+    }
+    .top-list-left {
+        display: flex;
+        list-style: none;
+        width: 60%;
+        justify-content: space-between;
+    }
+    /*detalles al costado de imagen */
+    .product .prod-name, .product .unit-price {
+        display: block;
+    }
+    .product {
+        display: flex;
+
+    }
+    .product .details {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+}

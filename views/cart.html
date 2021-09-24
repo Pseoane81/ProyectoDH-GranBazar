@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Carrito de compras</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img src="img/logo-transparente.png" alt="Logo Gran Bazar" class="logo">
+        
+            <div class="search-bar">
+                <form action="search">
+                <div><input type="text" name="search" class="form-search" placeholder="Buscar productos y mas"></div>
+                 </form>
+                <i class="fas fa-search"></i>
+            </div></div>
+
+        <nav class="header-navbar">
+            <ul class="right-navbar">
+                <li><a href="#">Categoria1</a></li>
+                <li><a href="#">Categoria2</a></li>
+                <li><a href="#">Categoria3</a></li>
+            </ul>
+            <ul class="left-navbar">
+                <li><a href="#">Usuario <i class="fas fa-user-circle"></i></a></li>
+                <li><a href="#">Favoritos <i class="fas fa-heart"></i></a></li>
+                <li><a href="#">Carrito <i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Carrito de Compras</h2>
+        <div class="column-title">
+        <p class="top-list-right"> Producto</p> 
+        <ul class="top-list-left">
+            <li>Precio</li>
+            <li>Cantidad</li>
+            <li>Subtotal</li>
+        </ul>
+    </div>
+        <div class="border-top"></div>
+
+        <div class="product">
+            <div><img src="img/marco-1.jpeg" alt="frame-pic"></div>
+            <div class="details">
+                <div class="prod-name"> Marco</div> 
+                <div class="unit-price">$1000.00</div>
+                <div class="ammount">2</div>
+                <div class="total-prod-price">$2000.00</div></div>
+            </div>
+            <div class="delete-button"><button type="submit"><i class="fas fa-trash-alt"></i></button></div>
+        </div>
+        <div class="border-top"></div>
+
+        <div class="product">
+            <div><img src="img/florero-2.jpeg" alt="flower-pic"></div>
+            <div class="details">
+                <div class="prod-name">Florero</div> 
+                <div class="unit-price">$1000.00</div>
+                <div class="ammount">1</div>
+                <div class="total-prod-price">$1000.00</div></div>
+            </div>
+            <div class="delete-button"><button type="submit"><i class="fas fa-trash-alt"></i></button></div>
+        </div>
+        <div class="border-top"></div>
+
+        <div class="discount-total">
+            <div>
+            <h4 class="cupon-discount">Agrega tu cupon de descuento</h4>
+            <input type="text" class="codigo-cupon">
+            <button type="submit" class="cupon">Agregar</button>
+        </div>
+
+        <div class="total-shopping">
+            <h4 class="total-title">Resumen de compras</h4>
+            <div class="border-top"></div>
+            <h5 class="ship-cost">Calcular envio</h5>
+            <div class="envio">
+                <input type="text">
+                <button type="submit" class="button-cal">Calcular</button>    
+            </div>
+            <div class="total-order"><h5 class="total">Total del pedido</h5>
+            <div class="suma-pedido">$3000.00</div></div>
+            <div class="confirm-button">
+                <button type="submit" class="button-order">Realizar el pedido</button>
+            </div>
+        </div>
+        </div>
+
+        No hay productos en tu carrito de compras.
+
+Haga click <a href="/home.html">aquí</a>  para continuar comprando.
+    </main>
+
+</body>
+</html>
