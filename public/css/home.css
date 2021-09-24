@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2? family = Roboto: ital @ 1 & display = swap');
+
+/*en general*/
+*{
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+/*el header*/
+.header{
+    background-color:#3D405B;
+    padding: 20px;
+}
+.logo{
+    width: 200px;
+}
+ /*barra de la lupa*/
+ .search-bar{
+     width: 300px;
+     height: 15px;
+     display: flex;
+     background-color: #eaeaea;
+     border: solid 0.5px black;
+     padding: 10px;
+
+    
+ }
+ 
+ header nav{
+     font-size: 12px;
+     display: none;
+     width: 90%;
+     padding: 10px;
+ }
+ .riht-navbar{
+     list-style-type: none;
+ }
+ .left-navabar{
+     list-style-type: none;
+ }
+a{
+    text-decoration: none;
+    color:#F4F1DE;
+}
+/*menu 3 barritas*/
+
+div.burger-menu{
+    text-align: center;
+}
+div.burger-menu i{
+    background-color: #F4F1DE;
+    border-radius: 5px  ;
+    color: #3D405B;
+    font-size: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+}
+
+/*banner*/
+section.banner img{
+    width: 100%;
+   
+}
+/*cuerpo*/
+body{
+    background-color: #fff;
+}
+
+h3{
+    font-size: 24px;
+}
+p{
+    font-size: 16px;
+}
+
+/*contenido de los articulos*/
+
+article div.main-article{
+    width: 100%;
+    border-top: solid 1px #ebebeb;
+}
+
+.precio{
+    font-size: 16px;
+    
+}
+.descuento,
+.descripcion{
+    font-size: 16px;
+    font-weight: normal;
+    
+    margin: 5px;
+}
+
+h3,
+.descipcion{
+    color:#666
+}
+/*contenido principal*/
+main{
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+    
+}
+
+    
+/*esto es cada producto del contenido principla*/
+main section article{
+    background-color: #fff;
+    margin: 12px;
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+}
+/*descuentos*/
+main.descuento{
+    color:#39b54a;
+}
+
+/*esto es la img*/
+main section article img{
+    width: 100%;
+    padding: 10px;
+    
+
+}
+/*seccion articulo-descuento*/
+main section article i,
+.descuento{
+    color: #39b54a;
+    border-radius: 15px;
+}
+
+/*la barra de los ul*/
+.main-navbar{
+    
+    list-style-type: none;
+    width: 90%;
+    text-decoration: none;
+}
+.right-navbar{
+    list-style-type: none;
+    
+}
+.left-navbar{
+    list-style-type: none;
+    
+}
+/*el contenido de la barra il*/
+a{
+    text-decoration: none;
+    color:#F4F1DE;
+}
+
+.main-navbar {
+    margin:0 5px;
+    margin-top:50px;
+}
+/*aca empieza el footer*/
+.pie-de-pagina{
+    width: 100%;
+    background-color:#F4F1DE ;
+    
+}
+.sub-titulo{
+    margin-top: 10px;
+
+}
+.titulo {
+    color:#3D405B;
+    font-size: 25px;
+    font-family: Roboto;
+    padding: 10px;
+    margin-top: 20px;
+   
+}
+article.iconos{
+    border-radius: 5px  ;
+    color: #3D405B;
+    
+    
+    
+   
+}
+section.de-iconos{
+    font-size: 20px;
+    padding: 12px;
+    margin: 40px;
+    margin-top: 30px;
+    display: block;
+    
+}
+.copy{
+    color:#666;
+    padding: 20px;
+    display: block;
+}
+section.de-copy{
+    margin-top: 50px;
+}
+
+
+@media (min-width:361px) {
+    .descripcion{
+        display: block;
+        width: 45%;
+    }
+    
+   main section div.productos{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    
+ }
+    main section div.productos article{
+        width: 45%;
+        align-content: center;
+    }
+  
+    
+    
+    
+    
+    
+} 
+
+ 
+@media (min-width:769px) {
+     header nav{
+         display: block;
+         width: 22%;
+     }
+     .header-top-bar{
+         display: flex;
+         justify-content: space-between;
+     }
+     .main-navbar{
+         display: flex;
+         justify-content: space-between;
+     }
+     .main-navbar ul{
+         display: flex;
+     }
+     .main-navbar li{
+         margin:  0 10px;
+         font-size: 16px;
+     }
+     main section div.productos article{
+         width: 22%;
+
+     }
+     div.burger-menu i{
+        display: none;
+     }
+      .pie-de-pagina,article .iconos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+     
+   
+    
+    
+
+ }
