@@ -13,4 +13,8 @@ app.get("/",(req,res)=>{
 app.get("/cart",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/cart.html"))
 });
+app.get("/empty-cart",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/empty-cart.html"))
+});
+
 app.listen(3000,()=>console.log("server corriendo en el puerto 3000"));

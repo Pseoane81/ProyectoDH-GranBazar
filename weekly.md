@@ -6,4 +6,7 @@ Dividimos las tareas en base al trabajo realizado
 
 Meet 22/09
 
-header que se achique.
+Nos pusimos al dia con el trabajo particular de cada uno, mostramos home y parte del carrito
+Determinamos cambios especificos para header y footer.
+Fijamos meet todos los martes 21hs.
+Especificamos colores

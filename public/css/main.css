@@ -1,98 +1,246 @@
-/* ESTILOS GENERALES */
-* {
+/*REGLAS GENERALES*/
+*{
+    font-family: 'Rubik';
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    font-family: 'Source Sans pro';
+
 }
-
-/*HEADER*/
-
-.main-header {
-    background-color: #3D405B;
+/*el header*/
+.header{
+    background-color:#3D405B;
     padding: 20px;
 }
+.logo{
+    width: 200px;
+}
+div.header-top-bar {
+    display:flex;
+    flex-direction: column;
 
-/*menus*/
-nav {
-    display: none;
 }
-.logo {
-    width: 150px;
-    height: 40px;
-   
-}
-/*incluye logo y barra de busqueda*/
-.main-header-top-bar{
+div.logo-barra {
     display: flex;
     justify-content: space-between;
 }
-.burger-button i {
-    color: #F4F1DE;
-    display: block;
-    max-width: 50px;
-    text-align: center;
-    padding: 10px 0px;
-    border-radius: 8px;
-    font-size: 18px;
-    margin: auto;
-    border: solid 2px #F4F1DE;
-    border-radius: 7px;
-}
+
+
 /*barra de busqueda*/
 .search-bar {
     display:flex;
     align-items: center;
-}
-.search-bar input {
+    }
+    .search-bar input {
     width: 100%;
-}
-/*lupita */
-.search-bar i{
+    }
+    /*lupita */
+    .search-bar i{
     background-color: #eaeaea;
     color: black;
     text-align: right;
-    align-self:center ; 
+    align-self:center ;
     display: inline-block;
     padding: 3px;
+    
+    
+    }
+    .logo-barra{ 
+        display: flex;
+    }
+ 
+ header nav{
+     display: flex;
+     font-size: 12px;
+     display: none;
+     width: 90%;
+     padding: 10px;
+ }
 
+a{
+    text-decoration: none;
+    color:#F4F1DE;
+}
+/*menu 3 barritas*/
 
+div.burger-menu{
+    text-align: center;
+}
+div.burger-menu i{
+    background-color: #F4F1DE;
+    border-radius: 5px  ;
+    color: #3D405B;
+    font-size: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+}
+
+/*la barra de los ul*/
+.main-navbar{
+    
+    list-style-type: none;
+    width: 100%;
+    text-decoration: none;
+}
+.right-navbar{
+    list-style-type: none;
+    
+}
+.left-navbar{
+    list-style-type: none;
+    
+}
+/*el contenido de la barra il*/
+a{
+    text-decoration: none;
+    color:#F4F1DE;
+}
+
+.main-navbar {
+    margin:0 5px;
+    margin-top:50px;
+}
+
+/*banner*/
+section.banner img{
+    width: 100%;
+   
+}
+/*cuerpo*/
+body{
+    background-color: #fff;
 }
 
 
+/*aca empieza el footer*/
 
 
+footer{
+    width: 100%;
+    background-color:#F4F1DE ;
+    
+}
+footer img {
+    width: 200px;
 
-/*MEDIA QUERIES*/
 
-@media(min-width: 361px) {
+}
+div.logo-footer { 
+    display: flex;
+    align-items: center;
+}
+.pie-de-pagina,article .iconos{
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+.sub-titulo{
+    margin-top: 10px;
+    color: #3D405B;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.sub-titulo ul {
+    list-style: none;
+    line-height: 24px;
+}
+.sub-titulo ul a{
+    color: #3D405B;
+}
+.titulo {
+    color:#3D405B;
+    font-size: 25px;
+    padding: 10px;
+    margin-top: 20px;
+   
+}
+article.iconos{
+    color: #3D405B;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+section.de-iconos{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+section.de-iconos ul {
+    list-style: none;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: space-evenly;
+    display: flex;
     
 }
 
-@media(min-width:769px) {
-    .burger-button i{
-        display: none;
+section.de-iconos ul a{
+    color: #3D405B;
+}
+
+
+article.iconos div {
+    margin-top: 10px;
+    color: #3D405B;
+    display: flex;
+    
+}
+.copy{
+    color:#666;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+section.de-copy{
+    margin-top: 50px;
+}
+
+@media (min-width:361px) {
+    header nav{
+        display: block;
+        width: 22%;
     }
-    .header-navbar{
-        display:flex;
-        justify-content:space-between; /*con esta linea puse un menu d cada lado */
-    }
-    .header-navbar ul{
-        list-style: none;
+    .header-top-bar{
         display: flex;
         justify-content: space-between;
-        
     }
-    .header-navbar a {
-        text-decoration: none;
-        color: #F4F1DE;   
-    }
-    .right-navbar {
-        width: 40%;
+    .main-navbar{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
-    .left-navbar{
-        width: 40%;
+    .main-navbar ul{
+        display: flex;
     }
-
+    .main-navbar li{
+        margin:  0 10px;
+        font-size: 16px;
+    }
+    .pie-de-pagina {
+        display: flex;
+        flex-direction: column;
+    }
 
 }
+    @media (min-width:769px) {
+  
+        main section div.productos article{
+            width: 22%;
+   
+        }
+        div.burger-menu i{
+           display: none;
+        }
+         .pie-de-pagina,article .iconos{
+           flex-wrap: nowrap;
+           display: flex;
+           justify-content: space-between;
+       }
+       .enlaces-1 {
+           display: flex;
+       }
+
+    
+    }

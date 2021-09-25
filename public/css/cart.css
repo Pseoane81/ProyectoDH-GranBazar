@@ -61,6 +61,14 @@
     background-color:#273746 ;
 }
 
+.vacio {
+    margin: 15px;
+    color: #273746;
+}
+.vacio a{
+    color: #273746;
+    font-style: italic;
+}
 @media(min-width: 361px) {
     /*cupon y total*/
     .discount-total {
