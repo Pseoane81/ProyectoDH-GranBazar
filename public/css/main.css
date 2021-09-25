@@ -119,6 +119,7 @@ footer{
     background-color:#F4F1DE ;
     
 }
+
 footer img {
     width: 200px;
 
@@ -175,6 +176,7 @@ section.de-iconos ul {
     justify-content: space-evenly;
     display: flex;
     
+
 }
 
 section.de-iconos ul a{
@@ -199,6 +201,14 @@ section.de-copy{
 }
 
 @media (min-width:361px) {
+    .pie-de-pagina {
+        display:flex;
+     
+        flex-direction: column;
+    }
+}
+
+@media (min-width:769px) {
     header nav{
         display: block;
         width: 22%;
@@ -218,22 +228,23 @@ section.de-copy{
         margin:  0 10px;
         font-size: 16px;
     }
-    .pie-de-pagina {
-        display: flex;
-        flex-direction: column;
-    }
 
-}
-    @media (min-width:769px) {
-  
-        main section div.productos article{
-            width: 22%;
+    main section div.productos article{
+        width: 22%;
    
         }
-        div.burger-menu i{
-           display: none;
+     div.burger-menu i{
+         display: none;
         }
-         .pie-de-pagina,article .iconos{
+
+     .pie-de-pagina{
+         display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex-direction: row;
+        }
+
+    .pie-de-pagina,article .iconos{
            flex-wrap: nowrap;
            display: flex;
            justify-content: space-between;
