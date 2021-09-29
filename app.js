@@ -16,6 +16,12 @@ app.get("/cart",(req,res)=>{
 app.get("/empty-cart",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/empty-cart.html"))
 });
+app.get("/productos",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/productos.html"))
+});
+app.get("/productodetalle",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/productodetalle.html"))
+});
 
 app.get("/login",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/login.html"))

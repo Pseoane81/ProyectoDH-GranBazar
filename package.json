@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/melibass/grupo_3_tubazar#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "y": "^0.3.2"
   }
 }

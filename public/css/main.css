@@ -220,6 +220,7 @@ section.de-copy{
     .main-navbar{
         display: flex;
         justify-content: space-between;
+        
     }
     .main-navbar ul{
         display: flex;

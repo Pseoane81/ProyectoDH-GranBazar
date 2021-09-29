@@ -10,3 +10,5 @@ Nos pusimos al dia con el trabajo particular de cada uno, mostramos home y parte
 Determinamos cambios especificos para header y footer.
 Fijamos meet todos los martes 21hs.
 Especificamos colores
+
+/*comentario*/
