@@ -1,5 +1,7 @@
 /*Pantalla menor a 480px */
-
+main.cart {
+    margin-top: 170px;
+}
 /*propio carrito de compras*/
 .border-top {
     border-top: solid 2px #273746;
@@ -55,6 +57,13 @@
 }
 
 /*cupon y total*/
+h4.total-title, h4.cupon-discount {
+    display: flex;
+    color: #3D405B;
+}
+h4.total-title {
+    justify-content: flex-start;
+}
 .discount-total {
     width: 100%;
     display: flex;
@@ -66,6 +75,7 @@
     justify-content: space-between;
 
 }
+
 h5 {
     margin: 4px 0;
 }
