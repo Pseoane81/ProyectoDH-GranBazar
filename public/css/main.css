@@ -29,13 +29,20 @@ div.logo-barra {
 .search-bar {
     display:flex;
     align-items: center;
+    background-color: #F3F1F0;
+    border-radius: 8px;
+    width: 50%;
     }
+ .search-bar form {
+     width: 100%;
+ }
     .search-bar input {
     width: 100%;
+
     }
     /*lupita */
     .search-bar i{
-    background-color: #eaeaea;
+    background-color: #F3F1F0;
     color: black;
     text-align: right;
     align-self:center ;

@@ -10,3 +10,10 @@ Nos pusimos al dia con el trabajo particular de cada uno, mostramos home y parte
 Determinamos cambios especificos para header y footer.
 Fijamos meet todos los martes 21hs.
 Especificamos colores
+
+Meet 28/09
+
+En conjunto revisamos el avance de la mayoria de las vistas
+Corregimos detalles para entender mejor el uso de la web
+Determinamos como finalizar el estilo del footer
+Pautamos orden de commits

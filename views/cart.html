@@ -40,46 +40,59 @@
         
         </header>
     <main>
-        <h2>Carrito de Compras</h2>
-        <div class="column-title">
-        <p class="top-list-right"> Producto</p> 
-        <ul class="top-list-left">
-            <li>Precio</li>
-            <li>Cantidad</li>
-            <li>Subtotal</li>
-        </ul>
-    </div>
-        <div class="border-top"></div>
+        <div class="cart-title"><h2>Carrito de Compras</h2></div>
 
+        <div class="border-top"></div>
         <div class="product">
-            <div><img src="img/marco-1.jpeg" alt="frame-pic"></div>
-            <div class="details">
-                <div class="prod-name"> Marco</div> 
-                <div class="unit-price">$1000.00</div>
-                <div class="ammount">2</div>
-                <div class="total-prod-price">$2000.00</div></div>
+            <div class="product-details">
+            <img src="/img/marco-1.jpeg" alt="Imagen producto">
+            
+                <div class="product-specs">
+                    <ul>
+                    <li> Marco para fotos</li>
+                    <li class="li-2"> Color: Unico</li>
+                    <li class="li-2"> Tamaño: S</li>
+                </ul>
+                </div>
+                <div class="product-quantity">
+                <i class="fas fa-minus"></i>   
+                <div class="quantity-number">1 </div>
+                <i class="fas fa-plus"></i>
+                </div>
+                <div class="product-price">$1000</div>
+                <div class="bin"><i class="fas fa-trash-alt"></i></div>
             </div>
-            <div class="delete-button"><button type="submit"><i class="fas fa-trash-alt"></i></button></div>
+           
         </div>
         <div class="border-top"></div>
-
         <div class="product">
-            <div><img src="img/florero-2.jpeg" alt="flower-pic"></div>
-            <div class="details">
-                <div class="prod-name">Florero</div> 
-                <div class="unit-price">$1000.00</div>
-                <div class="ammount">1</div>
-                <div class="total-prod-price">$1000.00</div></div>
+            <div class="product-details">
+            <img src="/img/marco-1.jpeg" alt="Imagen producto">
+                <div class="product-specs">
+                    <ul>
+                    <li> Marco para fotos</li>
+                    <li class="li-2"> Color: Unico</li>
+                    <li class="li-2"> Tamaño: S</li>
+                </ul>
+                </div>
+                <div class="product-quantity">
+                <i class="fas fa-minus"></i>   
+                <div class="quantity-number">1 </div>
+                <i class="fas fa-plus"></i>
+                </div>
+                <div class="product-price">$1000</div>
+                <div class="bin"><i class="fas fa-trash-alt"></i></div>
             </div>
-            <div class="delete-button"><button type="submit"><i class="fas fa-trash-alt"></i></button></div>
+            
         </div>
-        <div class="border-top"></div>
 
+        <div class="border-top"></div>
         <div class="discount-total">
             <div>
             <h4 class="cupon-discount">Agrega tu cupon de descuento</h4>
-            <input type="text" class="codigo-cupon">
-            <button type="submit" class="cupon">Agregar</button>
+            <div class="border-top"></div>
+            <div class="input-discount"><input type="text" class="codigo-cupon">
+            <button type="submit" class="cupon">Agregar</button></div>
         </div>
 
         <div class="total-shopping">
@@ -87,8 +100,8 @@
             <div class="border-top"></div>
             <h5 class="ship-cost">Calcular envio</h5>
             <div class="envio">
-                <input type="text">
-                <button type="submit" class="button-cal">Calcular</button>    
+                <div class="input-shipping"><input type="text">
+                <button type="submit" class="button-cal">Calcular</button>  </div>  
             </div>
             <div class="total-order"><h5 class="total">Total del pedido</h5>
             <div class="suma-pedido">$3000.00</div></div>
