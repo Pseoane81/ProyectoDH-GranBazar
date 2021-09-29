@@ -1,0 +1,167 @@
+*{
+    font-family: 'Rubik';
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+/*Ocultar segunda imagen en pantallas chicas  */
+.foto2 {
+    display: none;
+}
+
+/* Mostrar en pantalla chica las imagenes y datos en columna  */
+.imagen-compra {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dar formato a la imagen de la compra */
+.producto-compra img {
+    width: 100%;
+    padding: 2%;
+}
+
+/* Formato gral al area de compra */
+.compra {
+    margin: 15px auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-left: 2%;
+    justify-content: center;  
+    color: #666;
+}
+
+/* Dar formaro al nombre del articulo */
+.titulo-articulo {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 10%;
+}
+
+/* Dar formato al precio del articulo */
+.precio-articulo {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 10%;
+}
+
+/* Dar formato al titulo descripcion del articulo */
+.descripcion-articulo-titulo{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 4%;
+}
+
+/* Dar formato a la descripcion del articulo */
+.descripcion-articulo {
+    font-size: 14px;
+    margin-bottom: 10%;
+}
+
+/* Dar formato al titulo medidas del articulo */
+.descripcion-medidas-titulo {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 4%;
+}
+
+/* Dar formato a las medidas del articulo */
+.descripcion-medida {
+    font-size: 14px;
+    margin-bottom: 10%;
+}
+
+/* Dar formato al titulo material del articulo */
+.descripcion-material-titulo  {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 4%;
+}
+
+/* Dar formato al material del articulo */
+.descripcion-material {
+    font-size: 14px;
+    margin-bottom: 4%;
+}
+
+/* Dar formato al area del boton para que arezca todo uno */
+.boton {
+    display: flex;
+    align-items: center;
+    background-color: #3483fa;
+    padding: 5%;
+    width: 70%;
+    justify-content: center;
+    margin-left: 50px;
+
+}
+
+/* Dar formato al boton de compra */
+.boton-compra {
+    background-color: #3483fa;
+    color: white;
+    border: transparent;
+    font-size: 12px;
+    margin-right: 2%;
+}
+
+
+/* Dar color al carrito */
+.carrito {
+    color: white;
+} 
+
+/* Agregar una linea intermedia para separar */
+.linea {
+    border-top: 2px solid #666;
+    width: 100%;
+    margin-bottom: 2%;  
+}
+
+
+/* Dar formato al titulo INTERESES */
+h4 {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+    font-weight:bold;
+}
+
+/* Darle Formato al precio */
+.precio {
+    font-size: 16px;
+    color: #666;
+    font-weight:bold;
+}
+
+/* Formatos para Celular */
+@media (min-width:361px) { 
+    /* Imagen y compra en horizontal */
+.imagen-compra {
+    flex-direction: row;
+    }   
+}
+
+/* Formatos para Tablet y Desktop */
+@media (min-width:769px) {
+    /* Muestra Segunda Foto */
+    .foto2 {
+        display: flex;
+    }
+    /* Foto ocupa el 100% */
+    .producto-compra img {
+        width: 100%;
+    }
+    /* Muestra las 2 fotos en horizontal */
+    .productos-compra {
+        display: flex;
+        flex-direction: row;
+        }
+
+    
+    
+}
