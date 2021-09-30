@@ -1,5 +1,5 @@
 /*Pantalla menor a 480px */
-main.cart {
+main.cart, main.empty-cart {
     margin-top: 170px;
 }
 /*propio carrito de compras*/

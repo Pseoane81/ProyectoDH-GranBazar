@@ -23,4 +23,12 @@ app.get("/productodetalle",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/productodetalle.html"))
 });
 
+app.get("/login",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/login.html"))
+});
+
+app.get("/register",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/register.html"))
+});
+
 app.listen(3000,()=>console.log("server corriendo en el puerto 3000"));

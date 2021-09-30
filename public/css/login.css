@@ -1,0 +1,131 @@
+main {
+    margin-top: 170px;
+}
+
+.ingresa {
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.crea {
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.form-control {
+    padding: 15px;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 3px;
+}
+
+form.login {
+    margin: 15px auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F3F1F0;
+    border-radius: 8px
+}
+form.login input {
+    background-color: #fff;
+}
+
+p.login {
+    text-align: center;
+    width: 100%;
+}
+.register-here {
+color: #E07A5F;
+}
+
+
+.form-control label {
+    width: 100%;
+    margin-bottom: 4px;
+}
+.form-control input {
+    width: 100%;
+}
+input {
+    transition: all 1.5s;
+}
+input:focus{ 
+  outline-color: #E07A5F;
+  border: 2px;
+}
+.enviar {
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 1.5s;
+}
+.enviar:hover {
+    color:#F4F1DE;
+    background-color:#3D405B ;
+}
+.enviar{
+    margin: 3px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    padding: 8px 60px;
+}
+/*.enviar {
+    text-align: center;
+    background-color: #3D405B;
+    border-radius: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}   
+.enviar:hover {
+    background-color: #3D405B;
+    color: #F4F1DE;
+}*/
+
+/*particular del register */
+form.register {
+    margin: 15px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F3F1F0;
+    border-radius: 8px
+}
+
+form.register input {
+    background-color: #fff;
+}
+
+.borrar {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #E07A5F;
+    transition: background-color 1.5s;
+}
+.borrar:hover {
+    color:#F4F1DE;
+    background-color:#3D405B ;
+}
+.borrar{
+    margin: 3px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    padding: 8px 60px;
+}
+@media(min-width:769px) {
+    main {
+        margin-top: 200px;
+    }
+}

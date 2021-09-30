@@ -89,7 +89,7 @@
 }
 
 /* Dar formato al area del boton para que arezca todo uno */
-.boton {
+/*.boton {
     display: flex;
     align-items: center;
     background-color: #3483fa;
@@ -98,16 +98,32 @@
     justify-content: center;
     margin-left: 50px;
 
+}*/
+.boton {
+    margin-left: 50%;
 }
-
-/* Dar formato al boton de compra */
+.boton-compra {
+    display: none;
+}
+.boton-compra2 {
+    font-size: 12px;
+        padding: 12px;
+        border-radius: 8px;
+        transition: background-color 1.5s;
+}
+.boton-compra2:hover {
+    color:#F4F1DE;
+    background-color:#3D405B ;
+}
+/*
+Dar formato al boton de compra 
 .boton-compra {
     background-color: #3483fa;
     color: white;
     border: transparent;
     font-size: 12px;
     margin-right: 2%;
-}
+}*/
 
 
 /* Dar color al carrito */
@@ -148,6 +164,21 @@ h4 {
 
 /* Formatos para Tablet y Desktop */
 @media (min-width:769px) {
+    /*muestra boton completo */
+    .boton-compra {
+        display: block;
+        font-size: 14px;
+        padding: 12px;
+        border-radius: 8px;
+        transition: background-color 1.5s;
+    }
+    .boton-compra:hover {
+        color:#F4F1DE;
+        background-color:#3D405B ;
+    }
+    .boton-compra2 {
+        display: none;
+    }
     /* Muestra Segunda Foto */
     .foto2 {
         display: flex;
