@@ -9,6 +9,12 @@
 a:hover{
     color:#81B29A;
 }
+.sub-titulo ul li a:hover {
+    color:#81B29A;
+}
+.fa-instagram:hover, .fa-facebook:hover, .fa-whatsapp:hover {
+    color:#81B29A;
+}
 /*el header*/
 .header{
     background-color:#3D405B;
@@ -57,6 +63,7 @@ div.logo-barra {
  }
     .search-bar input {
     width: 100%;
+    outline: none;
 
     }
     /*lupita */

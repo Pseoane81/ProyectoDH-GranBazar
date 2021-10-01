@@ -109,12 +109,24 @@
     font-size: 12px;
         padding: 12px;
         border-radius: 8px;
-        transition: background-color 1.5s;
+        transition: background-color 1s;
 }
-.boton-compra2:hover {
+/*.boton-compra2:hover {
     color:#F4F1DE;
     background-color:#3D405B ;
+}*/
+
+.boton-compra:focus, .boton-compra2:focus{
+    color:#F4F1DE;
+    background-color: #81B29A ;
 }
+.boton-compra,.boton-compra2{
+    margin: 3px;
+    border: 0px;
+    background-color: #3D405B ;
+    color: white;
+} 
+
 /*
 Dar formato al boton de compra 
 .boton-compra {
