@@ -18,8 +18,9 @@ a:hover{
 /*el header*/
 .header{
     background-color:#3D405B;
-    padding: 20px;
+    padding: 5px;
     width: 100%;
+    
 }
 
 header{ 
@@ -27,12 +28,13 @@ header{
     top: 0px;
     z-index: 100;
 }
-.banner {
-    margin-top: 150px;
-}
+
+
+
+
 main {
     width: 90%;
-    padding: 20px;
+    padding: 30px;
     margin: auto;
 }
 
@@ -135,17 +137,6 @@ a ul:hover {
     margin:0 5px;
     margin-top:50px;
 }
-
-/*banner*/
-section.banner img{
-    width: 100%;
-   
-}
-/*cuerpo*/
-body{
-    background-color: #fff;
-}
-
 
 /*aca empieza el footer*/
 
@@ -250,12 +241,11 @@ section.de-copy{
     margin-top: 50px;
 }
 
-@media (min-width:361px) {
+ @media (min-width:361px) {
     .pie-de-pagina {
         display:flex;
-     
-        flex-direction: column;
-    }
+        flex-direction:column;
+     }
 }
 
 @media (min-width:769px) {
