@@ -6,6 +6,9 @@
 
 }
 
+.cuerpo {
+    margin-top: 160px;
+}
 /* Dar Formato a la palabra categoria*/
 .linea-producto p {
     font-size: 20px;

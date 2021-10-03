@@ -6,6 +6,10 @@
 
 }
 
+.cuerpo {
+    margin-top: 160px;
+}
+
 /*Ocultar segunda imagen en pantallas chicas  */
 .foto2 {
     display: none;

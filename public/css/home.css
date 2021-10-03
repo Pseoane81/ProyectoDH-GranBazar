@@ -29,11 +29,15 @@ main{
     overflow: hidden;
 }
 
-main section article{
-    margin: 12px;
-    box-shadow: 0px 0px 10px rgb(29, 28, 28);
+main section article {
+    margin-bottom: 5px;
 }
 
+
+/*main section article{
+    margin: 12px;
+    box-shadow: 0px 0px 10px rgb(29, 28, 28);
+}*/
 
 /*esto es la img*/
 main section article img{
@@ -66,11 +70,11 @@ img{
     max-width:100% ;
 }
 .banner-all{
-    margin-top: 200px;
+    margin-top: 130px;
     position: relative;
     max-width: 2000px;
     width: 100%;
-    border-radius: 6px;
+    /*border-radius: 6px;*/
     overflow: hidden;
 }
 .slider{
@@ -248,7 +252,7 @@ input[id="4"]:checked ~ .pagination .pagination-item [for="4"]{
     display:block;
 
 }
-.descripcion{
+.description{
     font-size: 18px;
     font-family:sans-serif ;
     font-weight:lighter;
@@ -287,7 +291,9 @@ input[id="4"]:checked ~ .pagination .pagination-item [for="4"]{
         transition: box-shadow 2s;
     }
   
-    
+    .banner-all {
+        margin-top: 135px;
+    }
     
     
 } 
@@ -300,7 +306,9 @@ input[id="4"]:checked ~ .pagination .pagination-item [for="4"]{
 
      }
      
-     
+     .banner-all {
+         margin-top: 147px;
+     }
 
 }
 
