@@ -2,8 +2,6 @@
 h3{
     font-size: 24px;
     text-align: center;
-    font-family:sans-serif ;
-    font-weight:lighter;
     
 }
 .titulo-descripcion{
@@ -11,7 +9,6 @@ h3{
     margin-top: -1px;
     font-size: 16px;
     text-align: center;
-    font-family:sans-serif ;
     font-weight:lighter;  
 }
 
@@ -171,7 +168,6 @@ input[id="4"]:checked ~ .pagination .pagination-item [for="4"]{
     display: inline-block;
     position: relative;
     margin-top: 50px;
-    font-family:sans-serif ;
     font-weight:lighter;
     color: #81B29A;
 }
@@ -254,7 +250,6 @@ input[id="4"]:checked ~ .pagination .pagination-item [for="4"]{
 }
 .description{
     font-size: 18px;
-    font-family:sans-serif ;
     font-weight:lighter;
     margin-top: 5px;
     color: rgb(71, 69, 69);

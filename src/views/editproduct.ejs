@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('partials/head') %> 
+<body>
+    <%- include('partials/header')  %> 
+        <main>
+            <h3 class="addedit">EDITAR PRODUCTO</h3>
+    <form action="/crearproducto" method="POST" enctype="multipart/form-data" class="add-edit">
+    
+    <div class="form-control">
+        <label for="">Nombre</label>
+        <input type="text" name="productname" required>
+    </div>
+    <div class="form-control">
+        <label for="">Categorias</label>
+        <div class="checkbox"> 
+            <label for="muebles" class="check"><input type="checkbox" name="muebles" id="muebles" value="Muebles"class="check">Muebles</label>
+        </div>
+        <div class="checkbox"> 
+            <label for="decoracion" class="check" ><input type="checkbox" name="decoracion" id="decoracion" value="Decoracion"class="check">Decoración</label>
+        </div>
+        <div class="checkbox"> 
+            <label for="viaje"class="check"><input type="checkbox" name="viaje" id="viaje" value="Viaje"class="check">Viaje</label>
+        </div>
+        <div class="checkbox"> 
+            <label for="uso-personal"class="check"><input type="checkbox" name="uso-personal" id="uso-personal" value="Uso personal"class="check">Uso personal</label>
+        </div>
+    
+        <div class="form-control">
+            <label for="">Selecciona las imagenes para tu producto</label>
+            <input type="file" name="pictures" accept=".png, .jpg, .jpeg" multiple required>
+            <span class="imgs">Solo acepta .png, .jpg, .jpeg</span>
+        </div>
+        <div class="form-control descripcion" >
+        <label for="descripcion">Descripcion del producto</label>
+        <textarea class="text-description" name="text-description" id="text-description"> </textarea>
+        </div>
+        <div class="form-control">
+            <label for="">Medidas:</label>
+            <input type="text" name="medidas" placeholder="en cms">
+        </div>
+        <div class="form-control">
+            <label for="">Color</label>
+            <select name="color" id="color">
+                <option value="white">Blanco</option>
+                <option value="black">Negro</option>
+                <option value="blue">Azul</option>
+                <option value="yellow">Amarillo</option>
+                <option value="green">Verde</option>
+                <option value="orange">Naranja</option>
+                <option value="red">Rojo</option>
+                <option value="pink">Rosa</option>
+                <option value="purple">Violeta</option>
+                <option value="gold">Dorado</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="">Material</label>
+            <input type="text" name="material" class="material">
+        </div>
+        <div class="form-control">
+            <label for="">Pais de origen</label>
+            <input type="text" name="origin" class="origin">
+        </div>
+        <div class="buttons">
+        <button type="submit" class="enviar">EDITAR</button>
+        <button type="reset" class="borrar">BORRAR</button> </div>
+    </div>  
+    
+    </form>
+    
+    
+    
+    
+       </main>
+
+
+       <%- include('partials/footer')  %> 
+    </body>
+    </html>
+
+
+

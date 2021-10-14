@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %> 
+<body>
+    <%- include('partials/header')  %> 
+    <main class="cuerpo">
+        
+        <section class="visita">
+            <h3>LISTADO DE PRODUCTOS</h3>
+        </section>
+    
+        <div class="menu-imagenes"> 
+            <section class="menu-lateral">
+                <div class="linea-producto">
+                    <p>Categorias</p>
+                </div>
+                <div>
+                    <ul class="menu-productos">
+                        <li><a href="./productodetalle">Muebles</a></li>
+                        <li><a href="./productodetalle">Decoracion</a></li>
+                        <li><a href="./productodetalle">Uso personal</a></li>
+                        <li><a href="./productodetalle">Viajes</a></li>
+                        
+                    </ul>
+                </div>
+            </section>
+            <section class="visita">
+                
+            <div class="productos">
+                
+                <article class="producto">
+                <a href="./productodetalle">
+                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                <div class="categoria">
+                    <p class="precio">Categoria A</p>   
+                </div></a>
+                    </article>
+            
+                <article class="producto">
+                <a href="./productodetalle">
+                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                <div class="categoria">
+                    <p class="precio">Categoria B</p>   
+                </div></a>
+                </article>
+             
+                <article class="producto">
+                <a href="./productodetalle">
+                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                <div class="categoria">
+                    <p class="precio">Categoria C</p>   
+                </div></a>
+                </article>
+                        
+                <article class="producto">
+                <a href="./productodetalle">
+                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                <div class="categoria">
+                    <p class="precio">Categoria D</p>   
+                </div></a>
+                </article>
+                            
+                <article class="producto">
+                <a href="./productodetalle">
+                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                <div class="categoria">
+                    <p class="precio">Categoria E</p>   
+                </div></a>
+                </article>
+                                
+                <article class="producto">
+                    <a href="./productodetalle">
+                    <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                    <div class="categoria">
+                        <p class="precio">Categoria F</p>   
+                    </div></a>
+                </article>    
+                
+            </div> 
+            </section>
+
+            
+        </div>
+        <div class="formularios">
+            Click <a href="/products/createproduct">aqui</a> para crear un nuevo producto
+        </div>
+        <div class="formularios">
+            Click <a href="/products/editproduct">aqui</a> para editar un producto
+        </div>
+   </main>
+   <%- include('partials/footer')  %> 
+   
+</body>
+</html>

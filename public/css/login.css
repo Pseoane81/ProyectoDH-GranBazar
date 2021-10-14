@@ -1,8 +1,9 @@
 main {
-    margin-top: 170px;
+    margin-top: 150px;
 }
 
 .ingresa {
+    margin-top: 150px;
     margin-bottom: 30px;
     text-align: center;
     font-style: italic;
@@ -12,6 +13,7 @@ main {
 }
 
 .crea {
+    margin-top: 150px;
     margin-bottom: 30px;
     text-align: center;
     font-style: italic;
@@ -20,6 +22,9 @@ main {
 
 }
 
+h3.addedit{
+    margin-top: 150px;
+}
 .form-control {
     padding: 15px 10px;
     width: 100%;
