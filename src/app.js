@@ -23,4 +23,12 @@ app.use('/users', usersRouter);
 app.use('/carts', cartsRouter);
 app.use('/products', productsRouter);
 
+/*el error*/
+
+app.use(function(req, res, next) {
+    res.status(404).render('not-found')
+});
+
+
+
 app.listen(3000,()=>console.log("server corriendo en el puerto 3000"));

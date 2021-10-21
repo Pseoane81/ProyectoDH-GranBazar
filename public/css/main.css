@@ -267,6 +267,11 @@ section.de-copy{
 }
 
 
+main.not-found{
+    margin-top: 150px;
+}
+
+
 
  @media (min-width:361px) {
     .pie-de-pagina {
