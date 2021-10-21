@@ -1,0 +1,9 @@
+{
+    "id": "1",
+    "Nombre": "Daniel",
+    "apellido":"Garcia",
+    "email": "dg@gmail.com",
+    "contrasenia": "12356",
+    "categoria": "Particular",
+    "img": "imagen"
+}
