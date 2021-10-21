@@ -16,5 +16,5 @@ Sprint 2:
 
 4. Hacer menos: no priorizar tareas. el sprint pasado dejamos un poco de lado el header y el footer y lo compeltamos de a poco lo cual dificulto o complejizo hacer los estilos luego.
 
-
+Sprint 3: a completar
 

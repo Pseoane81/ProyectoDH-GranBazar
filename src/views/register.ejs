@@ -10,7 +10,11 @@
             <form action="/register" method="POST" class="register">
                 
                 <div class="form-control">
-                    <label for="">Nombre y Apellido</label>
+                    <label for="">Nombre</label>
+                    <input type="text" name="fullname">
+                </div>
+                <div class="form-control">
+                    <label for="">Apellido</label>
                     <input type="text" name="fullname">
                 </div>
 
@@ -23,7 +27,12 @@
                     <label for="">Fecha de nacimiento</label>
                     <input type="date" name="">
                 </div>
-
+                
+                <div class="form-control">
+                    <label for="image">Imagen de perfil</label>
+                    <input type="file" name="pictures" accept=".png, .jpg, .jpeg" multiple >
+                    <span class="imgs">Solo acepta .png, .jpg, .jpeg</span>
+                </div>
                 
                 <div class="form-control">
                     <label for="">Contraseña</label>

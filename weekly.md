@@ -23,4 +23,7 @@ Meet 05/10
 Hicimos la retro del sprint anterior. Nos pusimos de acuerdo en metodologias de info, y pautamos que hacer para el sprint y proxima reunion. Marcamos las tareas a hacer en Trello.
 
 Meet 13/10
+Repaso de lo hecho en relacion a rutas
 
+Meet 20/10
+Puesta en comun sobre trabajo realizado. Division de tareas y programacion de nuevos encuentros
