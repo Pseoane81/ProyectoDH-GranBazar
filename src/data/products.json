@@ -1,0 +1,25 @@
+[
+    {
+    "id": "1",
+    "name": "Taza",
+    "description":"Una linda Taza",
+    "categoria": "Tazas",
+    "colores": "Verde",
+    "precio": "1200",
+    "material": "Ceramica",
+    "medida": "320ml",
+    "origen":"India"
+    },
+    {
+    "id": "2",
+    "name": "Perchero pie",
+    "description":"Perchero de pie",
+    "categoria": "Perchero",
+    "colores": "negro",
+    "precio": "12000",
+    "material": "Metal",
+    "medida": "180cm",
+    "origen":"India"
+    }
+
+]
