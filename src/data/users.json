@@ -1,4 +1,4 @@
-{
+[{
     "id": "1",
     "Nombre": "Daniel",
     "apellido":"Garcia",
@@ -6,7 +6,7 @@
     "contrasenia": "123456",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "2",
     "Nombre": "Alberto",
@@ -15,7 +15,7 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "3",
     "Nombre": "Lorena",
@@ -24,7 +24,7 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "4",
     "Nombre": "Alicia",
@@ -33,7 +33,7 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "5",
     "Nombre": "Juan",
@@ -42,7 +42,7 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "6",
     "Nombre": "Daniela",
@@ -51,7 +51,7 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "7",
     "Nombre": "Sebastian",
@@ -60,7 +60,7 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "8",
     "Nombre": "Federico",
@@ -69,7 +69,7 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "9",
     "Nombre": "Mauro",
@@ -78,7 +78,7 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+},
 {
     "id": "10",
     "Nombre": "Maria",
@@ -87,4 +87,4 @@
     "contrasenia": "12356",
     "categoria": "Particular",
     "img": "imagen"
-}
+}]
