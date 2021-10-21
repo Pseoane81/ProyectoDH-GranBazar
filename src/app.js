@@ -12,6 +12,10 @@ app.set ('views', path.resolve(__dirname, 'views'));
 /*Config express */
 app.use(express.static(path.resolve(__dirname,"../public"))); // para que la carpeta public se disponibilice
 
+/* config para poder usar post */
+app.use(express.urlencoded({ extended: false })) // para poder usar method post
+app.use(express.json()) // para poder usar method post
+
 /* Routes */
 const usersRouter = require('./routes/users');
 const cartsRouter = require('./routes/carts');
