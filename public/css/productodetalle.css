@@ -103,24 +103,51 @@
     margin-left: 50px;
 
 }*/
-.boton {
-    margin-left: 50%;
+
+.boton ,.botones{
+    margin-left: 40%;
+    
+
+}
+.action-buttondelete{
+    background-color: #E07A5F;
+    margin: 3px;
+    border: 0px;
+    color: white;
+}
+
+
+.action-buttonedit{
+    margin: 3px;
+    border: 0px;
+    background-color: #3D405B ;
+    color: white;
+
+}
+.action-buttondelete,.action-buttonedit{
+        font-size: 13px;
+        padding: 15px;
+        border-radius: 8px;
+        transition: background-color 1s;
+        margin: 5px;
 }
 .boton-compra {
     display: none;
+  
 }
 .boton-compra2 {
     font-size: 12px;
         padding: 12px;
         border-radius: 8px;
         transition: background-color 1s;
+        justify-content: space-evenly;
 }
 /*.boton-compra2:hover {
     color:#F4F1DE;
     background-color:#3D405B ;
 }*/
 
-.boton-compra:focus, .boton-compra2:focus{
+.boton-compra:focus, .boton-compra2:focus,.action-buttondelete:focus,.action-buttonedit:focus{
     color:#F4F1DE;
     background-color: #81B29A ;
 }
