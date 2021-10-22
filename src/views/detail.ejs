@@ -7,7 +7,7 @@
 
     <main class="cuerpo">
         <section class="visita">
-            <h3>Estas viendo: NOMBRE DEL PRODUCTO</h3>
+            <!--<h3>Estas viendo: <%= product.name%> </h3>-->
         </section>
     
     <div class="imagen-compra">   
@@ -18,14 +18,14 @@
                     <article class="producto-compra">
                     <div class="foto1">
                         <a href="/productodetalle">
-                    <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                    <img src="/img/productos/<%= product.image%>" width="360" alt="taza" class="producto_img">
                     </div></a>
                     </article>
             
                     <article class="producto-compra">
                     <div class="foto2">
                         <a href="/productodetalle">
-                    <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                    <img src="/img/productos/<%= product.image%>" width="360" alt="taza" class="producto_img">
                     </div></a>
                     </article>
 
@@ -34,22 +34,26 @@
         
             <div class="compra">
                 <div>
-                    <p class="titulo-articulo">NOMBRE DEL PRODUCTO</p>
+                    <p class="titulo-articulo"><%= product.name%></p>
                 </div>
                 <div>
-                    <p class="precio-articulo">$ PRECIO</p>
+                    <p class="precio-articulo">$ <%=product.price%></p>
                 </div>
                 <div class="linea">
                     <p class="descripcion-articulo-titulo">Descripcion</p> 
-                    <p class="descripcion-articulo">DESCRIPCION DEL PRODUCTO</p>
+                    <p class="descripcion-articulo"><%=product.description%></p>
                 </div>
                 <div class="linea">
                     <p class="descripcion-medidas-titulo">Medidas</p>
-                    <p class="descripcion-medidas">MEDIDAS</p>
+                    <p class="descripcion-medidas"><%=product.measurements%></p>
                 </div>
                 <div class="linea">
                     <p class="descripcion-material-titulo">Material</p>
-                    <p class="descripcion-material">MATERIAL DEL PRODUCTO</p>
+                    <p class="descripcion-material"><%=product.material%></p>
+                </div>
+                <div class="linea">
+                    <p class="descripcion-material-titulo">Origen</p>
+                    <p class="descripcion-material"><%=product.origin%></p>
                 </div>
 
                 <div class="botones">

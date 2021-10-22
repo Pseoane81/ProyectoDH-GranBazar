@@ -29,8 +29,12 @@ let controller = {
     
 
     detallar: function (req, res) { 
-        res.render('detail');
+        let id = req.params.id;
         
+        let productoMuestra = products.find(product => {
+            return product.id == id;
+        })
+        res.render('detail', {product: productoMuestra});
     },
     comprar: (req,res) => {
         res.render('cart');
