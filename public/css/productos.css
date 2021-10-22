@@ -45,23 +45,36 @@ div.formularios a {
     margin-bottom: 5px;
     
 }
-/* Formato al texto debajo de las imagenes */
-.categoria {
-    text-align: center;
-    margin-bottom: 5px;
+.specs{
+    display: none;
 }
-
+article.product{
+    display: flex;
+justify-content: center;
+}
 /*Reglas para pantallas superiores a 769px*/
 @media (min-width:769px) {
-    /*ocultar la palabra de la categoria*/
+    /*ocultar la palabra de la categoria
     .categoria {
         display: none;
-    }
+    }*/
     /*mostrar el menu lateral y darle formato*/
+    article.product{
+        display: flex;
+    justify-content: space-between;
+    }
+
+    .specs {
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 24px;
+    }
     .menu-lateral {
         display: block;
         padding: 2px;
-        width: 100%;
+        width: 20%;
     }
     /*mostrar el menu lateral y las imagens en horizontal*/
     .menu-imagenes {
