@@ -1,24 +1,39 @@
 [
     {
-    "id": 1,
-    "name": "Taza",
-    "category":"uso-personal",
-    "image": "img-default.jpeg",
-    "description": "Taza pequeña de ceramica",
-    "measurements": "250ml",
-    "color": "verde",
-    "material": "ceramica",
-    "origin":"India"
+        "id": 1,
+        "name": "Taza",
+        "category": "uso-personal",
+        "image": "img-default.jpeg",
+        "description": "Taza pequeña de ceramica",
+        "measurements": "250ml",
+        "color": "verde",
+        "material": "ceramica",
+        "origin": "India"
     },
-    {"id": 2,
-    "name": "Espejo",
-    "category":"decoracion",
-    "image": "img-default.jpeg",
-    "description": "Espejo de pie",
-    "measurements": "1200cms",
-    "color": "Negro",
-    "material": "Madera",
-    "origin":"Marruecos"
+    {
+        "id": 2,
+        "name": "Espejo",
+        "category": "decoracion",
+        "image": "img-default.jpeg",
+        "description": "Espejo de pie",
+        "measurements": "1200cms",
+        "color": "Negro",
+        "material": "Madera",
+        "origin": "Marruecos"
+    },
+    {
+        "id": 3,
+        "name": "Perchero Base Gris Grafito Y Perchas Negras",
+        "category": [
+            "Muebles",
+            "Destacados"
+        ],
+        "description": "Perchero de pie con base de hierro y acero pintado, y perchas en inyección plástica. Mide 170 cm de altura y la base mide 34 cm de diámetro.",
+        "measurements": "170x34 cm",
+        "color": "white",
+        "material": "Base de hierro y acero pintado",
+        "origin": "china",
+        "price": "23990",
+        "image": "product-1634936538986.jpg"
     }
-
 ]

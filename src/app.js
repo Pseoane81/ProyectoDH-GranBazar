@@ -2,11 +2,14 @@ const express=require('express');
 const path = require('path');
 const app = express();
 const ejs = require ('ejs');
+const methodOverride = require('method-override'); // agregamos method override
 
 /* config template ejs*/
 app.set('view engine', 'ejs');
 app.set ('views', path.resolve(__dirname, 'views'));
 
+/*Config method */
+app.use(methodOverride('_method'));
 
 
 /*Config express */
