@@ -24,6 +24,7 @@ router.get("/:id", controller.detallar);
 router.get("/createproduct", controller.create);
 router.post('/', upload.single('image'), controller.store); //Ruta que guarda
 router.get("/editproduct", controller.edit);
+router.delete("/:id", controller.delete);
 
 
 

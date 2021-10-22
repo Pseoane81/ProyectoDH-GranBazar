@@ -63,5 +63,17 @@ let controller = {
         res.redirect('/');
     },
 
+    delete (req, res) {
+
+        let productosRestantes = products.filter(product => {
+            return product.id != req.params.id;
+        })
+
+        let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
+        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
+
+        res.redirect('/');
+    }
+
 };
 module.exports = controller;

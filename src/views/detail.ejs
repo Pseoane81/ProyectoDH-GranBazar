@@ -58,8 +58,9 @@
 
                 <div class="botones">
                     <a href="/products/editproduct"><button type="submit" class="action-buttonedit">EDITAR </button></a>
+                    <form action="/products/<%= product.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
                     <button type="submit" class="action-buttondelete">ELIMINAR</button>
-
+                    </form>
                 </div>
                 <div class="boton">
                     <!-- <input type="button" value="AGREGAR AL CARRITO" class="boton-compra">
