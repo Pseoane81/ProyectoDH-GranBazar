@@ -25,22 +25,26 @@
                 </div>
             </section>
             <section class="visita">
+                <% mostrar.forEach(product => { %>
+
                 
-                <div class="products">
-                
-                    <article class="product">
-                    <a href="./products/detail" class="unit-product"></a>
-                    <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
-                    <div class="specs">
-                        <div>Nombre: NOMBRE DEL PRODUCTO</div>
-                        <div>Categoria: CATEGORIA</div>  
-                        <div>Medidas: MEDIDAS</div>
-                        <div>Color: COLOR</div>
-                        <div>Material: MATERIAL</div>
-                        <div>Origen: ORIGEN</div>
-                    </div>
-                       
+                    <div class="products">
+                    
+                        <article class="product">
+                        <a href="./products/<%= product.id %> " class="unit-product"></a>
+                        <img src="/img/productos/<%= product.image %>" width="360" alt="taza" class="producto_img">
+                        <div class="specs">
+                            <div>Nombre: <%=product.name%> ></div>
+                            <div>Categoria: <%=product.category%></div>  
+                            <div>Medidas: <%=product.measurements%></div>
+                            <div>Color:<%=product.color%></div>
+                            <div>Material:<%=product.material%></div>
+                            <div>Origen: <%=product.origin%></div>
+                            <div>Precio: <%=product.price%></div>
+    
+                        </div>
                         
+                   <% }) %>      
                 
                     
                 </section>

@@ -16,10 +16,18 @@ const nuevoId = () => {
 }
 
 let controller = {
-    products:  (req,res)=> {
-        res.render('products');
-        
+    mostrarProductos:  (req,res)=> {
+       let mostrar=[];
+       products.forEach(product =>{
+           mostrar.push(product);
+       });
+       res.render('products',{mostrar});
     },
+
+       
+        
+    
+
     detallar: function (req, res) { 
         res.render('detail');
         
