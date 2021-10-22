@@ -18,13 +18,11 @@ app.use(express.json()) // para poder usar method post
 
 /* Routes */
 const usersRouter = require('./routes/users');
-const cartsRouter = require('./routes/carts');
 const productsRouter = require('./routes/products');
 const mainRouter = require('./routes/main');
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
-app.use('/carts', cartsRouter);
 app.use('/products', productsRouter);
 
 /*el error*/

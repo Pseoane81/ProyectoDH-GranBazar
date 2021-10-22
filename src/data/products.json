@@ -1,25 +1,24 @@
 [
     {
-    "id": "1",
+    "id": 1,
     "name": "Taza",
-    "description":"Una linda Taza",
-    "categoria": "Tazas",
-    "colores": "Verde",
-    "precio": "1200",
-    "material": "Ceramica",
-    "medida": "320ml",
-    "origen":"India"
+    "category":"uso-personal",
+    "image": "img-default.jpeg",
+    "description": "Taza pequeña de ceramica",
+    "measurements": "250ml",
+    "color": "verde",
+    "material": "ceramica",
+    "origin":"India"
     },
-    {
-    "id": "2",
-    "name": "Perchero pie",
-    "description":"Perchero de pie",
-    "categoria": "Perchero",
-    "colores": "negro",
-    "precio": "12000",
-    "material": "Metal",
-    "medida": "180cm",
-    "origen":"India"
+    {"id": 2,
+    "name": "Espejo",
+    "category":"decoracion",
+    "image": "img-default.jpeg",
+    "description": "Espejo de pie",
+    "measurements": "1200cms",
+    "color": "Negro",
+    "material": "Madera",
+    "origin":"Marruecos"
     }
 
 ]

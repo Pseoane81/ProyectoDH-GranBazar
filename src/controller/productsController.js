@@ -2,11 +2,11 @@ const path=require('path');
 
 let controller = {
     products:  (req,res)=> {
-        res.render('productos');
+        res.render('products');
         
     },
     detallar: function (req, res) { 
-        res.render('productodetalle');
+        res.render('detail');
         
     },
     comprar: (req,res) => {
