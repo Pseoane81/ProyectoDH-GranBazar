@@ -5,7 +5,7 @@
     <%- include('partials/header')  %> 
         <main>
             <h3 class="addedit">EDITANDO PRODUCTO: <%= product.name%> </h3>
-        <form action="/products/editproduct/<%= product.id %>?_method=PUT" method="POST" class="add-edit">
+        <form action="/products/editproduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">
   
     <div class="form-control">
         <label for="">Nombre</label>

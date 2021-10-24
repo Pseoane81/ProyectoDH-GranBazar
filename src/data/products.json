@@ -1,26 +1,27 @@
 [
     {
         "id": 1,
-        "name": "Ropero",
-        "category": "destacados",
-        "image": "img-default.jpeg",
-        "description": " Taza pequeña de ceramica ",
-        "measurements": "250ml",
-        "color": "white",
-        "material": "ceramica",
-        "origin": "India",
-        "price": "30560"
+        "name": "Puff Fiaca",
+        "category": "uso-personal",
+        "description": "Puff Fiaca triangular",
+        "measurements": "180cm",
+        "color": "gold",
+        "material": "Tela y relleno espuma",
+        "origin": "Argentina",
+        "price": "18500",
+        "image": "product-1635114585197.jpg"
     },
     {
         "id": 2,
         "name": "Espejo",
         "category": "decoracion",
-        "image": "img-default.jpeg",
         "description": "Espejo de pie",
         "measurements": "1200cms",
         "color": "Negro",
         "material": "Madera",
-        "origin": "Marruecos"
+        "origin": "Marruecos",
+        "price": "30560",
+        "image": "img-default.jpeg"
     },
     {
         "id": 3,
