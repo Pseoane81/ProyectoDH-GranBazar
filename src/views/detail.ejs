@@ -7,7 +7,7 @@
 
     <main class="cuerpo">
         <section class="visita">
-            <!--<h3>Estas viendo: <%= product.name%> </h3>-->
+           
         </section>
     
     <div class="imagen-compra">   
@@ -17,17 +17,11 @@
                 
                     <article class="producto-compra">
                     <div class="foto1">
-                        <a href="/productodetalle">
+                        <a href="/img/productos/<%= product.image%>">
                     <img src="/img/productos/<%= product.image%>" width="360" alt="taza" class="producto_img">
                     </div></a>
                     </article>
-            
-                    <article class="producto-compra">
-                    <div class="foto2">
-                        <a href="/productodetalle">
-                    <img src="/img/productos/<%= product.image%>" width="360" alt="taza" class="producto_img">
-                    </div></a>
-                    </article>
+        
 
                 </div>
             </div>
@@ -57,7 +51,8 @@
                 </div>
 
                 <div class="botones">
-                    <a href="/products/editproduct"><button type="submit" class="action-buttonedit">EDITAR </button></a>
+                   <a href="/products/editproduct/<%= product.id  %>">
+                    <button type="submit" class="action-buttonedit">EDITAR </button></a>
                     <form action="/products/<%= product.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
                     <button type="submit" class="action-buttondelete">ELIMINAR</button>
                     </form>
@@ -80,29 +75,29 @@
              <div class="productos">   
                 <article class="producto-interes">
                     <a href="/products/detail">
-                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img"></a>
                 <div class="main-article">
                     <p class="precio">$PRECIO</p>
                     <p class="descripcion">NOMBRE DEL PRODUCTO</p>   
-                </div></a>
+                </div>
                 </article>
                         
                 <article class="producto-interes">
                     <a href="/products/detail">
-                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img"></a>
                 <div class="main-article">
                     <p class="precio">$PRECIO</p>
                     <p class="descripcion">NOMBRE DEL PRODUCTO</p>   
-                </div></a>
+                </div>
                 </article>
                             
                 <article class="producto-interes">
                     <a href="/products/detail">
-                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img">
+                <img src="/img/taza.jpg" width="360" alt="taza" class="producto_img"></a>
                 <div class="main-article">
                     <p class="precio">$PRECIO</p>
                     <p class="descripcion">NOMBRE DEL PRODUCTO</p>   
-                </div></a>
+                </div>
                 </article>
                                 
              </div>       

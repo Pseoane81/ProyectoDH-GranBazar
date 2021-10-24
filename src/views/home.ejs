@@ -103,35 +103,21 @@
                             <div class="linea divisora">
                                 <h2 class="lines-effect"> Nuestros Favoritos</h2>
                                </div> 
-
-                            <div class="favoritos">
-                                <article class="produc">
-                                    <a href="products/productodetalle">
-                                            <img src="/img/bloque-produc/favorito1.jpeg" alt="mueble" class="producto_img"></a>
-                                    <div class="articulos" >
-                                        <p class="precio">$2.500</p> 
-                                        <h6 class="description">Espejos</h6>  
-                                    </div>
-                                </article>
-                                    <article class="produc">
-                                        <a href="products/productodetalle">
-                                                <img src="/img/bloque-produc/favorito2.jpeg" alt="mueble" class="producto_img"></a>
-                                            <div class="articulos" >
-                                                <p class="precio">$3.500</p> 
-                                                <h6 class="description">Papeleria</h6>   
-                                            </div>
-                                    </article>
-
-                                <article class="produc">
-                                    <a href="products/productodetalle">
-                                        <img src="/img/bloque-produc/favorito3.jpeg" alt="mueble" class="producto_img"></a>
-                                    <div class="articulos" >
-                                        <p class="precio"> $4.500</p> 
-                                        <h6 class="description">Macetas </h6>  
-                                    </div>
-                                </article>
-                            </div>
-
+                               
+                               <% destacados.forEach(product => { %>
+                                <section class="prod-box">
+                               <a href="products/<%= product.id%>">
+                                <div class="highlight-prod">
+                               
+                                     <img src="/img/productos/<%= product.image%>" alt="mueble" class="product-img"></a>
+                                    <p>$<%= product.price%></p>
+                                        <p><%= product.name%></p>
+                                    
+                                    
+                               </div></section>
+                               <% }) %>
+                               
+                            
 
             </div>                
         </section>

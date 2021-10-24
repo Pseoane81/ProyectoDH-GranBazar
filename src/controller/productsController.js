@@ -35,6 +35,9 @@ let controller = {
             return product.id == id;
         })
         res.render('detail', {product: productoMuestra});
+        
+
+    
     },
     comprar: (req,res) => {
         res.render('cart');
@@ -44,7 +47,44 @@ let controller = {
         res.render('createproduct');
     },
     edit: (req,res) => {
-        res.render('editproduct');
+        let id = req.params.id;
+        
+        let productoActualizar = products.find(product => {
+            return product.id == id;
+        })
+        res.render('editproduct', {product: productoActualizar});
+
+    },
+
+    update:(req,res) => {
+        // Editamos el producto buscandolo con una condición
+        products.forEach(product => {
+            if (product.id == req.params.id) {
+                product.name = req.body.name;
+                product.description = req.body.description;
+                product.price = req.body.price;
+                product.category = req.body.category;
+                product.origin = req.body.origin;
+                product.material = req.body.material;
+                product.color = req.body.color;
+                product.measurements = req.body.measurements;
+                product.image = 'img-default.jpeg';
+            }
+        })
+
+        // let productToEdit = products.find(product => {
+        //     return product.id == req.params.id;
+        // })
+        // productToEdit.name = req.body.name;
+
+        // Pasamos a json todos los productos y sobreescribimos la db
+        let jsonDeProductos = JSON.stringify(products, null, 4);
+        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
+
+        res.redirect('/');
+
+
+    
     },
     store (req, res) {
         // Creamos el producto base

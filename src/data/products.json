@@ -1,14 +1,15 @@
 [
     {
         "id": 1,
-        "name": "Taza",
-        "category": "uso-personal",
+        "name": "Ropero",
+        "category": "destacados",
         "image": "img-default.jpeg",
-        "description": "Taza pequeña de ceramica",
+        "description": " Taza pequeña de ceramica ",
         "measurements": "250ml",
-        "color": "verde",
+        "color": "white",
         "material": "ceramica",
-        "origin": "India"
+        "origin": "India",
+        "price": "30560"
     },
     {
         "id": 2,
@@ -20,5 +21,17 @@
         "color": "Negro",
         "material": "Madera",
         "origin": "Marruecos"
+    },
+    {
+        "id": 3,
+        "name": "Estanteria 4 estantes",
+        "category": "destacados",
+        "description": "Estanteria de hierro y madera con 4 estantes",
+        "measurements": "190 cm x 80 cm",
+        "color": "black",
+        "material": "Hierro y madera",
+        "origin": "Chile",
+        "price": "29990",
+        "image": "product-1635109504297.jpeg"
     }
 ]

@@ -1,15 +1,12 @@
-*{
-    font-family: 'Rubik';
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-
-}
 
 .cuerpo {
     margin-top: 160px;
 }
-
+.foto1{
+    width: 250px;
+    height: auto;
+    margin: auto;
+}
 /*Ocultar segunda imagen en pantallas chicas  */
 .foto2 {
     display: none;
@@ -25,18 +22,21 @@
 .producto-compra img {
     width: 100%;
     padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Formato gral al area de compra */
 .compra {
     margin: 15px auto;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
     margin-left: 2%;
     justify-content: center;  
-    color: #666;
+    color: #3D405B;
 }
 
 /* Dar formaro al nombre del articulo */
@@ -91,24 +91,8 @@
     font-size: 14px;
     margin-bottom: 4%;
 }
+/*botones*/
 
-/* Dar formato al area del boton para que arezca todo uno */
-/*.boton {
-    display: flex;
-    align-items: center;
-    background-color: #3483fa;
-    padding: 5%;
-    width: 70%;
-    justify-content: center;
-    margin-left: 50px;
-
-}*/
-
-.boton ,.botones{
-    margin-left: 40%;
-    
-
-}
 .action-buttondelete{
     background-color: #E07A5F;
     margin: 3px;
@@ -141,13 +125,10 @@
         border-radius: 8px;
         transition: background-color 1s;
         justify-content: space-evenly;
+        margin: auto;
 }
-/*.boton-compra2:hover {
-    color:#F4F1DE;
-    background-color:#3D405B ;
-}*/
 
-.boton-compra:focus, .boton-compra2:focus,.action-buttondelete:focus,.action-buttonedit:focus{
+.boton-compra:hover, .boton-compra2:focus,.action-buttondelete:focus,.action-buttonedit:focus{
     color:#F4F1DE;
     background-color: #81B29A ;
 }
@@ -157,28 +138,16 @@
     background-color: #3D405B ;
     color: white;
 } 
-
-/*
-Dar formato al boton de compra 
-.boton-compra {
-    background-color: #3483fa;
-    color: white;
-    border: transparent;
-    font-size: 12px;
-    margin-right: 2%;
-}*/
-
-
-/* Dar color al carrito */
+/* Dar color al carrito del boton*/
 .carrito {
     color: white;
 } 
 
 /* Agregar una linea intermedia para separar */
 .linea {
-    border-top: 2px solid #666;
+    border-top: 2px solid #3D405B;
     width: 100%;
-    margin-bottom: 2%;  
+    padding: 4px;  
 }
 
 
@@ -186,7 +155,7 @@ Dar formato al boton de compra
 h4 {
     margin-top: 20px;
     font-size: 16px;
-    color: #666;
+    color: #3D405B;
     font-weight:bold;
 }
 
@@ -196,17 +165,30 @@ h4 {
     color: #666;
     font-weight:bold;
 }
+.boton ,.botones{
+    margin: auto;;
+    
+
+}
+img.product-img {
+    width: 200px;
+}
 
 /* Formatos para Celular */
 @media (min-width:361px) { 
     /* Imagen y compra en horizontal */
 .imagen-compra {
-    flex-direction: row;
+    flex-direction: column;
     }   
 }
 
 /* Formatos para Tablet y Desktop */
 @media (min-width:769px) {
+
+    .foto1{
+        width: 450px;
+        height: auto;
+    }
     /*muestra boton completo */
     .boton-compra {
         display: block;
@@ -222,6 +204,11 @@ h4 {
     .boton-compra2 {
         display: none;
     }
+    .boton ,.botones{
+        margin-left: 40%;
+        
+    
+    }
     /* Muestra Segunda Foto */
     .foto2 {
         display: flex;
@@ -236,6 +223,9 @@ h4 {
         flex-direction: row;
         }
 
-    
+        .imagen-compra {
+            flex-direction: row;
+            }   
+            
     
 }

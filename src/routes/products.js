@@ -16,19 +16,21 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage })
 
-router.get('/', controller.mostrarProductos); 
 
-router.get("/:id", controller.detallar); 
+/*envio de vistas*/
+router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
+router.post('/', upload.single('image'), controller.store); //Ruta que crea y guarda
+router.get('/cart',controller.comprar);
+router.get("/createproduct", controller.create); // Vista de crear
+router.get("/editproduct/:id", controller.edit); //vista de editar
+router.put("/editproduct/:id", controller.update); //Edita productos?
+router.get("/:id", controller.detallar); // Muestra detalle de producto
+router.put("/editproduct/:id", controller.update); //Edita productos?
+router.delete("/:id", controller.delete); // Ruta que elimina el producto
 
 
-router.get("/createproduct", controller.create);
-router.post('/', upload.single('image'), controller.store); //Ruta que guarda
-router.get("/editproduct", controller.edit);
-router.delete("/:id", controller.delete);
 
 
-
-/*carrito*/
 router.get('/cart',controller.comprar);
 
 

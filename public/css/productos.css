@@ -2,6 +2,10 @@
 .cuerpo {
     margin-top: 160px;
 }
+
+.list-title {
+    margin-bottom: 10px;
+}
 /* Dar Formato a la palabra categoria*/
 .linea-producto p {
     font-size: 20px;
@@ -48,9 +52,40 @@ div.formularios a {
 .specs{
     display: none;
 }
+a.specs li {
+    text-decoration: none;
+}
 article.product{
     display: flex;
 justify-content: center;
+}
+
+.producto-img {
+    width:80px;
+  height:auto;
+}
+div.img-specs{
+    display: flex;
+    justify-content: center;
+}
+.prod-box{
+    display: inline-block;
+   
+}
+.prod-box img {
+    width: 200px;
+}
+div.list {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    
+}
+div.products {
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 /*Reglas para pantallas superiores a 769px*/
 @media (min-width:769px) {
@@ -59,12 +94,25 @@ justify-content: center;
         display: none;
     }*/
     /*mostrar el menu lateral y darle formato*/
-    article.product{
+    .unit-product {
         display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
     }
-
+    div.products {
+        
+        margin-left: 160px;
+    }
+    div.img-specs {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .img-specs {
+        display: flex;
+        padding: 10px;
+    }
     .specs {
+        list-style: none;
         display: flex;
     flex-direction: column;
     justify-content: center;
