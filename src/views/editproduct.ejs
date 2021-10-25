@@ -44,16 +44,16 @@
         <div class="form-control">
             <label for="">Color</label>
             <select name="color" id="color">
-                <option value="white">Blanco</option>
-                <option value="black">Negro</option>
-                <option value="blue">Azul</option>
-                <option value="yellow">Amarillo</option>
-                <option value="green">Verde</option>
-                <option value="orange">Naranja</option>
-                <option value="red">Rojo</option>
-                <option value="pink">Rosa</option>
-                <option value="purple">Violeta</option>
-                <option value="gold">Dorado</option>
+                <option value="white" <%= product.color == "white" ? "selected" : ""; %>>Blanco</option>
+                <option value="black"<%= product.color == "black" ? "selected" : ""; %>>Negro</option>
+                <option value="blue"<%= product.color == "blue" ? "selected" : ""; %>>Azul</option>
+                <option value="yellow"<%= product.color == "yellow" ? "selected" : ""; %>>Amarillo</option>
+                <option value="green"<%= product.color == "green" ? "selected" : ""; %>>Verde</option>
+                <option value="orange"<%= product.color == "orange" ? "selected" : ""; %>>Naranja</option>
+                <option value="red"<%= product.color == "red" ? "selected" : ""; %>>Rojo</option>
+                <option value="pink"<%= product.color == "pink" ? "selected" : ""; %>>Rosa</option>
+                <option value="purple"<%= product.color == "purple" ? "selected" : ""; %>>Violeta</option>
+                <option value="gold"<%= product.color == "gold" ? "selected" : ""; %>>Dorado</option>
             </select>
         </div>
         <div class="form-control">
