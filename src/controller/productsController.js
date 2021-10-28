@@ -68,7 +68,7 @@ let controller = {
                 product.material = req.body.material;
                 product.color = req.body.color;
                 product.measurements = req.body.measurements;
-                product.image = req.file.filename || 'img-default.jpeg'
+                product.image = req.file == "" ? 'img-default.jpeg' : req.file.filename;
             }
         })
 
