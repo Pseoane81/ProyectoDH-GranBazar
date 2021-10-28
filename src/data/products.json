@@ -3,25 +3,26 @@
         "id": 2,
         "name": "libreta de viaje",
         "viaje": "viaje",
-        "description": " agenda para viajes ",
+        "description": "  agenda para viajes  ",
         "measurements": "50cm",
         "color": "white",
         "material": "cartón duro",
         "origin": "Argentina",
         "price": "1500",
-        "image": "product-1635430729070.jpeg"
+        "image": "product-1635448377541.jpeg",
+        "category": "decoracion"
     },
     {
         "id": 3,
         "name": "espejo ",
-        "category": "muebles",
-        "description": " espejo circular ",
+        "category": "destacados",
+        "description": "  espejo circular  ",
         "measurements": "60cm",
         "color": "white",
         "material": "madera",
         "origin": "Argentina",
         "price": "2500",
-        "image": "product-1635430794823.jpeg"
+        "image": "product-1635444675348.jpeg"
     },
     {
         "id": 4,

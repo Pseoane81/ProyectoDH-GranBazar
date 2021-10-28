@@ -24,36 +24,31 @@
                     </ul>
                 </div>
             </section>
-            <% mostrar.forEach(product => { %>
 
-                <section class="visita">
-                
-
-                
-                    <div class="products-list">
-                    
-                        <article class="product-category">
-                        <a href="./products/<%= product.id %> " class="unit-product">
-                        <img src="/img/productos/<%=product.image%>" width="360" alt="taza" class="p_img"></a>
-                        <div class="specs">
-                            <div>Nombre: <%=product.name%> </div>
-                            <div>Categoria: <%=product.category%></div>  
-                            <div>Medidas: <%=product.measurements%></div>
-                            <div>Color:<%=product.color%></div>
-                            <div>Material:<%=product.material%></div>
-                            <div>Origen: <%=product.origin%></div>
-                            <div>Precio: <%=product.price%></div>
+            <section class="all-products">
+                <% mostrar.forEach(product => { %>
     
-                    </div>
-                        
-                
+                    <a href="./products/<%= product.id %> ">
+                        <div class="products-list"> 
+                            <img src="/img/productos/<%=product.image%>" width="360" alt="taza" class="p_img"></a>
+                            <div class="specs">
+                                <div>Nombre: <%=product.name%> </div>
+                                <div>Categoria: <%=product.category%></div>  
+                                <div>Medidas: <%=product.measurements%></div>
+                                <div>Color:<%=product.color%></div>
+                                <div>Material:<%=product.material%></div>
+                                <div>Origen: <%=product.origin%></div>
+                                <div>Precio: <%=product.price%></div>
+                        </div>
+                            
                     
+                      
+                     
+                    
+                    
+                </div>
+                <% }) %>  
                 </section>
-             <% }) %>      
-                
-                
-            </div>
-            </section>
 
             
         </div>
