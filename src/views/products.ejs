@@ -3,7 +3,7 @@
 <%- include ('partials/head') %> 
 <body>
     <%- include('partials/header')  %> 
-    <main class="cuerpo">
+    <main class="body-product">
         
         <section class="visita">
             <h3>LISTADO DE PRODUCTOS</h3>
@@ -24,15 +24,17 @@
                     </ul>
                 </div>
             </section>
-            <section class="visita">
-                <% mostrar.forEach(product => { %>
+            <% mostrar.forEach(product => { %>
+
+                <section class="visita">
+                
 
                 
-                    <div class="products">
+                    <div class="products-list">
                     
-                        <article class="product">
+                        <article class="product-category">
                         <a href="./products/<%= product.id %> " class="unit-product">
-                        <img src="/img/productos/<%=product.image%>" width="360" alt="taza" class="producto_img"></a>
+                        <img src="/img/productos/<%=product.image%>" width="360" alt="taza" class="p_img"></a>
                         <div class="specs">
                             <div>Nombre: <%=product.name%> </div>
                             <div>Categoria: <%=product.category%></div>  
@@ -42,13 +44,13 @@
                             <div>Origen: <%=product.origin%></div>
                             <div>Precio: <%=product.price%></div>
     
-                        </div>
+                    </div>
                         
-                   <% }) %>      
                 
                     
                 </section>
-    
+             <% }) %>      
+                
                 
             </div>
             </section>

@@ -1,38 +1,72 @@
 [
     {
-        "id": 1,
-        "name": "Puff Fiaca",
-        "category": "uso-personal",
-        "description": "Puff Fiaca triangular",
-        "measurements": "180cm",
-        "color": "gold",
-        "material": "Tela y relleno espuma",
-        "origin": "Argentina",
-        "price": "18500",
-        "image": "product-1635114585197.jpg"
-    },
-    {
         "id": 2,
-        "name": "Espejo",
-        "category": "decoracion",
-        "description": "Espejo de pie",
-        "measurements": "1200cms",
-        "color": "Negro",
-        "material": "Madera",
-        "origin": "Marruecos",
-        "price": "30560",
-        "image": "img-default.jpeg"
+        "name": "libreta de viaje",
+        "viaje": "viaje",
+        "description": " agenda para viajes ",
+        "measurements": "50cm",
+        "color": "white",
+        "material": "cartón duro",
+        "origin": "Argentina",
+        "price": "1500",
+        "image": "product-1635430729070.jpeg"
     },
     {
         "id": 3,
-        "name": "Estanteria 4 estantes",
+        "name": "espejo ",
+        "category": "muebles",
+        "description": " espejo circular ",
+        "measurements": "60cm",
+        "color": "white",
+        "material": "madera",
+        "origin": "Argentina",
+        "price": "2500",
+        "image": "product-1635430794823.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "agenda verde",
+        "viaje": "viaje",
+        "description": "  valija para viajes largos  ",
+        "measurements": "50cm",
+        "color": "white",
+        "material": "cartón duro",
+        "origin": "Argentina",
+        "price": "1500",
+        "image": "product-1635434439204.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "bufanda",
         "category": "destacados",
-        "description": "Estanteria de hierro y madera con 4 estantes",
-        "measurements": "190 cm x 80 cm",
-        "color": "black",
-        "material": "Hierro y madera",
-        "origin": "Chile",
-        "price": "29990",
-        "image": "product-1635109504297.jpeg"
+        "description": " ",
+        "measurements": "",
+        "color": "white",
+        "material": "",
+        "origin": "",
+        "price": "",
+        "image": "product-1635437232313.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "perchero",
+        "description": " ",
+        "measurements": "",
+        "color": "white",
+        "material": "",
+        "origin": "",
+        "price": "",
+        "image": "product-1635437268182.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "perchero",
+        "description": " ",
+        "measurements": "",
+        "color": "white",
+        "material": "",
+        "origin": "",
+        "price": "",
+        "image": "product-1635437295233.jpeg"
     }
 ]

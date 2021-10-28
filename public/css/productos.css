@@ -1,6 +1,12 @@
 
-.cuerpo {
+.body-product{
     margin-top: 160px;
+    
+    
+}
+.visita{
+   width: 90%;
+    padding: 30px; 
 }
 
 .list-title {
@@ -15,11 +21,14 @@
 /*Sacarle estilos a la lista del menu lateral*/
 .menu-productos li {   
     list-style-type: none;
+    
 }
 
 /*Agregando distancia del inicio/producto al banner */
-main section h3 {
+section h3 {
     margin-bottom: 20px;
+    color: #3D405B;
+    
 }
 
 /*Agregando distancia de la palabra categorias a inicio*/
@@ -49,43 +58,51 @@ div.formularios a {
     margin-bottom: 5px;
     
 }
+/*aca empieza el cuerpo de todos los productos creados */
 .specs{
-    display: none;
+    display:flex;
 }
 a.specs li {
     text-decoration: none;
 }
-article.product{
-    display: flex;
-justify-content: center;
+article.product-category{
+    
+display: block;
+display: inline-flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+align-self: center;
 }
 
-.producto-img {
-    width:80px;
-  height:auto;
+
+
+.p-img {
+width:50px;
+height:auto;
+
 }
+
 div.img-specs{
     display: flex;
-    justify-content: center;
-}
-.prod-box{
-    display: inline-block;
    
 }
-.prod-box img {
-    width: 200px;
-}
-div.list {
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    
-}
-div.products {
+
+
+div.products-list {
     margin-top: 5px;
     margin-bottom: 10px;
+    
+}
+@media (min-width:361px) {
+    article.product-category{
+        display:block;
+        display: inline-flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        }
 }
 /*Reglas para pantallas superiores a 769px*/
 @media (min-width:769px) {
@@ -95,14 +112,11 @@ div.products {
     }*/
     /*mostrar el menu lateral y darle formato*/
     .unit-product {
-        display: flex;
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     }
-    div.products {
-        
-        margin-left: 160px;
-    }
+   
     div.img-specs {
         display: flex;
         justify-content: flex-start;
@@ -114,10 +128,10 @@ div.products {
     .specs {
         list-style: none;
         display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    line-height: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        line-height: 24px;
     }
     .menu-lateral {
         display: block;
