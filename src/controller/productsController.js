@@ -91,6 +91,7 @@ let controller = {
         let product = {
             id: nuevoId(),
             ...req.body,
+            category:[req.body.category],
              image: req.file.filename || 'img-default.jpeg',
         }
         // Agregamos el nuevo producto

@@ -14,19 +14,19 @@
     <div class="form-control">
         <label for="">Categorias</label>
             <div class="checkbox"> 
-                <label for="muebles" class="check"><input type="checkbox" name="category" id="muebles" class="check" value="muebles">Muebles</label>
+                <label for="muebles" class="check"><input type="checkbox" name="category" id="muebles" class="check" value="muebles" <%= product.category.find(cat => cat == "muebles") ? "checked = true" : ""; %>>Muebles</label>
             </div>
             <div class="checkbox"> 
-                <label for="decoracion" class="check" ><input type="checkbox" name="category" id="decoracion" class="check"value="decoracion">Decoración</label>
+                <label for="decoracion" class="check" ><input type="checkbox" name="category" id="decoracion" class="check"value="decoracion" <%= product.category.find(cat => cat == "decoracion") ? "checked = true" : ""; %>>Decoración</label>
             </div>
             <div class="checkbox"> 
-                <label for="viaje"class="check"><input type="checkbox" name="viaje" id="category" class="check"value="viaje">Viaje</label>
+                <label for="viaje"class="check"><input type="checkbox" name="viaje" id="category" class="check"value="viaje" <%= product.category.find(cat => cat == "viaje") ? "checked = true" : ""; %>>Viaje</label>
             </div>
             <div class="checkbox"> 
-                <label for="uso-personal"class="check"><input type="checkbox" name="category" id="uso-personal" class="check"value="uso-personal">Uso personal</label>
+                <label for="uso-personal"class="check"><input type="checkbox" name="category" id="uso-personal" class="check"value="uso-personal" <%= product.category.find(cat => cat == "uso-personal") ? "checked = true" : ""; %>>Uso personal</label>
             </div>
             <div class="checkbox"> 
-                <label for="destacados"class="check"><input type="checkbox" name="category" id="destacados" class="check"value="destacados">Destacados</label>
+                <label for="destacados"class="check"><input type="checkbox" name="category" id="destacados" class="check"value="destacados" <%= product.category.find(cat => cat == "destacados") ? "checked = true" : ""; %>>Destacados</label>
             </div>
         <div class="form-control">
             <label for="">Selecciona las imagenes para tu producto</label>

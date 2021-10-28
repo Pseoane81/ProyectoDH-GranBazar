@@ -2,7 +2,7 @@
     {
         "id": 2,
         "name": "libreta de viaje",
-        "viaje": "viaje",
+        "category": ["viaje","muebles"],
         "description": "   agenda para viajes   ",
         "measurements": "50cm",
         "color": "black",
@@ -14,7 +14,7 @@
     {
         "id": 3,
         "name": "espejo ",
-        "category": "destacados",
+        "category": ["destacados"],
         "description": "  espejo circular  ",
         "measurements": "60cm",
         "color": "white",
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "name": "agenda verde",
-        "viaje": "viaje",
+        "viaje": ["viaje"],
         "description": "  valija para viajes largos  ",
         "measurements": "50cm",
         "color": "white",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "name": "bufanda",
-        "category": "destacados",
+        "category": ["destacados"],
         "description": " ",
         "measurements": "",
         "color": "white",
@@ -50,6 +50,7 @@
     {
         "id": 6,
         "name": "perchero",
+        "category": ["destacados"],
         "description": " ",
         "measurements": "",
         "color": "white",
@@ -61,6 +62,7 @@
     {
         "id": 7,
         "name": "perchero",
+        "category": ["destacados"],
         "description": " ",
         "measurements": "",
         "color": "white",
@@ -68,5 +70,19 @@
         "origin": "",
         "price": "",
         "image": "product-1635437295233.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "aaaa",
+        "category": [
+            "muebles"
+        ],
+        "description": " a",
+        "measurements": "a",
+        "color": "Amarillo",
+        "material": "aaaa",
+        "origin": "a",
+        "price": "a",
+        "image": "product-1635456108636.jpg"
     }
 ]
