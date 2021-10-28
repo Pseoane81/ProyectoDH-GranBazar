@@ -3,14 +3,13 @@
         "id": 2,
         "name": "libreta de viaje",
         "viaje": "viaje",
-        "description": "  agenda para viajes  ",
+        "description": "   agenda para viajes   ",
         "measurements": "50cm",
-        "color": "white",
+        "color": "black",
         "material": "cartón duro",
         "origin": "Argentina",
         "price": "1500",
-        "image": "product-1635448377541.jpeg",
-        "category": "decoracion"
+        "image": "product-1635450476421.jpeg"
     },
     {
         "id": 3,
