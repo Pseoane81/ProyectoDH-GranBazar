@@ -2,19 +2,27 @@
     {
         "id": 2,
         "name": "libreta de viaje",
-        "category": ["viaje","muebles"],
-        "description": "   agenda para viajes   ",
+        "category": [
+            "muebles",
+            "decoracion",
+            "viaje",
+            "uso-personal",
+            "destacados"
+        ],
+        "description": "      agenda para viajes      ",
         "measurements": "50cm",
-        "color": "black",
+        "color": "Blanco",
         "material": "cartón duro",
         "origin": "Argentina",
         "price": "1500",
-        "image": "product-1635450476421.jpeg"
+        "image": "img-default.jpeg"
     },
     {
         "id": 3,
         "name": "espejo ",
-        "category": ["destacados"],
+        "category": [
+            "destacados"
+        ],
         "description": "  espejo circular  ",
         "measurements": "60cm",
         "color": "white",
@@ -26,7 +34,9 @@
     {
         "id": 4,
         "name": "agenda verde",
-        "viaje": ["viaje"],
+        "viaje": [
+            "viaje"
+        ],
         "description": "  valija para viajes largos  ",
         "measurements": "50cm",
         "color": "white",
@@ -38,7 +48,9 @@
     {
         "id": 5,
         "name": "bufanda",
-        "category": ["destacados"],
+        "category": [
+            "destacados"
+        ],
         "description": " ",
         "measurements": "",
         "color": "white",
@@ -50,7 +62,9 @@
     {
         "id": 6,
         "name": "perchero",
-        "category": ["destacados"],
+        "category": [
+            "destacados"
+        ],
         "description": " ",
         "measurements": "",
         "color": "white",
@@ -62,7 +76,9 @@
     {
         "id": 7,
         "name": "perchero",
-        "category": ["destacados"],
+        "category": [
+            "destacados"
+        ],
         "description": " ",
         "measurements": "",
         "color": "white",

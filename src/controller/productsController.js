@@ -68,7 +68,7 @@ let controller = {
                 product.material = req.body.material;
                 product.color = req.body.color;
                 product.measurements = req.body.measurements;
-                product.image = req.file == "" ? 'img-default.jpeg' : req.file.filename;
+                product.image = req.file == undefined ? 'img-default.jpeg' : req.file.filename;
             }
         })
 
@@ -91,7 +91,7 @@ let controller = {
         let product = {
             id: nuevoId(),
             ...req.body,
-            category:[req.body.category],
+            //category:[req.body.category],
              image: req.file.filename || 'img-default.jpeg',
         }
         // Agregamos el nuevo producto
