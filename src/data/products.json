@@ -1,86 +1,53 @@
 [
     {
-        "id": 3,
-        "name": "espejo ",
+        "id": 1,
+        "name": "Bolsa Agua Caliente Cactus",
         "category": [
+            "uso-personal",
             "destacados"
         ],
-        "description": "  espejo circular  ",
-        "measurements": "60cm",
-        "color": "white",
-        "material": "madera",
-        "origin": "Argentina",
-        "price": "2500",
-        "image": "product-1635444675348.jpeg"
+        "description": " Bolsa de agua caliente para aliviar dolores en el cuerpo. Diseños originales",
+        "measurements": "20 x 34 x 2cm",
+        "color": "Blanco",
+        "material": "Goma",
+        "origin": "Peru",
+        "price": "2590",
+        "image": "product-1635874263233.jpeg"
     },
     {
-        "id": 4,
-        "name": "agenda verde",
-        "viaje": [
-            "viaje"
-        ],
-        "description": "  valija para viajes largos  ",
-        "measurements": "50cm",
-        "color": "white",
-        "material": "cartón duro",
+        "id": 2,
+        "name": "Macetero colgante",
+        "category": "destacados",
+        "description": "  Macetero colgante geométrico de metal. Incluye maceta plástica. Alto de estructura y cadena con gancho: 80cm. No incluye planta   ",
+        "measurements": "10 x 9cm",
+        "color": "Negro",
+        "material": "Metal y plástico",
         "origin": "Argentina",
-        "price": "1500",
-        "image": "product-1635434439204.jpeg"
-    },
-    {
-        "id": 5,
-        "name": "bufanda",
-        "category": [
-            "destacados"
-        ],
-        "description": " ",
-        "measurements": "",
-        "color": "white",
-        "material": "",
-        "origin": "",
-        "price": "",
-        "image": "product-1635437232313.jpeg"
+        "price": "2990",
+        "image": "product-1635874764850.jpeg"
     },
     {
         "id": 6,
-        "name": "perchero",
-        "category": [
-            "destacados"
-        ],
-        "description": " ",
-        "measurements": "",
-        "color": "white",
-        "material": "",
-        "origin": "",
-        "price": "",
-        "image": "product-1635437268182.jpeg"
+        "name": "Estanteria 4 estantes",
+        "category": "muebles",
+        "description": "Estanteria de hierro y madera 4 estantes",
+        "measurements": "190 cm x 80 cm",
+        "color": "Negro",
+        "material": "Hierro y madera",
+        "origin": "Chile",
+        "price": "29990",
+        "image": "product-1635874542152.jpeg"
     },
     {
-        "id": 7,
-        "name": "perchero",
-        "category": [
-            "destacados"
-        ],
-        "description": " ",
-        "measurements": "",
-        "color": "white",
-        "material": "",
-        "origin": "",
-        "price": "",
-        "image": "product-1635437295233.jpeg"
-    },
-    {
-        "id": 8,
-        "name": "aaaa",
-        "category": [
-            "muebles"
-        ],
-        "description": " a",
-        "measurements": "a",
+        "id": 9,
+        "name": "Identificadores de equipaje",
+        "viaje": "viaje",
+        "description": "Identificador de equipaje con display de datos en su reverso y cinta sujetadora ",
+        "measurements": "7x10.5cm",
         "color": "Amarillo",
-        "material": "aaaa",
-        "origin": "a",
-        "price": "a",
-        "image": "product-1635456108636.jpg"
+        "material": "Goma",
+        "origin": "China",
+        "price": "389",
+        "image": "product-1635874672231.jpeg"
     }
 ]

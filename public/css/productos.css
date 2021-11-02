@@ -65,6 +65,21 @@ div.products-list {
     margin-bottom: 20px;
 }
 
+table {
+    width: 100%;
+ }
+ th, td {
+    width: 25%;
+    text-align: left;
+ }
+ table td.botones-list{
+     display: flex;
+     justify-content: center;
+ }
+table thead.encabezado {
+    font-size: 20px;
+    font-weight: bold;
+}
 @media (min-width:361px) {
     article.product-category{
         display:block;
