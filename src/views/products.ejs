@@ -10,7 +10,7 @@
         </section>
     
         <div class="menu-imagenes"> 
-            <section class="menu-lateral">
+            <!--<section class="menu-lateral">
                 <div class="linea-producto">
                     <p>Categorias</p>
                 </div>
@@ -23,33 +23,37 @@
                         
                     </ul>
                 </div>
-            </section>
+            </section>-->
+            
+            <table class="col-12">
+				<thead class="encabezado">
+					<td>ID</td>
+                    <td>Nombre</td>
+					<td>Precio</td>
+					<td>Acciones</td>
+					
+				</thead>
+				<tbody>
+					<% mostrar.forEach(product => { %>
+						<tr>
+							<td><%= product.id %></td>
+							<td><%= product.name %></td>
+                            <td><%= product.price %></td>
+							<td class="botones-list">
+								<a href="/products/<%= product.id %>" class="action-buttonedit">Detalle</a>
+								<a href="/products/editproduct/<%= product.id %>" class="action-buttonedit">Editar</a>
+							
+								<form action="/products/<%= product.id %>?_method=DELETE" method="post" class="d-inline">
+									<button class="action-buttondelete">Borrar</button>
+								</form>
+							</td>
+						</tr>
+					<% }) %>
+				</tbody>
 
-            <section class="all-products">
-                <% mostrar.forEach(product => { %>
-    
-                    <a href="./products/<%= product.id %> ">
-                        <div class="products-list"> 
-                            <img src="/img/productos/<%=product.image%>" width="360" alt="taza" class="p_img"></a>
-                            <div class="specs">
-                                <div>Nombre: <%=product.name%> </div>
-                                <div>Categoria: <%=product.category%></div>  
-                                <div>Medidas: <%=product.measurements%></div>
-                                <div>Color:<%=product.color%></div>
-                                <div>Material:<%=product.material%></div>
-                                <div>Origen: <%=product.origin%></div>
-                                <div>Precio: <%=product.price%></div>
-                        </div>
-                            
-                    
-                      
-                     
-                    
-                    
-                </div>
-                <% }) %>  
-                </section>
+			</table>
 
+            
             
         </div>
         

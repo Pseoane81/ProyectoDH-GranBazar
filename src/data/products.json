@@ -1,23 +1,5 @@
 [
     {
-        "id": 2,
-        "name": "libreta de viaje",
-        "category": [
-            "muebles",
-            "decoracion",
-            "viaje",
-            "uso-personal",
-            "destacados"
-        ],
-        "description": "      agenda para viajes      ",
-        "measurements": "50cm",
-        "color": "Blanco",
-        "material": "cartón duro",
-        "origin": "Argentina",
-        "price": "1500",
-        "image": "img-default.jpeg"
-    },
-    {
         "id": 3,
         "name": "espejo ",
         "category": [
