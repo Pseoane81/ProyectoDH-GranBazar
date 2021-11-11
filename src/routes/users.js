@@ -4,22 +4,23 @@ const controller = require('../controller/usersController')
 
 const path=require('path');
 
+/*middleware*/
+const uploadFile =require('../middleware/multerMiddleware');
+const validation=require ('../middleware/validatorRegisterMiddleware');
 
 /*Register*/
 router.get('/register', controller.register);
 
-router.post('/register', (req,res)=> {
-    res.send('Ya te registraste');
-});
+
     
 /*Login*/
 router.get('/login',controller.login);
+router.post('/login', controller.logged);
 
 
-router.post("/login",(req,res)=>{
-    res.send('Ya te logueaste');
-});
 
+//proceso de registro
+router.post('/register',uploadFile.single('avatar'),validation,controller.processRegister);
 
 
 

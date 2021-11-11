@@ -6,16 +6,19 @@
 
         <main> 
         <div class="ingresa">INGRESÁ A TU CUENTA</div>
-        <form action="/login" method="POST" class="login">
+        <form action="/users/login" method="POST" class="login">
         <div class="form-control">
             <label for="">Email</label>
             <input type="email" name="email">
         </div>
+
         
         <div class="form-control">
             <label for="">Contraseña</label>
             <input type="password" name="password">
         </div>
+
+        <input type="checkbox" name="recordame" id=""><label for="">Recordame</label>
         
         <button type="submit" class="enviar">Iniciar sesión</button>
         

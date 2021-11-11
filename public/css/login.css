@@ -11,6 +11,10 @@ main {
     font-size: 32px;
 
 }
+/*aviso del register-validetor*/
+.text-danger{
+    color:red;
+}
 
 .crea {
     margin-top: 150px;
