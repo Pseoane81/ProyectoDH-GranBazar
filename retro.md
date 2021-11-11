@@ -18,12 +18,23 @@ Sprint 2:
 
 Sprint 3: 
 
-1. Comenzar a hacer : A la hora de pactar la meet para codear en equipo, ver el contenido en playground para estar todos con los mismos conocimientos.
+1. Comenzar a hacer: A la hora de pactar la meet para codear en equipo, ver el contenido en playground para estar todos con los mismos conocimientos.
 
 2. Hacer más: Organizar el tiempo para llegar al sprint mediante objetivos cortos. Utilizar tiempo restante para mejorar cosas del sprint pasado (ya sea organizar carpetas, editar estilos, etc)
 
 3. Continuar haciendo: Meets semanales. Meets extras.
 
-4. Hacer menos: Dejar tareas para último momento por "menor dificultad".
+4. Hacer menos: No procrastinar. Dejar tareas para último momento por "menor dificultad".
+
+
+Sprint 4:
+
+1. Comenzar a hacer: Ponernos de acuerdo para ver el contenido en playground para estar con los mismos conocimientos a la hora de codear en equipo.
+
+2. Hacer más: Organizar el tiempo para llegar al sprint mediante objetivos cortos. Utilizar tiempo restante para mejorar cosas del sprint pasado (ya sea organizar carpetas, editar estilos, etc)
+
+3. Continuar haciendo: Codear en equipo. Meets semanales y meets extras. 
+
+4. Hacer menos: No procrastinar. 
 
 
