@@ -35,7 +35,7 @@ module.exports = {
                 id:iduser(),
                 ...req.body,
                 password: bcrypt.hashSync(req.body.password, 12),
-                avatars: req.file.filename
+                avatar: req.file.filename
             }
             delete user.repassword;
             
@@ -62,15 +62,12 @@ module.exports = {
 
         });
        res.redirect('/');
-    }
+    },
+
+    userProfile: (req,res) => {
+        res.render('userprofile');
     
-        
-
-
-
-
-
-
+    }
 
  }
 

@@ -16,5 +16,14 @@
         "dob": "",
         "password": "$2a$12$tDUkebGGAgq6KaapGbZ2BOsaNcZ485HcmOIqG4yN3Hg/uxQLJ1IVu",
         "avatars": "1636588580092_img.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Melina",
+        "lastname": "Bassano",
+        "email": "mbassano@gmail.com",
+        "dob": "1990-02-14",
+        "password": "$2a$12$m1KXrSr92X0dQlhueTLtT./ddxT7fBdeRigmSGmH7FrLj2NQWPDh2",
+        "avatars": "1636635611892_img.png"
     }
 ]
