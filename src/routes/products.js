@@ -18,9 +18,10 @@ const upload = multer({ storage })
 
 
 /*envio de vistas*/
-router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
+//router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
 router.post('/', upload.single('image'), controller.store); //Ruta que crea y guarda
 router.get('/cart',controller.comprar);
+router.get('/inventory', controller.inventory); // Te lleva a la vista de todos los productos
 router.get("/createproduct", controller.create); // Vista de crear
 router.get("/editproduct/:id", controller.edit); //vista de editar
 //router.put("/editproduct/:id",upload.single('image'), controller.update); //Edita productos?

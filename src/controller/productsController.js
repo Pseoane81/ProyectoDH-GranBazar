@@ -16,17 +16,21 @@ const nuevoId = () => {
 }
 
 let controller = {
-    mostrarProductos:  (req,res)=> {
-       let mostrar=[];
+    inventory:  (req,res)=> {
+       let inventory=[];
        products.forEach(product =>{
-           mostrar.push(product);
+           inventory.push(product);
        });
-       res.render('products',{mostrar});
-    },
-
-       
-        
+       res.render('inventory',{inventory});
+    },      
     
+    /*mostrarProductos:  (req,res)=> {
+        let mostrar=[];
+        products.forEach(product =>{
+            mostrar.push(product);
+        });
+        res.render('products',{mostrar});
+     },*/
 
     detallar: function (req, res) { 
         let id = req.params.id;
