@@ -3,6 +3,7 @@ const router = express.Router();
 const path=require('path');
 const controller = require('../controller/productsController')
 const multer = require('multer');
+const validation=require ('../middleware/validatorProductsMiddleware');
 
 /* Configuracion de multer */
 const storage = multer.diskStorage({
@@ -18,8 +19,11 @@ const upload = multer({ storage })
 
 
 /*envio de vistas*/
-//router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
-router.post('/', upload.single('image'), controller.store); //Ruta que crea y guarda
+router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
+router.get('/decoracion', controller.decoracion); // Te lleva a la vista DECORACION
+router.get('/usopersonal', controller.usopersonal); // Te lleva a la vista USO PERSONAL
+router.get('/viajes', controller.viajes); // Te lleva a la vista VIAJES
+router.post('/', upload.single('image'),validation, controller.store); //Ruta que crea y guarda
 router.get('/cart',controller.comprar);
 router.get('/inventory', controller.inventory); // Te lleva a la vista de todos los productos
 router.get("/createproduct", controller.create); // Vista de crear

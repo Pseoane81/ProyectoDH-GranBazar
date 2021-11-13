@@ -1,5 +1,6 @@
 const path=require('path');
 const fs = require('fs'); 
+const { validationResult } = require('express-validator');
 
 /* Logica para traer los productos */
 let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), 'utf-8');
@@ -24,13 +25,41 @@ let controller = {
        res.render('inventory',{inventory});
     },      
     
-    /*mostrarProductos:  (req,res)=> {
+    mostrarProductos:  (req,res)=> {
         let mostrar=[];
         products.forEach(product =>{
             mostrar.push(product);
         });
         res.render('products',{mostrar});
-     },*/
+     },
+     decoracion:  (req,res)=> {       
+        let mostrar=[];
+        products.forEach(product =>{
+            if(product.category.indexOf("decoracion")!=-1){
+            mostrar.push(product);
+            }
+        });               
+        res.render('products',{mostrar}); 
+        },
+    usopersonal:  (req,res)=> {       
+        let mostrar=[];
+        products.forEach(product =>{
+            if(product.category.indexOf("uso-personal")!=-1){
+            mostrar.push(product);
+            }
+        });               
+        res.render('products',{mostrar}); 
+        },
+    
+    viajes:  (req,res)=> {       
+         let mostrar=[];
+        products.forEach(product =>{
+            if(product.category.indexOf("viaje")!=-1){
+            mostrar.push(product);
+            }
+        });               
+        res.render('products',{mostrar}); 
+        },
 
     detallar: function (req, res) { 
         let id = req.params.id;
@@ -91,6 +120,13 @@ let controller = {
     
     },
     store (req, res) {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+			return res.render('createproduct', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
         // Creamos el producto base
         let product = {
             id: nuevoId(),

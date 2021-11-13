@@ -4,7 +4,7 @@
         "name": "Bolsa Agua Caliente Cactus",
         "category": [
             "uso-personal",
-            "destacados"
+            "decoracion"
         ],
         "description": " Bolsa de agua caliente para aliviar dolores en el cuerpo. Diseños originales",
         "measurements": "20 x 34 x 2cm",
@@ -29,7 +29,7 @@
     {
         "id": 6,
         "name": "Estanteria 4 estantes",
-        "category": "muebles",
+        "category": "decoracion",
         "description": "Estanteria de hierro y madera 4 estantes",
         "measurements": "190 cm x 80 cm",
         "color": "Negro",
@@ -41,7 +41,7 @@
     {
         "id": 9,
         "name": "Identificadores de equipaje",
-        "viaje": "viaje",
+        "category": "viaje",
         "description": "Identificador de equipaje con display de datos en su reverso y cinta sujetadora ",
         "measurements": "7x10.5cm",
         "color": "Amarillo",

@@ -10,67 +10,112 @@
          
     <div class="form-control">
         <label for="">Nombre</label>
-        <input type="text" name="name" required>
+        <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>">
+        <% if (locals.errors && errors.name) { %>
+            <div class="text-danger">
+                <%= errors.name.msg %> 
+            </div>
+        <% } %>
     </div>
     <div class="form-control">
         <label for="">Categorias</label>
         <div class="checkbox"> 
-            <label for="muebles" class="check"><input type="checkbox" name="category" id="muebles" value="muebles"class="check">Muebles</label>
+            <label for="muebles" class="check"><input type="checkbox" name="category" id="muebles" value="muebles"class="check"<%= locals.oldData && ("muebles" === oldData.category) ? 'checked' : null %>>Muebles</label>
         </div>
         <div class="checkbox"> 
-            <label for="decoracion" class="check" ><input type="checkbox" name="category" id="decoracion" value="decoracion"class="check">Decoración</label>
+            <label for="decoracion" class="check" ><input type="checkbox" name="category" id="decoracion" value="decoracion"class="check"<%= locals.oldData && ("decoracion" === oldData.category) ? 'checked' : null %>>Decoración</label>
         </div>
         <div class="checkbox"> 
-            <label for="viaje"class="check"><input type="checkbox" name="viaje" id="category" value="viaje"class="check">Viaje</label>
+            <label for="viaje"class="check"><input type="checkbox" name="category" id="category" value="viaje"class="check"<%= locals.oldData && ("viaje" === oldData.category) ? 'checked' : null %>>Viaje</label>
         </div>
         <div class="checkbox"> 
-            <label for="uso-personal"class="check"><input type="checkbox" name="category" id="uso-personal" value="uso-personal"class="check">Uso personal</label>
+            <label for="uso-personal"class="check"><input type="checkbox" name="category" id="uso-personal" value="uso-personal"class="check"<%= locals.oldData && ("uso-personal" === oldData.category) ? 'checked' : null %>>Uso personal</label>
         </div>
         <div class="checkbox"> 
-            <label for="destacados"class="check"></label><input type="checkbox" name="category" id="destacados" value="destacados"class="check">Destacados</label>
+            <label for="destacados"class="check"></label><input type="checkbox" name="category" id="destacados" value="destacados"class="check"<%= locals.oldData && ("destacados" === oldData.category) ? 'checked' : null %>>Destacados</label>
         </div>
+        <% if (locals.errors && errors.category) { %>
+            <div class="text-danger">
+                <%= errors.category.msg %> 
+            </div>
+        <% } %>
     
         <div class="form-control">
             <label for="">Selecciona las imagenes para tu producto</label>
-            <input type="file" name="image" accept=".png, .jpg, .jpeg" multiple required>
-            <span class="imgs">Solo acepta .png, .jpg, .jpeg</span>
+            <input type="file" name="image" accept=".png, .jpg, .jpeg" multiple>
+            <span class="imgs">Solo acepta .png, .jpg, .jpeg .gif</span>
+            <% if (locals.errors && errors.image) { %>
+                <div class="text-danger">
+                    <%= errors.image.msg %> 
+                </div>
+            <% } %>
         </div>
         <div class="form-control descripcion" >
         <label for="descripcion">Descripcion del producto</label>
         <textarea class="text-description" name="description" id="text-description"> </textarea>
+        <% if (locals.errors && errors.description) { %>
+            <div class="text-danger">
+                <%= errors.description.msg %> 
+            </div>
+        <% } %>
         </div>
         <div class="form-control">
             <label for="">Medidas:</label>
-            <input type="text" name="measurements">
+            <input type="text" name="measurements" value="<%= locals.oldData ? oldData.measurements : null %>">
+            <% if (locals.errors && errors.measurements) { %>
+                <div class="text-danger">
+                    <%= errors.measurements.msg %> 
+                </div>
+            <% } %>
         </div>
         <div class="form-control">
             <label for="">Color</label>
             <select name="color" id="color">
-                <option value="Blanco">Blanco</option>
-                <option value="Negro">Negro</option>
-                <option value="Azul">Azul</option>
-                <option value="Amarillo">Amarillo</option>
-                <option value="Verde">Verde</option>
-                <option value="Naranja">Naranja</option>
-                <option value="Rojo">Rojo</option>
-                <option value="Rosa">Rosa</option>
-                <option value="Violeta">Violeta</option>
-                <option value="Dorado">Dorado</option>
-                <option value="Lila">Lila</option>
-                <option value="Fucsia">Fucsia</option>
+                <option value="Blanco" <%= locals.oldData && ("blanco" === oldData.color) ? 'selected' : null %>>Blanco</option>
+                <option value="Negro"<%= locals.oldData && ("Negro" === oldData.color) ? 'selected' : null %>>Negro</option>
+                <option value="Azul"<%= locals.oldData && ("Azul" === oldData.color) ? 'selected' : null %>>Azul</option>
+                <option value="Amarillo"<%= locals.oldData && ("Amarillo" === oldData.color) ? 'selected' : null %>>Amarillo</option>
+                <option value="Verde"<%= locals.oldData && ("Verde" === oldData.color) ? 'selected' : null %>>Verde</option>
+                <option value="Naranja"<%= locals.oldData && ("Naranja" === oldData.color) ? 'selected' : null %>>Naranja</option>
+                <option value="Rojo"<%= locals.oldData && ("Rojo" === oldData.color) ? 'selected' : null %>>Rojo</option>
+                <option value="Rosa"<%= locals.oldData && ("Rosa" === oldData.color) ? 'selected' : null %>>Rosa</option>
+                <option value="Violeta"<%= locals.oldData && ("Violeta" === oldData.color) ? 'selected' : null %>>Violeta</option>
+                <option value="Dorado"<%= locals.oldData && ("Dorado" === oldData.color) ? 'selected' : null %>>Dorado</option>
+                <option value="Lila"<%= locals.oldData && ("Lila" === oldData.color) ? 'selected' : null %>>Lila</option>
+                <option value="Fucsia"<%= locals.oldData && ("Fucsia" === oldData.color) ? 'selected' : null %>>Fucsia</option>
             </select>
+            <% if (locals.errors && errors.color) { %>
+                <div class="text-danger">
+                <%= errors.color.msg %> 
+                </div>
+            <% } %>
         </div>
         <div class="form-control">
             <label for="">Material</label>
-            <input type="text" name="material" class="material">
+            <input type="text" name="material" class="material" value="<%= locals.oldData ? oldData.material : null %>">
+            <% if (locals.errors && errors.material) { %>
+                <div class="text-danger">
+                    <%= errors.material.msg %> 
+                </div>
+            <% } %>
         </div>
         <div class="form-control">
             <label for="">Pais de origen</label>
-            <input type="text" name="origin" class="origin">
+            <input type="text" name="origin" class="origin" value="<%= locals.oldData ? oldData.origin : null %>">
+            <% if (locals.errors && errors.origin) { %>
+                <div class="text-danger">
+                    <%= errors.origin.msg %> 
+                </div>
+            <% } %>
         </div>
         <div class="form-control">
             <label for="">Precio</label>
-            <input type="text" name="price" class="price">
+            <input type="text" name="price" class="price" value="<%= locals.oldData ? oldData.price : null %>">
+            <% if (locals.errors && errors.price) { %>
+                <div class="text-danger">
+                    <%= errors.price.msg %> 
+                </div>
+            <% } %>
         </div>
         <div class="buttons">
         <a href="#"><button type="submit" class="enviar">AGREGAR</button></a>
