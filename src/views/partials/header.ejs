@@ -9,13 +9,27 @@
         </div></div>
         
     <nav class="main-navbar">
-        <ul class="left-navbar" >
-            <li><a href="/products/inventory">Todos los productos</a></li>
+        <% if (locals.isLogged) { %>
+        <ul class="left-navbar" >          
             <li><a href="/products/decoracion">Decoracion</a></li>
             <li><a href="/products/usopersonal">Uso personal</a></li> 
             <li><a href="/products/viajes">Viajes</a></li>
+            <li><a href="/users/userprofile">Hola <%= locals.userLogged.name %></a> </li>
+            <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+        </ul>
+        <ul class="right-navbar">
             <li><a href="/products/createproduct">Crear producto nuevo</a></li>
-    
+            <li><a href="/products/inventory">Todos los productos</a></li>
+            <li><a href="/users/userprofile">Mi cuenta <i class="fas fa-user"></i></a></li>
+            <li><a href="/users/logout">Salir <i class="fas fa-sign-out-alt"></i></a></li>
+            <li><a href="#">Favoritos <i class="fas fa-heart"></i></a></li>
+            <li><a href="/products/cart">Carrito <i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+        <% } else { %>
+        <ul class="left-navbar" >          
+            <li><a href="/products/decoracion">Decoracion</a></li>
+            <li><a href="/products/usopersonal">Uso personal</a></li> 
+            <li><a href="/products/viajes">Viajes</a></li>
         </ul>
         <ul class="right-navbar">
             <li><a href="/users/register">Registrate <i class="fas fa-id-card"></i></a></li>
@@ -23,6 +37,7 @@
             <li><a href="#">Favoritos <i class="fas fa-heart"></i></a></li>
             <li><a href="/products/cart">Carrito <i class="fas fa-shopping-cart"></i></a></li>
         </ul>
+        <% } %>
     </nav>
     </div>    
     <div class="burger-menu">

@@ -5,81 +5,39 @@
     <%- include('partials/header')  %> 
 
         <main class="userprof"> 
-            <h3 class="username">Hola NOMBRE DE USUARIO</h3>
+            <h3 class="username">Hola <%= user.name %>  </h3>
             <form action="">    
-                <div class="img-data"><img src="/public/img/img-default.jpeg" alt="avatar de usuario">
-                    <div class="form-control">
-                        <label for="image">Imagen de perfil</label>
-                        <input type="file" name="avatar" accept=".png, .jpg, .jpeg" >
-                    </div>
+                <div class="img-data"><img src="/img/avatars/<%= user.avatar %>" alt="avatar de usuario">
+                    
                 <div class="user-info">
                    
                     <div class="form-control">
                     <label for="">Nombre</label>
-                    <input type="text" name="name">
+                    <input type="text" name="name" value=<%= user.name %>>
                     </div>
             
                     <div class="form-control">
                     <label for="">Apellido</label>
-                    <input type="text" name="lastname">
+                    <input type="text" name="lastname" value=<%= user.lastname %>>
                     </div>
 
                     <div class="form-control">
                     <label for="">Email</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" value=<%= user.email %>>
                      </div>
 
                     <div class="form-control">
                     <label for="">Fecha de nacimiento</label>
-                    <input type="date" name="dob">
+                    <input type="date" name="dob" value=<%= user.dob %>>
                     </div>
+                          
                 
                     <div class="form-control">
-                    <label for="image">Imagen de perfil</label>
-                    <input type="file" name="avatar" accept=".png, .jpg, .jpeg" >
-                    </div>
-                
-                     <div class="form-control">
                     <label for="">Contraseña</label>
                     <input type="password" name="password">
                     </div>
                     <button type="submit" class="enviar">EDITAR</button>
-                    </form>
-
-            <h3 class="miscompras">Mis compras</h3>
-
-            <table class="mis-compras">
-				<thead class="encabezado">
-					
-                    <td>Nombre</td>
-					<td>Precio</td>
-					
-					
-				</thead>
-				<tbody>
-					
-						<tr>
-							
-							<td>PRODUCTO</td>
-                            <td>precio</td>
-							<td class="botones-list">
-									<button class="volver-a-comprar">Volver a comprar</button>
-								</form>
-							</td>
-						</tr>
-					
-				</tbody>
-
-			</table>
-
-
-            
-                
-                
-                
-                
-                
-                
+                    </form>         
         </main>
 
 
