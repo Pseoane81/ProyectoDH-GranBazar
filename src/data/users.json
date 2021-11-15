@@ -14,25 +14,7 @@
   "lastname": "Acevedo",
   "email": "acevedoelena.23@gmail.com",
   "dob": "",
-  "password": "$2a$12$tDUkebGGAgq6KaapGbZ2BOsaNcZ485HcmOIqG4yN3Hg/uxQLJ1IVu",
-  "avatars": "1636588580092_img.jpeg"
- },
- {
-  "id": 3,
-  "name": "Melina",
-  "lastname": "Bassano",
-  "email": "mbassano@gmail.com",
-  "dob": "1990-02-14",
-  "password": "$2a$12$m1KXrSr92X0dQlhueTLtT./ddxT7fBdeRigmSGmH7FrLj2NQWPDh2",
-  "avatars": "1636635611892_img.png"
- },
- {
-  "id": 4,
-  "name": "Pablo",
-  "lastname": "Seoane",
-  "email": "pablitoseoane@gmail.com",
-  "dob": "1981-10-14",
-  "password": "$2a$12$U2Y4e8nX6L73vNKsc77D9O/jpP5W0W0ZhHm8UNtbOADMcMSbpo8Wu",
-  "avatar": "1636938280999_img.jpg"
+  "password": "$2a$12$p86Lm5usY5fHx8w2BPNjpOALYs.GiUBKSQnw9Y8LiPbGf.lOOzlXa",
+  "avatar": "1636998166537_img.jpeg"
  }
 ]
