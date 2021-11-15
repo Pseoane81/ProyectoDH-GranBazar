@@ -150,6 +150,12 @@ let controller = {
             return product.id != req.params.id;
         })
 
+        let borrarimagen = products.filter(product => {
+            return product.id == req.params.id;
+        })
+        
+        fs.unlinkSync('../public/img/productos/'+borrarimagen[0].image);
+
         let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
 
