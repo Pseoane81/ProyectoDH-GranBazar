@@ -50,6 +50,15 @@ let controller = {
         });               
         res.render('products',{mostrar}); 
         },
+        muebles:  (req,res)=> {       
+            let mostrar=[];
+            products.forEach(product =>{
+                if(product.category.indexOf("muebles")!=-1){
+                mostrar.push(product);
+                }
+            });               
+            res.render('products',{mostrar}); 
+            },
     
     viajes:  (req,res)=> {       
          let mostrar=[];

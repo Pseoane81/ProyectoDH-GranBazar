@@ -2,8 +2,8 @@ const fs = require("fs");
 
 
 const user = {
-    fileName: "./data/users.json", // A Pablo le funciona con esta linea
-    //fileName: "./src//data/users.json", // A Elena le funciona con esta linea
+    //fileName: "./data/users.json", // A Pablo le funciona con esta linea
+    fileName: "./src//data/users.json", // A Elena/Melina le funciona con esta linea
     // Tenemos que ver este tema
 
     getdata: function () {
