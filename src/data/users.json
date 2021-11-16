@@ -24,6 +24,16 @@
   "email": "pablitoseoane@gmail.com",
   "dob": "1981-10-14",
   "password": "$2a$12$VuYYR.zJcKIxIwXsv8lN5ujyzsjBnx09029cmDjbFti6jCcB0pyoC",
-  "avatar": "1637021021647_img.jpg"
+  "avatar": "1637021021647_img.jpg",
+  "rol": "admin"
+ },
+ {
+  "id": 4,
+  "name": "Pablo",
+  "lastname": "Seoane",
+  "email": "pablitoseoane1@gmail.com",
+  "dob": "1981-10-14",
+  "password": "$2a$12$EqlmytGkndm.lMlmP.BzCeon93ZtwqZnV2e1PveIXgHTDKi9dQ8ze",
+  "avatar": "1637021964837_img.jpg"
  }
 ]
