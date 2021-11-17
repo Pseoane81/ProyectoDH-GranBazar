@@ -47,7 +47,7 @@ module.exports = {
             });            
          }
 
-         let userToCreate = {
+         let userToCreate = { //crea el usuario
              ...req.body,
              avatar : req.file.filename,
              password: bcrypt.hashSync(req.body.password, 12)

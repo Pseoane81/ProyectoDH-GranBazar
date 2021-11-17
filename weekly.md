@@ -27,3 +27,11 @@ Repaso de lo hecho en relacion a rutas
 
 Meet 20/10
 Puesta en comun sobre trabajo realizado. Division de tareas y programacion de nuevos encuentros
+
+
+Meet 10/11
+Chequeamos el codigo hecho sobre proceso de registro y login. Corregimos algunos errores. Realizamos retro Sprint 4 y pactamos nueva meet.
+
+Meet 16/11
+Dimos vuelta el codigo nuevo del sprint 5, chequeamos que este todo.
+Tomamos nota de dos temas a tener en cuenta: repassword y rutas diferentes que funcionan a unos si y otros no.
