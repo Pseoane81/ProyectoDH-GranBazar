@@ -35,8 +35,8 @@ let controller = {
      decoracion:  (req,res)=> {       
         let mostrar=[];
         products.forEach(product =>{
-            if(product.category.indexOf("decoracion")!=-1){
-            mostrar.push(product);
+            if(product.category.indexOf("decoracion")!=-1){ // recorre el array de productos, y trae lo que este en categoria, y lo pushea
+            mostrar.push(product); // uso indexOf porque la categoria puede tener mas de una.
             }
         });               
         res.render('products',{mostrar}); 
@@ -50,7 +50,7 @@ let controller = {
         });               
         res.render('products',{mostrar}); 
         },
-        muebles:  (req,res)=> {       
+     muebles:  (req,res)=> {       
             let mostrar=[];
             products.forEach(product =>{
                 if(product.category.indexOf("muebles")!=-1){
@@ -160,10 +160,10 @@ let controller = {
         })
 
         let borrarimagen = products.filter(product => {
-            return product.id == req.params.id;
+            return product.id == req.params.id; // me guarda la info del producto a borrar
         })
         
-        fs.unlinkSync('../public/img/productos/'+borrarimagen[0].image);
+        fs.unlinkSync('../public/img/productos/'+borrarimagen[0].image); // devuelve el nombre del archivo, me borra la imagen del producto
 
         let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
