@@ -53,5 +53,14 @@
   "dob": "2021-11-11",
   "password": "$2a$12$lTKa6BMfGtGc0fVBja74auZlG.vO.b0UFzjvMheTAIPMjXxxlH1e6",
   "avatar": "1637108290747_img.png"
+ },
+ {
+  "id": 7,
+  "name": "aldana",
+  "lastname": "torres",
+  "email": "aldana1234@gmail.com",
+  "dob": "1996-04-30",
+  "password": "$2a$12$1eHK12OlM6uR0594ebZv8uoPEQ8J0JitbfynVMa/u6zyVHwuDUR8.",
+  "avatar": "1637249897899_img.jpeg"
  }
 ]

@@ -53,7 +53,7 @@
                     <p class="descripcion-material-titulo">Origen</p>
                     <p class="descripcion-material"><%=product.origin%></p>
                 </div>
-
+                <% if (locals.isLogged && locals.userLogged.rol == "admin") { %>
                 <div class="botones">
                    <a href="/products/editproduct/<%= product.id  %>">
                     <button type="submit" class="action-buttonedit">EDITAR </button></a>
@@ -61,6 +61,7 @@
                     <button type="submit" class="action-buttondelete">ELIMINAR</button>
                     </form>
                 </div>
+                <% } %>  
                 <div class="boton">
                     <!-- <input type="button" value="AGREGAR AL CARRITO" class="boton-compra">
                     <p class="carrito"><i class="fas fa-shopping-cart"></i></p> -->
