@@ -8,8 +8,8 @@ let products = JSON.parse(jsonProducts); //Convertimos el json a array
 let controller = {
     home: (req,res) => {
         let destacados=[];
-       products.filter(product =>{
-           if (product.category == 'destacados') {
+       products.forEach(product =>{
+           if (product.category.indexOf('destacados')!=-1) {
                destacados.push(product);
            }
        });

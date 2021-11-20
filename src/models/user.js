@@ -1,9 +1,11 @@
 const fs = require("fs");
+const path=require('path');
 
 //Modelo de usuario
 const user = {
+    fileName: path.resolve(__dirname,"../data/users.json"),
     //fileName: "./data/users.json", // A Pablo le funciona con esta linea
-    fileName: "./src//data/users.json", // A Elena/Melina le funciona con esta linea
+    //fileName: "./src//data/users.json", // A Elena/Melina le funciona con esta linea
     // Tenemos que ver este tema
 
     getdata: function () { //toda la info del json

@@ -29,7 +29,11 @@
     {
         "id": 6,
         "name": "Estanteria 4 estantes",
-        "category": "decoracion",
+        "category": [
+            "uso-personal",
+            "decoracion",
+            "destacados"
+        ],
         "description": "Estanteria de hierro y madera 4 estantes",
         "measurements": "190 cm x 80 cm",
         "color": "Negro",
@@ -61,5 +65,104 @@
         "origin": "Chile",
         "price": "29990",
         "image": "product-1637105463753.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "Biblioteca Alanis",
+        "category": [
+            "muebles",
+            "destacados"
+        ],
+        "description": " Mueble biblioteca Alanis con tres puertas.",
+        "measurements": "130 x 120 x 33 cm",
+        "color": "Blanco",
+        "material": "MDF",
+        "origin": "China",
+        "price": "72990",
+        "image": "product-1637364508469.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Bandeja C/Base Porta Laptop",
+        "category": "muebles",
+        "description": " Bandeja con secciones.Una sección para apoyar la notebooks con 4 posturas de altura y tope. Otra sección para apoyar mouse o apoyar bebidas. Contiene patas regulables en altura y cajon porta objetos.",
+        "measurements": "72 x 34 cm",
+        "color": "Blanco",
+        "material": "Madera",
+        "origin": "Argentina",
+        "price": "11990",
+        "image": "product-1637364592653.jpg"
+    },
+    {
+        "id": 13,
+        "name": " Estantería metálica cromada",
+        "category": "muebles",
+        "description":"Bandeja con secciones.Una sección para apoyar la notebooks con 4 posturas de altura y tope. Otra sección para apoyar mouse o apoyar bebidas. Contiene patas regulables en altura y cajon porta objetos.", 
+        "measurements": "60 x 90 x 180 cm",
+        "color": "Blanco",
+        "material": "Metal cromado",
+        "origin": "China",
+        "price": "23110",
+        "image": "product-1637364665359.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Escritorio Judith",
+        "category": "muebles",
+        "description": " Escritorio Juanuditha. Construido en melamina blanca de 18mm de espesor, con los cantos invertidos a 20 grados. Posee un instructivo impreso para el armado aunque es muy simple. Solo necesitarás un destornillador.",
+        "measurements": "73 x 90 x 60 cm",
+        "color": "Blanco",
+        "material": "Melamina",
+        "origin": "Argentina",
+        "price": "19990",
+        "image": "product-1637364744411.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Escritorio Combinado Infantil",
+        "category": "muebles",
+        "description": " Pupitre kids. Construido en melamina blanco y roble de 18 mm de espesor. El armado requiere de un destornillador y las patas se ensamblan a rosca. Incluye 2 vasos plasticos de distinto color para poder apoyar lápices o marcadores.",
+        "measurements": "60 x 60 x 65 cm",
+        "color": "Blanco",
+        "material": "Melamina",
+        "origin": "Argentina",
+        "price": "17990",
+        "image": "product-1637364814749.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Escritorio NOA",
+        "category": "muebles",
+        "description": " Escritorio NOA. Construido en multilaminado de 18 mm de espesor + melamina blanca de 18 mm con los cantos pegados en igual tono. Se entrega desarmado y se arma con llave allen la cual viene incluida con el producto.",
+        "measurements": "90 x 65 x 85 cm",
+        "color": "Blanco",
+        "material": "Melamina",
+        "origin": "China",
+        "price": "19990",
+        "image": "product-1637364874691.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Rack Tv Hope Negro/Roble",
+        "category": "muebles",
+        "description": " Rack de TV de laminado melamínico de primera calidad de 18 mm de espesor. Posee 2 estantes a la vista y 2 estantes tras las puertas. Las bisagras son metálicas de máxima calidad con sistema de cierre suave, que evita golpes al cerrar. Sistema de apertura uñero, lo que evita la vista de la estructura dando mayor robustez y diseño al mueble. Ancho 135 cm, alto 50 cm, profundidad 37 cm.",
+        "measurements": "135 x 50 x 37 cm",
+        "color": "Blanco",
+        "material": "Laminado melamínico",
+        "origin": "China",
+        "price": "31890",
+        "image": "product-1637364941976.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Rack Tv Airin",
+        "category": "muebles",
+        "description": " El rack de TV Alanis, posee un diseño de origen Nórdico con estilo minimalista y cuenta con 2 estantes y 2 puertas súper cómodas para que puedas guardar de todo. Los muebles de la colección Alanis son ideales para livings, dormitorios y comedores. Posee terminaciones redondeadas y de máxima calidad. Color Madera Natural y Blanco.\r\nEl producto se entrega desarmado en su empaque original, junto con un sencillo manual de instrucciones. Incluye un Kit completo de armado para su ensamblaje",
+        "measurements": "140 x 53 x 40 cm",
+        "color": "Blanco",
+        "material": "Madera y MDF enchapado",
+        "origin": "China",
+        "price": "41990",
+        "image": "product-1637365023035.jpg"
     }
 ]
