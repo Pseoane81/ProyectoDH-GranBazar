@@ -18,9 +18,10 @@ a:hover{
 }
 /*el header*/
 .header{
-    background-color:#3D405B;
+    
     padding: 10px;
     width: 100%;
+    background-color:#3D405B;
     
 }
 
@@ -28,6 +29,7 @@ header{
     position: fixed;
     top: 0px;
     z-index: 100;
+    
 }
 
 
@@ -45,7 +47,6 @@ main {
 div.header-top-bar {
     display:flex;
     flex-direction: column;
-
 }
 div.logo-barra {
     display: flex;
@@ -271,6 +272,32 @@ main.not-found{
     margin-top: 150px;
 }
 
+/*scrolling*/
+
+header.abajo {
+    opacity: 0.6;
+}
+
+header.abajo .logo {
+    width: 100px;
+}
+header.abajo .search-bar {
+    display:none;
+}
+header.abajo div.header-top-bar {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+header.abajo .main-navbar {
+    margin:0 1px;
+    margin-top:1px;
+}
+
+header.abajo ul li {
+    font-size: 15px;
+    
+}
 
 
  @media (min-width:361px) {
