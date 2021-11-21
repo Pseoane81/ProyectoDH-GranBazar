@@ -5,7 +5,7 @@ const multer=require('multer');
 
 const storage=multer.diskStorage({
     destination:(req,file,cb) => {
-      cb(null,path.resolve(__dirname,'../img/avatars'))
+     cb(null,path.resolve(__dirname,'../img/avatars'))
       //cb(null,'../public/img/avatars') // A pablo le funciona con esta ruta
       //cb(null,'./public/img/avatars') // A Elena le funciona con esta ruta
     },

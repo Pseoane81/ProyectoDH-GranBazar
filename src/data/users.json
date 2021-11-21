@@ -37,21 +37,12 @@
   "avatar": "1637021964837_img.jpg"
  },
  {
-  "id": 5,
-  "name": "Melina",
-  "lastname": "Bassano",
-  "email": "mbassano@gmail.com",
-  "dob": "1990-02-14",
-  "password": "$2a$12$GQH0mJ7xkgyfNripQkpkj.VJO4uIrknwuTZpBFYGNF1BbRRs7SzqC",
-  "avatar": "1637106385361_img.png"
- },
- {
   "id": 6,
   "name": "Jonathan",
   "lastname": "Eskesen",
   "email": "Jona91_eskesen@hotmail.com",
   "dob": "2021-11-11",
-  "password": "$2a$12$lTKa6BMfGtGc0fVBja74auZlG.vO.b0UFzjvMheTAIPMjXxxlH1e6",
+  "password": "holahola",
   "avatar": "1637108290747_img.png"
  },
  {
@@ -62,5 +53,15 @@
   "dob": "1996-04-30",
   "password": "$2a$12$1eHK12OlM6uR0594ebZv8uoPEQ8J0JitbfynVMa/u6zyVHwuDUR8.",
   "avatar": "1637249897899_img.jpeg"
+ },
+ {
+  "id": 8,
+  "name": "Melina",
+  "lastname": "B",
+  "email": "mbassano@gmail.com",
+  "dob": "1990-02-14",
+  "password": "$2a$12$fxdwR/Nlp74PhbAiMZRaa.sCBh0Jnf5ZvoyKOMB7ibt6hqHJ4nlPW",
+  "avatar": "1637500344558_img.png",
+  "rol": "admin"
  }
 ]

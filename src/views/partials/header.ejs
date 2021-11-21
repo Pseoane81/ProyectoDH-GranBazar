@@ -22,8 +22,8 @@
             <li><a href="/products/usopersonal">Uso personal</a></li> 
             <li><a href="/products/viajes">Viajes</a></li>
             <li><a href="/products/muebles">Muebles</a></li>
-            <li><a href="/users/userprofile">Hola <%= locals.userLogged.name %></a> </li>
-            <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+            <li class="username"><a href="/users/userprofile">Hola <%= locals.userLogged.name %></a> <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;"class="img-avatar"> </li>
+            
         </ul>
         <ul class="right-navbar">
             <li><a href="/products/createproduct">Crear producto nuevo</a></li>

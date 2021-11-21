@@ -141,6 +141,18 @@ a ul:hover {
     margin-top:50px;
 }
 
+li.username {
+    display: flex;
+}
+img.img-avatar {
+    border-radius: 50%;
+    height: 38px;
+    object-fit: cover;
+    object-position: center;
+    width: 38px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
 /*aca empieza el footer*/
 
 
