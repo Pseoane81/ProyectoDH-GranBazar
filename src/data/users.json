@@ -63,5 +63,14 @@
   "password": "$2a$12$fxdwR/Nlp74PhbAiMZRaa.sCBh0Jnf5ZvoyKOMB7ibt6hqHJ4nlPW",
   "avatar": "1637500344558_img.png",
   "rol": "admin"
+ },
+ {
+  "id": 9,
+  "name": "Laura",
+  "lastname": "Laura",
+  "email": "laura@email.com",
+  "dob": "2021-11-10",
+  "password": "$2a$12$VdY1bsCXl03OKNKTHm4J.OCNXDhbnl2WpkyvZhDxz54fBFOxrp5JG",
+  "avatar": "1637501914788_img.png"
  }
 ]
