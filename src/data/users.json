@@ -72,5 +72,23 @@
   "dob": "2021-11-10",
   "password": "$2a$12$VdY1bsCXl03OKNKTHm4J.OCNXDhbnl2WpkyvZhDxz54fBFOxrp5JG",
   "avatar": "1637501914788_img.png"
+ },
+ {
+  "id": 10,
+  "name": "hola",
+  "lastname": "hola",
+  "email": "Jona9_eskesen@hotmail.com",
+  "dob": "2021-11-27",
+  "password": "$2a$12$AZU2/2B8yNWBtbl3i20J.OpIOXQkP/Cb7CmJGOrsKaPDf3N1yBpxW",
+  "avatar": "1637621151328_img.png"
+ },
+ {
+  "id": 11,
+  "name": "hola",
+  "lastname": "hola",
+  "email": "Jo9_eskesen@hotmail.com",
+  "dob": "2021-11-03",
+  "password": "$2a$12$dDG3rW4r0cg0dfQOv7NW9eAnBMprjolYQ47Tb8nrWWk2JA6qxYlfe",
+  "avatar": "1637621299514_img.png"
  }
 ]
