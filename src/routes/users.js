@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require('../controller/usersController');
 const guestmiddelware = require("../middleware/guestMiddleware");
 const authmiddelware = require("../middleware/authmiddleware");
+const changemiddleware = require("../middleware/validatorchangeMiddleware");
 
 
 /*middleware*/
@@ -27,6 +28,9 @@ router.get('/userprofile',authmiddelware, controller.userProfile);
 /*Logout*/ 
 router.get("/logout/", controller.logout);
 
+/*Editar Usuario*/ 
+router.get("/edituser/:id", controller.editProfile);
+router.put("/edituser/:id",uploadFile.single('avatar'),changemiddleware, controller.savechangesprofile);
 
 
 

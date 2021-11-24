@@ -19,12 +19,12 @@
  },
  {
   "id": 3,
-  "name": "Pablo",
+  "name": "Pablitos",
   "lastname": "Seoane",
   "email": "pablitoseoane@gmail.com",
   "dob": "1981-10-14",
-  "password": "$2a$12$VuYYR.zJcKIxIwXsv8lN5ujyzsjBnx09029cmDjbFti6jCcB0pyoC",
-  "avatar": "1637021021647_img.jpg",
+  "password": "$2a$12$nKxJOeRZjjfXJPM2OYPN0.zy4DO.1y8DbIWJK/oxY3b7Xv1oBSe0e",
+  "avatar": "1637791513398_img.jpg",
   "rol": "admin"
  },
  {

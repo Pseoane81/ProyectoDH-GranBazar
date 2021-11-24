@@ -5,9 +5,9 @@
     <%- include('partials/header')  %> 
 
         <main class="userprof"> 
-            <h3 class="username">Hola <%= user.name %>!  </h3>
+            <h3 >Hola <%= user.name %>!  </h3>
             <form action="">    
-                <div class="img-data"><img src="/img/avatars/<%= user.avatar %>" alt="avatar de usuario">
+                <div class="img-avatar"><img src="/img/avatars/<%= user.avatar %>" alt="avatar de usuario" width="100" style="border-radius: 100%;">
                     
                 <div class="user-info">
                    
@@ -31,12 +31,7 @@
                     <input type="date" name="dob" value=<%= user.dob %>>
                     </div>
                           
-                
-                    <div class="form-control">
-                    <label for="">Contraseña</label>
-                    <input type="password" name="password">
-                    </div>
-                    <button type="submit" class="enviar">EDITAR</button>
+                    <a href="/users/edituser/<%= user.id %>" class="action-buttonedit">Editar</a>
                     </form>         
         </main>
 

@@ -53,6 +53,20 @@ const user = {
         let finalUsers = allUsers.filter( oneUser => oneUser.id !== id);
         fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, " "));
         return true;
+    },
+    change: function(req,userdata) {
+        let allUsers = this.findAll();
+        allUsers.forEach(user => {
+            if(user.id == req.params.id){
+                user.name = userdata.name;
+                user.lastname = userdata.lastname;
+                user.dob = userdata.dob;
+                user.avatar = userdata.avatar == undefined ? 'img-default.jpeg' : userdata.avatar;
+                user.password =  userdata.password
+               }
+        })
+        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, " "));
+        
     }
 }
 //console.log(user.create({name: "pepe", lastname: "jose", email: "a@s.com" }))

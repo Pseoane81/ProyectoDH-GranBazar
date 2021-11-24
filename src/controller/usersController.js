@@ -90,7 +90,7 @@ module.exports = {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                 if(req.body.recordame){
-                    res.cookie("email", req.body.email, {maxAge: (1000 * 60)*2})
+                    res.cookie("email", req.body.email, {maxAge: (1000 * 60)*200})
                 }
                 return res.redirect("/")
             }
@@ -136,8 +136,38 @@ module.exports = {
         res.clearCookie("email")
         req.session.destroy();
         res.redirect("/")
-    }
-
+    },
+    editProfile: (req,res) => { 
+        
+        return res.render('editprofile', {
+            user: req.session.userLogged,
+        });
+    
+    },
+    savechangesprofile: (req,res) => { 
+        
+        const resultValidation=validationResult(req)
+           
+    
+         if(resultValidation.errors.length > 0){
+            res.render('editprofile',{
+                errors:resultValidation.mapped(),
+                oldData:req.body
+            });
+         }
+         
+         let userToChange = { 
+             ...req.body,
+             avatar : req.file.filename,
+             password: bcrypt.hashSync(req.body.password, 12)
+         }
+         delete userToChange.repassword;
+         User.change(req,userToChange)
+         
+         res.clearCookie("email")
+         req.session.destroy();
+          res.redirect("/users/login")
+        }
 
  }
 
