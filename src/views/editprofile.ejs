@@ -12,12 +12,12 @@
               <% } %>
                  
                   <% } %>
-        <div class="crea">Editando al usuario <%= user.name %></div>
+        <div class="crea">Editando al usuario <%= locals.oldData ? oldData.name : user.name %></div>
         
-        <form action="/users/edituser/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">              
+        <form action="/users/edituser/<%= locals.oldData ? oldData.id : user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">              
                 <div class="form-control">
                     <label for="">Nombre</label>
-                    <input type="text" name="name" value=<%= user.name %>>
+                    <input type="text" name="name" value=<%= locals.oldData ? oldData.name : user.name %>>
                     <% if (locals.errors && errors.name ) { %>
                         <div class="text-danger">
                           <p> <%= errors.name.msg %> </p>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-control">
                     <label for="">Apellido</label>
-                    <input type="text" name="lastname" value=<%= user.lastname %>>
+                    <input type="text" name="lastname" value=<%= locals.oldData ? oldData.lastname : user.lastname %>>
                     <% if (locals.errors && errors.lastname ) { %>
                         <div class="text-danger">
                           <p> <%= errors.lastname.msg %> </p>
@@ -37,7 +37,7 @@
 
                 <div class="form-control">
                     <label for="">Fecha de nacimiento</label>
-                    <input type="date" name="dob" value=<%= user.dob %>>
+                    <input type="date" name="dob" value=<%= locals.oldData ? oldData.dob : user.dob %>>
                 </div>
                 
                 <div class="form-control">
@@ -67,8 +67,7 @@
 
                 <div class="buttons">
                 <button type="submit" class="enviar">Guardar Cambios</button>
-                <button type="reset" class="borrar">Borrar</button></div>
-            </form>
+                
         </main>
 
 

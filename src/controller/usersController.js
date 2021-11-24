@@ -167,6 +167,16 @@ module.exports = {
          res.clearCookie("email")
          req.session.destroy();
           res.redirect("/users/login")
+        },
+        delete: (req,res) => {
+            let userInDB = User.findByField("id", req.params.id);
+            console.log
+            if (userInDB){
+                User.delete(userInDB);  
+            }
+            res.clearCookie("email")
+            req.session.destroy();
+            res.redirect("/users/register")
         }
 
  }

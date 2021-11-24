@@ -30,9 +30,12 @@
                     <label for="">Fecha de nacimiento</label>
                     <input type="date" name="dob" value=<%= user.dob %>>
                     </div>
-                          
+                    <div class="buttons">
                     <a href="/users/edituser/<%= user.id %>" class="action-buttonedit">Editar</a>
-                    </form>         
+                    </form> 
+                    <form action="/users/<%=user.id %>?_method=DELETE" method="post" >
+                        <button class="action-buttondelete">Borrar</button>
+                </form> </div>        
         </main>
 
 

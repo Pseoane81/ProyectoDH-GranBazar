@@ -48,9 +48,16 @@ const user = {
         return newUser;
     },
 
-    delete: function (id) {
+    delete: function (req,userdata) {
         let allUsers = this.findAll();
-        let finalUsers = allUsers.filter( oneUser => oneUser.id !== id);
+        let finalUsers = allUsers.filter( oneUser => oneUser.id !== req.id);
+
+        let borrarimagen = allUsers.filter(user => {
+            return user.id == req.id; // me guarda la info del producto a borrar
+        })
+        
+        
+        fs.unlinkSync(path.resolve(__dirname,'../../public/img/avatars/'+borrarimagen[0].avatar)); // devuelve el nombre del archivo, me borra la imagen del producto
         fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, " "));
         return true;
     },
