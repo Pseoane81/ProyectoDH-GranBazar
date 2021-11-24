@@ -254,5 +254,92 @@
         "origin": "Alemania",
         "price": "15490",
         "image": "product-1637797129855.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Humidificador Sphere",
+        "category": "decoracion",
+        "description": " Humificador Vaporizador Aromaterapia Símil Madera USB. Permite que el aire recupere de forma natural su porcentaje ideal de humedad, Eliminando los efectos nocivos del aire seco.\r\nPuede ser usado para perfumar los ambientes con solo añadir unas gotas de esencia al agua de deposito",
+        "measurements": "10cm",
+        "color": "Negro",
+        "material": "ABS",
+        "origin": "China",
+        "price": "2990",
+        "image": "product-1637797599295.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Set Cajas New York",
+        "category": "decoracion",
+        "description": " Cajas fabricadas en madera con diseño coordenadas New York",
+        "measurements": "Caja chica: 36 x 21.5 x 14 cm / Caja grande: 39.5 x 27 x 14 cm",
+        "color": "Blanco",
+        "material": "Madera",
+        "origin": "Argentina",
+        "price": "7890",
+        "image": "product-1637797654358.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Portaretrato",
+        "category": "decoracion",
+        "description": " Porta retrato encofrado 15x20.",
+        "measurements": "15x20cm",
+        "color": "Blanco",
+        "material": "MDF",
+        "origin": "Argentina",
+        "price": "1790",
+        "image": "product-1637797710463.jpg"
+    },
+    {
+        "id": 29,
+        "name": "Memo Tv",
+        "category": "decoracion",
+        "description": " Pizarra para pared de vidrio con metal. Incluye 4 imanes, un marcador apto para escribir y borrar, y un soporte de marcador con borrador. El vidrio esta montado sobre una chapa de metal, lo que permite que se peguen los imanes y puedas colocar allí notas, fotos o lo que necesites. Se instala en la pared por medio de 2 tornillos (no incluidos). Ideal para escritorios, cocinas, habitaciones, o cualquier lugar de la casa donde necesites espacio para escribir tus recordatorios.",
+        "measurements": "40 x 30 cm",
+        "color": "Negro",
+        "material": "Vidrio y Metal",
+        "origin": "Argentina",
+        "price": "3290",
+        "image": "product-1637797762818.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Decowall Tree",
+        "category": [
+            "decoracion",
+            "destacados"
+        ],
+        "description": " Aplique para pared fabricado en metal torneado y pintado en diferentes tonos de verdes, marrones y blanco. Posee soporte metálico detrás para colgar en la pared",
+        "measurements": "118 x 85 cm",
+        "color": "Verde",
+        "material": "Metal",
+        "origin": "Argentina",
+        "price": "24900",
+        "image": "product-1637797812373.jpg"
+    },
+    {
+        "id": 31,
+        "name": "Lámpara Lapicero",
+        "category": "decoracion",
+        "description": " Lámpara lapicero de escritorio con ranura para celular. Puede ajustarse en altura y direccionar la luz gracias a tu brazo móvil. Interruptor on/off en su parte trasera y botón táctil en el frente para encender la lámpara. 3 intensidades de luz iluminación máxima 1w, batería interna, caga DC5V/USB (cable usb incluído)",
+        "measurements": "Base: 10.5 x 8.5 cm / Altura: 41 cm",
+        "color": "Blanco",
+        "material": "ABS",
+        "origin": "China",
+        "price": "3590",
+        "image": "product-1637797882556.jpg"
+    },
+    {
+        "id": 32,
+        "name": "Lámpara Recargable",
+        "category": "decoracion",
+        "description": " Lampara de escritorio touch en color verde, con tres niveles de brillo ajustable, tiene tres divisiones para colocar lápices. Brazo flexible y direccionable. Se puede utilizar enchufada a la PC o a la corriente.O cargar y utilizar desenchufada. Incluye cable USB.",
+        "measurements": "40 cm extendida",
+        "color": "Blanco",
+        "material": "PVC",
+        "origin": "China",
+        "price": "1890",
+        "image": "product-1637797939839.jpg"
     }
 ]
