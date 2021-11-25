@@ -341,5 +341,113 @@
         "origin": "China",
         "price": "1890",
         "image": "product-1637797939839.jpg"
+    },
+    {
+        "id": 33,
+        "name": "Banco plegable",
+        "category": [
+            "viaje",
+            "destacados"
+        ],
+        "description": " Banco plegable, ideal para llevar en el auto o en el bolso para estar cómodo en cualquier lugar que vayas. Se puede trabar en diferentes alturas. Posee manija para transportar. Cerrado mide 25,5 cm de diámetro x 6 cm de alto. Abierto mide 25,5 cm de diámetro y 45 cm de altura máxima.",
+        "measurements": "25,5 x 6 cm",
+        "color": "Negro",
+        "material": "Plastico",
+        "origin": "China",
+        "price": "5490",
+        "image": "product-1637798243276.jpg"
+    },
+    {
+        "id": 34,
+        "name": "Neceser Travel",
+        "category": "viaje",
+        "description": " Neceser de viaje, para ordenar tus cosméticos en un solo lugar en la valija. Posee un gancho para colgar en el baño y tener todo a mano, y manija del lado externo para colgar o sujetar para trasladar. Con abrojos para que no se abra y no se pierda nada. Posee bolsillo transparente con cierre para las cosas pequeñas y compartimento amplio con cierre para los envases grandes",
+        "measurements": "26 x 22,5 x 2",
+        "color": "Rosa",
+        "material": "Poliester",
+        "origin": "India",
+        "price": "1690",
+        "image": "product-1637798298946.jpg"
+    },
+    {
+        "id": 35,
+        "name": "Organizador Equipaje",
+        "category": [
+            "viaje",
+            "destacados"
+        ],
+        "description": " Set x4 bolsos para clasificar y organizar mejor tu equipaje, ayuda a optimizar tu espacio, cada bolso cuenta con dos cierres. Bolso L 45 x 30 x 11 cm, Bolso M 35 x 27 x 9 cm, Bolso S 30 x 20 x 9 cm, Bolso XS 22 x 15 x 7 cm",
+        "measurements": "45 x 30 x 11 cm",
+        "color": "Azul",
+        "material": "Poliester",
+        "origin": "India",
+        "price": "4490",
+        "image": "product-1637798373990.jpg"
+    },
+    {
+        "id": 36,
+        "name": "Organizador De Cartera",
+        "category": "viaje",
+        "description": "Neceser con bolsillos grandes con cierre, bolsillos sin cierre, bolsillos de tela y bolsillos de red ",
+        "measurements": "27 x 17 x 9 cm",
+        "color": "Azul",
+        "material": "Poliéster",
+        "origin": "India",
+        "price": "990",
+        "image": "product-1637798433705.jpg"
+    },
+    {
+        "id": 37,
+        "name": "Bolso Airl Jfk",
+        "category": [
+            "viaje",
+            "destacados"
+        ],
+        "description": " Bolso de lona de algodón estampado JFK New York. Cierre marrón",
+        "measurements": "29 x 18 x 10 cm",
+        "color": "Dorado",
+        "material": "Lona 100% algodón",
+        "origin": "India",
+        "price": "1390",
+        "image": "product-1637798483150.jpg"
+    },
+    {
+        "id": 38,
+        "name": "Identificador Equipaje",
+        "category": [
+            "viaje",
+            "destacados"
+        ],
+        "description": " Identificador para maletas. Incluye tarjeta de datos",
+        "measurements": "11 x 6.7 cm",
+        "color": "Negro",
+        "material": "PVC y silicona",
+        "origin": "Argentina",
+        "price": "389",
+        "image": "product-1637798565705.jpg"
+    },
+    {
+        "id": 39,
+        "name": "Almohadón Cuello",
+        "category": "viaje",
+        "description": " Almohada para cuello, con tela suave al tacto. Sostiene tu mentón manteniendo tu cabeza erguida y descansada. Utilizala de maner lateral, completo o posterior.",
+        "measurements": "37 x 30 x 9 cm",
+        "color": "Rosa",
+        "material": "Funda: 100% poliester y relleno: 100% polipropileno",
+        "origin": "Vietnam",
+        "price": "3490",
+        "image": "product-1637798626933.jpg"
+    },
+    {
+        "id": 40,
+        "name": "Sombrilla Flamingo",
+        "category": "viaje",
+        "description": " Sombrilla diseño flamenco, diámetro 1,80 cm. Palo extensible hasta 2,40 cm. Sombrilla de playa fabricada en poliéster premium. Alta durabilidad.",
+        "measurements": "180cm",
+        "color": "Verde",
+        "material": "Poliéster premium.",
+        "origin": "China",
+        "price": "3890",
+        "image": "product-1637798815896.jpg"
     }
 ]
