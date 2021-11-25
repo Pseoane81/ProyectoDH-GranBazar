@@ -68,3 +68,9 @@ Tendremos en cuenta las siguientes tipografias de acuerdo a cual queda mejor en 
 ### **Trello** 
 
 https://trello.com/b/c72HQtHb/equipo-3 
+
+
+### **Usuario Uri (admin)**
+
+Email: urielsosa@dh.com"
+Contraseña: 12345678

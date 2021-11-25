@@ -90,5 +90,15 @@
   "dob": "2021-11-03",
   "password": "$2a$12$dDG3rW4r0cg0dfQOv7NW9eAnBMprjolYQ47Tb8nrWWk2JA6qxYlfe",
   "avatar": "1637621299514_img.png"
+ },
+ {
+  "id": 12,
+  "name": "Uriel",
+  "lastname": "Sosa",
+  "email": "urielsosa@dh.com",
+  "dob": "1999-12-22",
+  "password": "$2a$12$CWvOeGMYLLdxTD8v7V.py.EzOl5CWXBIRMkqWPStLEt81B3bzvNSS",
+  "avatar": "1637879815101_img.png",
+  "rol": "admin"
  }
 ]
