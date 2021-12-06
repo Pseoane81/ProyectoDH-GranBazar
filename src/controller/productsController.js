@@ -16,6 +16,7 @@ const nuevoId = () => {
     return ultimo + 1;
 }
 
+
 let controller = {
     inventory:  (req,res)=> {
        let inventory=[];

@@ -10,7 +10,10 @@ let controller = {
         let destacados=[];
        products.forEach(product =>{
            if (product.category.indexOf('destacados')!=-1) {
-               destacados.push(product);
+            if (destacados.length <=4) {
+                destacados.push(product);
+            }   
+            
            }
        });
        
