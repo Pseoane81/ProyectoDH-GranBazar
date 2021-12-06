@@ -164,7 +164,7 @@ let controller = {
             return product.id == req.params.id; // me guarda la info del producto a borrar
         })
         
-        fs.unlinkSync('../public/img/productos/'+borrarimagen[0].image); // devuelve el nombre del archivo, me borra la imagen del producto
+        fs.unlinkSync(path.resolve(__dirname,'../public/img/productos/'+borrarimagen[0].image)); // devuelve el nombre del archivo, me borra la imagen del producto
 
         let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);

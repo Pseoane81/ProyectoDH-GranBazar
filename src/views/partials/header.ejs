@@ -1,9 +1,3 @@
-<script type="text/javascript">
-    window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
-    header.classList.toggle("abajo",window.scrollY>0);
-})
-</script>
 <header class="header">
     <div class="header-top-bar">
         <div class="logo-barra"><a href="/"><img class="logo" src="/img/logo-transparente.png" width="360" alt="logo de Bazar" ></a>
@@ -14,7 +8,7 @@
             <div><i class="fas fa-search"></i></div>
         </div>
         </div>
-        
+      
     <nav class="main-navbar">
         <% if (locals.isLogged && locals.userLogged.rol == "admin") { %>
         <ul class="left-navbar" >          

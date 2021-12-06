@@ -102,9 +102,17 @@
 
                             <div class="linea divisora">
                                 <h2 class="lines-effect"> Productos destacados</h2>
-                               </div> 
+                               </div>
                                
-                               <% destacados.forEach(product => { %>
+                               <% function shuffleArray(x){%>
+                                <%  x.sort(()=> Math.random() - 0.5)%>
+                                <% return x%>
+                                <% } %><!-- esto es para desordenar el array de todos los productos  -->
+                                    
+                                
+                            <% shuffleArray(destacados)%>
+                               <% destacados.forEach((product,j) => { %>
+                                <% if (j<4) { %>  <!-- pone solo 4 productos-->
                                 <section class="prod-box">
                                <a href="products/<%= product.id%>">
                                 <div class="highlight-prod">
@@ -113,7 +121,7 @@
                                     <p>$<%= product.price%></p>
                                         <p><%= product.name%></p>
                                     
-                                    
+                                        <% } %>     
                                </div></section>
                                <% }) %>
                                
