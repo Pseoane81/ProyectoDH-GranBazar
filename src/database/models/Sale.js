@@ -15,7 +15,7 @@ module.exports = function(sequelize,dataTypes){
         },
        
         
-    },
+    };
     const config={
         tableName:'sales',
         timestamps:false

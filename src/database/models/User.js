@@ -34,7 +34,7 @@ module.exports = function(sequelize,dataTypes){
         country_id: {
             type:dataTypes.INTEGER, //al final x ser FK?
         }
-    },
+    };
     const config={
         tableName:'users',
         timestamps:false

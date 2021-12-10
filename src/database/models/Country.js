@@ -13,7 +13,7 @@ module.exports = function(sequelize,dataTypes){
        
        
         
-    },
+    };
     const config={
         tableName:'countries',
         timestamps:false

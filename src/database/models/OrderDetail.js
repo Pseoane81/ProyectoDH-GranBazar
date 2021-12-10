@@ -20,7 +20,7 @@ module.exports = function(sequelize,dataTypes){
         product_id: { // esto es FK? lo puse al final x lo q dijo Uri.
             type:dataTypes.INTEGER,
         }
-    },
+    };
     const config={
         tableName:'order_details',
         timestamps:false

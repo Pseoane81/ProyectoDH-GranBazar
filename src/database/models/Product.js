@@ -34,7 +34,7 @@ module.exports=function(sequelize,dataTypes){
         material_id:{
             type:dataTypes.INTEGER
         }
-    },
+    };
     const config={
         tableName:'products',
         timestamps:false

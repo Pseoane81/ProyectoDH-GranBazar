@@ -14,7 +14,7 @@ module.exports = function(sequelize,dataTypes){
         order_id: { // MB
             type:dataTypes.INTEGER,
         }
-    },
+    };
     const config={
         tableName:'orders',
         timestamps:false
