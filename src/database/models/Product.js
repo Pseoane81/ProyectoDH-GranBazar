@@ -1,5 +1,5 @@
 module.exports=function(sequelize,dataTypes){
-    const alias='Products';
+    const alias='Product';
 
     const cols={
         id:{
@@ -39,6 +39,6 @@ module.exports=function(sequelize,dataTypes){
         tableName:'products',
         timestamps:false
     }
-    const Products=sequelize.define(alias,cols,config);
-    return Products;
+    const Product=sequelize.define(alias,cols,config);
+    return Product;
 }

@@ -35,3 +35,7 @@ Chequeamos el codigo hecho sobre proceso de registro y login. Corregimos algunos
 Meet 16/11
 Dimos vuelta el codigo nuevo del sprint 5, chequeamos que este todo.
 Tomamos nota de dos temas a tener en cuenta: repassword y rutas diferentes que funcionan a unos si y otros no.
+
+Meet 07/12
+
+Repasamos y hacemos las tablas en MySql Workbench, dejamos plasmadas tablas y las relaciones. Mandamos DER y estructura de DB a profes para correccion. Dividimos creacion de modelos para la proxima juntada hacer asociaciones.

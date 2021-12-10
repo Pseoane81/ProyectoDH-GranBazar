@@ -1,5 +1,5 @@
 module.exports=function(sequelize,dataTypes){
-    const alias='Categories';
+    const alias='Color';
 
     const cols={
         id:{
@@ -7,15 +7,15 @@ module.exports=function(sequelize,dataTypes){
             primaryKey:true,
             autoIncrement:true 
         },
-        category_id:{
+        color:{
             type:dataTypes.STRING
         }
     }
     
     const config={
-        tableName:'categories',
+        tableName:'colors',
         timestamps:false
     }
-    const Categories=sequelize.define(alias,cols,config);
-    return Categories;
+    const Color=sequelize.define(alias,cols,config);
+    return Color;
 }

@@ -3,6 +3,7 @@ const {validationResult, body}=require('express-validator');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const User = require("../models/user")
+const db = require ('../database/models') // creo q esta ruta pisaria a la de arriba a la hora de quitar el CRUD con JSON
 
 //let users = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), { encoding: 'utf-8'});
 //users = JSON.parse(users);

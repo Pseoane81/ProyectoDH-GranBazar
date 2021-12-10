@@ -1,3 +1,6 @@
+//ESTE LO DEJE APARTE PORQUE UNA VEZ QUE LO PONGAMOS DESDE LA DB CREO QUE YA NO SE USA
+
+
 const fs = require("fs");
 const path=require('path');
 
@@ -79,3 +82,5 @@ const user = {
 //console.log(user.create({name: "pepe", lastname: "jose", email: "a@s.com" }))
 //console.log(user.delete(4))
 module.exports = user;
+
+

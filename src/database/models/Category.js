@@ -1,5 +1,5 @@
 module.exports=function(sequelize,dataTypes){
-    const alias='productCategory';
+    const alias='Category';
 
     const cols={
         id:{
@@ -8,17 +8,14 @@ module.exports=function(sequelize,dataTypes){
             autoIncrement:true 
         },
         category_id:{
-            type:dataTypes.INTEGER
-        },
-        product_id:{
-            type:dataTypes.INTEGER
+            type:dataTypes.STRING
         }
     }
     
     const config={
-        tableName:'category',
+        tableName:'categories',
         timestamps:false
     }
-    const productCategory=sequelize.define(alias,cols,config);
-    return productCategory;
+    const Category=sequelize.define(alias,cols,config);
+    return Category;
 }
