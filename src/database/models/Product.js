@@ -42,9 +42,16 @@ module.exports=function(sequelize,dataTypes){
         Product.belongsTo(models.Material, {
             as: "Material",
             foreingkey: "material_id"
+        }),
+        Product.belongsToMany(models.Color, {
+            as:"colors",
+            through:"product_color",
+            foreignKey:"product_id",
+            otherKey:"color_id",
+            timestamps:false
         })
     }
-
+    
 
     return Product;
 }
