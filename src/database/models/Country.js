@@ -21,7 +21,11 @@ module.exports = function(sequelize,dataTypes){
     const Country=sequelize.define(alias,cols,config);
     Country.associate=function(models) {
         Country.hasMany(models.Product, {
-            as: "Product",
+            as: "products",
+            foreingkey: "country_id"
+        }),
+        Country.hasMany(models.User, {
+            as: "users",
             foreingkey: "country_id"
         })
     }
