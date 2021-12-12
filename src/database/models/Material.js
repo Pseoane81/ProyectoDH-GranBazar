@@ -17,5 +17,11 @@ module.exports=function(sequelize,dataTypes){
         timestamps:false
     }
     const Material=sequelize.define(alias,cols,config);
+    Material.associate=function(models) {
+        Material.hasMany(models.Product, {
+            as: "Product",
+            foreingkey: "material_id"
+        })
+    }
     return Material;
 }

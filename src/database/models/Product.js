@@ -19,16 +19,10 @@ module.exports=function(sequelize,dataTypes){
         price:{
             type:dataTypes.INTEGER
         },
-        color_id:{
-            type:dataTypes.INTEGER
-        },
-        origin_id:{
+        country_id:{
             type:dataTypes.INTEGER
         },
         img:{
-            type:dataTypes.INTEGER
-        },
-        category_id:{
             type:dataTypes.INTEGER
         },
         material_id:{
@@ -40,5 +34,17 @@ module.exports=function(sequelize,dataTypes){
         timestamps:false
     }
     const Product=sequelize.define(alias,cols,config);
+    Product.associate=function(models) {
+        Product.belongsTo(models.Country, {
+            as: "Country",
+            foreingkey: "country_id"
+        }),
+        Product.belongsTo(models.Material, {
+            as: "Material",
+            foreingkey: "material_id"
+        })
+    }
+
+
     return Product;
 }
