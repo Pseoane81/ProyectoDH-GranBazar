@@ -36,11 +36,11 @@ module.exports=function(sequelize,dataTypes){
     const Product=sequelize.define(alias,cols,config);
     Product.associate=function(models) {
         Product.belongsTo(models.Country, {
-            as: "Country",
+            as: "countries",
             foreingkey: "country_id"
         }),
         Product.belongsTo(models.Material, {
-            as: "Material",
+            as: "materials",
             foreingkey: "material_id"
         }),
         Product.belongsToMany(models.Color, {
