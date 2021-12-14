@@ -73,12 +73,17 @@ let controller = {
         },
 
     detallar: function (req, res) { 
+        let mostrar=[];
+        products.forEach(product =>{
+            mostrar.push(product);
+        });
         let id = req.params.id;
         
         let productoMuestra = products.find(product => {
             return product.id == id;
         })
-        res.render('detail', {product: productoMuestra});
+   
+        res.render('detail', {product: productoMuestra, mostrar});
         
 
     
@@ -88,7 +93,13 @@ let controller = {
 
     },
     create: (req,res) => {
-        res.render('createproduct');
+        let categoria = db.Category.findAll()
+        let color =db.Color.findAll()
+        Promise.all([color,categoria])
+            .then(function([color,categoria]){
+               return res.render('createproduct',{colors:color,categoria:categoria});
+               
+            }).catch(error => console.log(error));
     },
     edit: (req,res) => {
         let id = req.params.id;
