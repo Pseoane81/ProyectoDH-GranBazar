@@ -16,7 +16,8 @@ module.exports = function(sequelize,dataTypes){
     };
     const config={
         tableName:'countries',
-        timestamps:false
+        timestamps:false,
+        underscored: true,
     }
     const Country=sequelize.define(alias,cols,config);
     Country.associate=function(models) {

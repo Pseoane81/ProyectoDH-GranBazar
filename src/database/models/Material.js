@@ -14,7 +14,8 @@ module.exports=function(sequelize,dataTypes){
     
     const config={
         tableName:'materials',
-        timestamps:false
+        timestamps:false,
+        underscored: true,
     }
     const Material=sequelize.define(alias,cols,config);
     Material.associate=function(models) {

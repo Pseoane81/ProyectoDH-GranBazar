@@ -17,7 +17,8 @@ module.exports = function(sequelize,dataTypes){
     };
     const config={
         tableName:'orders',
-        timestamps:false
+        timestamps:false,
+        underscored: true,
     }
     const Orders=sequelize.define(alias,cols,config);
     return Orders;

@@ -39,3 +39,6 @@ Tomamos nota de dos temas a tener en cuenta: repassword y rutas diferentes que f
 Meet 07/12
 
 Repasamos y hacemos las tablas en MySql Workbench, dejamos plasmadas tablas y las relaciones. Mandamos DER y estructura de DB a profes para correccion. Dividimos creacion de modelos para la proxima juntada hacer asociaciones.
+
+Meet  12/12
+Checkeamos modelos armados y establecimos las asociaciones. Pactamos fecha de siguiente meet.

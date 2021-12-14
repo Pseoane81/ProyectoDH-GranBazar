@@ -23,7 +23,8 @@ module.exports = function(sequelize,dataTypes){
     };
     const config={
         tableName:'order_details',
-        timestamps:false
+        timestamps:false,
+        underscored: true,
     }
     const OrderDetail=sequelize.define(alias,cols,config);
     return OrderDetail;

@@ -17,7 +17,8 @@ module.exports=function(sequelize,dataTypes){
     
     const config={
         tableName:'category',
-        timestamps:false
+        timestamps:false,
+        underscored: true,
     }
     const ProductCategory=sequelize.define(alias,cols,config);
     return ProductCategory;
