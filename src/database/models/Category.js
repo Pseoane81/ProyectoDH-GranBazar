@@ -7,7 +7,7 @@ module.exports=function(sequelize,dataTypes){
             primaryKey:true,
             autoIncrement:true 
         },
-        category_id:{
+        category:{
             type:dataTypes.STRING
         }
     }
