@@ -23,7 +23,7 @@ module.exports=function(sequelize,dataTypes){
             type:dataTypes.INTEGER
         },
         img:{
-            type:dataTypes.INTEGER
+            type:dataTypes.STRING
         },
         material_id:{
             type:dataTypes.INTEGER

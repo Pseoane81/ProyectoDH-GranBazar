@@ -29,7 +29,7 @@ module.exports = function(sequelize,dataTypes){
             type:dataTypes.STRING,
         },
         avatar: {
-            type:dataTypes.INTEGER, // no es string? si recibe nombre del archivo? - CHECKEAR img en modelo de productos
+            type:dataTypes.STRING, // no es string? si recibe nombre del archivo? - CHECKEAR img en modelo de productos
         },
         country_id: {
             type:dataTypes.INTEGER, //al final x ser FK?
