@@ -25,9 +25,7 @@ DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  UNIQUE KEY `category_UNIQUE` (`category`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,7 +35,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (6,'Decoracion'),(2,'Destacados'),(1,'Muebles'),(4,'Uso personal'),(3,'Viajes');
+INSERT INTO `categories` VALUES (1,'Muebles'),(2,'Destacados'),(3,'Viajes'),(4,'Uso personal'),(6,'Decoracion');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,8 +49,7 @@ DROP TABLE IF EXISTS `colors`;
 CREATE TABLE `colors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `color` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `color_UNIQUE` (`color`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -62,7 +59,7 @@ CREATE TABLE `colors` (
 
 LOCK TABLES `colors` WRITE;
 /*!40000 ALTER TABLE `colors` DISABLE KEYS */;
-INSERT INTO `colors` VALUES (6,'Amarillo'),(1,'azul'),(5,'Blanco'),(4,'Negro'),(3,'Rojo'),(2,'violeta');
+INSERT INTO `colors` VALUES (1,'azul'),(2,'violeta'),(3,'Rojo'),(4,'Negro'),(5,'Blanco'),(6,'Amarillo');
 /*!40000 ALTER TABLE `colors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -184,11 +181,11 @@ CREATE TABLE `product_category` (
   `category_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   UNIQUE KEY `id_UNIQUE` (`id`),
-  UNIQUE KEY `category_id_UNIQUE` (`category_id`),
-  UNIQUE KEY `product_id_UNIQUE` (`product_id`),
-  CONSTRAINT `FK_productCategory_category_id` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `FK_productcategory_product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  KEY `category_idx` (`category_id`),
+  KEY `product_idx` (`product_id`),
+  CONSTRAINT `category` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -197,6 +194,7 @@ CREATE TABLE `product_category` (
 
 LOCK TABLES `product_category` WRITE;
 /*!40000 ALTER TABLE `product_category` DISABLE KEYS */;
+INSERT INTO `product_category` VALUES (11,1,13),(12,1,15),(13,1,16),(14,3,17),(15,6,18),(16,3,19),(18,2,20);
 /*!40000 ALTER TABLE `product_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -216,7 +214,7 @@ CREATE TABLE `product_color` (
   KEY `FK_productcolor_product_id_idx` (`product_id`),
   CONSTRAINT `FK_productcolor_color_id` FOREIGN KEY (`color_id`) REFERENCES `colors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_productcolor_product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,6 +223,7 @@ CREATE TABLE `product_color` (
 
 LOCK TABLES `product_color` WRITE;
 /*!40000 ALTER TABLE `product_color` DISABLE KEYS */;
+INSERT INTO `product_color` VALUES (6,1,13),(7,1,15),(10,5,18),(11,1,19),(16,1,16),(17,4,17),(19,4,20);
 /*!40000 ALTER TABLE `product_color` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,7 +240,7 @@ CREATE TABLE `products` (
   `description` varchar(45) NOT NULL,
   `measure` varchar(45) NOT NULL,
   `price` int(11) NOT NULL,
-  `img` int(11) NOT NULL,
+  `img` varchar(45) NOT NULL,
   `country_id` int(11) NOT NULL,
   `material_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -249,7 +248,7 @@ CREATE TABLE `products` (
   KEY `FK_products_country_id_idx` (`country_id`),
   CONSTRAINT `FK_products_country_id` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_products_materials_id` FOREIGN KEY (`material_id`) REFERENCES `materials` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -258,7 +257,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Botella','Botellita','Grande',1500,0,2,3);
+INSERT INTO `products` VALUES (13,'prducto 13333asasasassdsd','   13 3333 sasasa sdsdd','133333asassasdsdsd',2147483647,'product-1639701916063.jpg',2,3),(14,'xdx<',' zxxz','zxzx',123,'product-1639693414082.jpg',1,3),(15,'asaaddd','  asa dddd','asasdddd',77,'product-1639702023617.jpg',2,1),(16,'destacado',' dd','azul',3,'product-1639694956267.jpg',1,3),(17,'viajes',' sdsd','negro',33,'product-1639694979252.jpg',1,3),(18,'asasa',' saa','asassasasasas',4,'product-1639695294043.jpg',1,2),(19,'19',' sdsddsdsds ','19',1111,'product-1639702278750.jpg',5,2),(20,'dfdfdf',' ddfdf','dfdf',9,'product-1639702904234.jpg',6,1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -334,4 +333,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-14 18:48:19
+-- Dump completed on 2021-12-17 19:43:14

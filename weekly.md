@@ -42,3 +42,13 @@ Repasamos y hacemos las tablas en MySql Workbench, dejamos plasmadas tablas y la
 
 Meet  12/12
 Checkeamos modelos armados y establecimos las asociaciones. Pactamos fecha de siguiente meet.
+
+Meet 14/12
+Nos juntamos para iniciar el CRUD de productos. Llegamos a un error, movimos meet para jueves.
+
+Meet 16/12
+Puesta en comun del avance sobre CRUD de producto, planteamos dudas para consultar con los profes, volcamos info a Trello, pactamos meet para dia siguiente.
+
+Meet 17/12
+
+
