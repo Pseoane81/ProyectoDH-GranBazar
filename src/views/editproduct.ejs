@@ -13,21 +13,11 @@
     </div>
     <div class="form-control">
         <label for="">Categorias</label>
-            <div class="checkbox"> 
-                <label for="muebles" class="check"><input type="checkbox" name="category" id="muebles" class="check" value="muebles" <%= product.category.indexOf("muebles") != -1 ? "checked = true" : ""; %>>Muebles</label>
-            </div>
-            <div class="checkbox"> 
-                <label for="decoracion" class="check" ><input type="checkbox" name="category" id="decoracion" class="check"value="decoracion" <%= product.category.indexOf("decoracion") != -1 ? "checked = true" : ""; %>>Decoración</label>
-            </div>
-            <div class="checkbox"> 
-                <label for="viaje"class="check"><input type="checkbox" name="category" id="viaje" class="check"value="viaje" <%= product.category.indexOf("viaje") != -1 ? "checked = true" : ""; %>>Viaje</label>
-            </div>
-            <div class="checkbox"> 
-                <label for="uso-personal"class="check"><input type="checkbox" name="category" id="uso-personal" class="check"value="uso-personal" <%= product.category.indexOf("uso-personal") != -1 ? "checked = true" : ""; %>>Uso personal</label>
-            </div>
-            <div class="checkbox"> 
-                <label for="destacados"class="check"><input type="checkbox" name="category" id="destacados" class="check"value="destacados" <%= product.category.indexOf("destacados") != -1 ? "checked = true" : ""; %>>Destacados</label>
-            </div>
+        <div class="checkbox"> 
+            <% for (let j = 0; j < categoria.length; j++){ %>
+            <label for="" class="check"><input type="checkbox" name="category"  value="<%=categoria[j].id%>"class="check"<%= locals.oldData && (categoria[j].category === oldData.category) ? 'checked' : null %>><%=categoria[j].category%></label>
+            <%}%>
+        </div>
         <div class="form-control">
             <label for="">Selecciona las imagenes para tu producto</label>
             <input type="file" name="image" accept=".png, .jpg, .jpeg" multiple value="<%= product.image%>">
@@ -39,33 +29,29 @@
         </div>
         <div class="form-control">
             <label for="">Medidas:</label>
-            <input type="text" name="measurements" value="<%= product.measurements%>">
+            <input type="text" name="measurements" value="<%= product.measure%>">
         </div>
         <div class="form-control">
-            <label for="">Color</label>
-            <select name="color" id="color">
-                <option value="Blanco" <%= product.color == "Blanco" ? "selected" : ""; %>>Blanco</option>
-                <option value="Negro"<%= product.color == "Negro" ? "selected" : ""; %>>Negro</option>
-                <option value="Azul"<%= product.color == "Azul" ? "selected" : ""; %>>Azul</option>
-                <option value="Amarillo"<%= product.color == "Amarillo" ? "selected" : ""; %>>Amarillo</option>
-                <option value="Verde"<%= product.color == "Verde" ? "selected" : ""; %>>Verde</option>
-                <option value="Naranja"<%= product.color == "Naranja" ? "selected" : ""; %>>Naranja</option>
-                <option value="Rojo"<%= product.color == "Rojo" ? "selected" : ""; %>>Rojo</option>
-                <option value="Rosa"<%= product.color == "Rosa" ? "selected" : ""; %>>Rosa</option>
-                <option value="Violeta"<%= product.color == "Violeta" ? "selected" : ""; %>>Violeta</option>
-                <option value="Dorado"<%= product.color == "Dorado" ? "selected" : ""; %>>Dorado</option>
-                <option value="Lila"<%= product.color == "Lila" ? "selected" : ""; %>>Lila</option>
-                <option value="Fucsia"<%= product.color == "Fucsia" ? "selected" : ""; %>>Fucsia</option>
-            </select>
-        </div>
-        <div class="form-control">
-            <label for="">Material</label>
-            <input type="text" name="material" class="material" value="<%= product.material%>">
-        </div>
-        <div class="form-control">
-            <label for="">Pais de origen</label>
-            <input type="text" name="origin" class="origin" value="<%= product.origin%>">
-        </div>
+            <label for="">Colores</label>
+            <div class="checkbox"> 
+                <% for (let k = 0; k < color.length; k++){ %>
+                <label for="" class="check"><input type="checkbox" name="color"  value="<%=color[k].id%>"class="check"<%= locals.oldData && (color[k].color === oldData.color) ? 'checked' : null %>><%=color[k].color%></label>
+                <%}%>
+            </div>
+            <div class="form-control">
+                <label for="">Material</label>
+                <select name="material" id="material">
+                    <% for (let i =0; i < material.length; i++){ %>
+                    <option value="<%=material[i].id%>" <%= locals.oldData && (material[i].material === oldData.material) ? 'selected' : null %>><%=material[i].material%></option>      
+                    <%}%>
+                </select>
+                <div class="form-control">
+                    <label for="">Origen</label>
+                    <select name="origin" id="origin">
+                        <% for (let i =0; i < country.length; i++){ %>
+                        <option value="<%=country[i].id%>" <%= locals.oldData && (country[i].country === oldData.country) ? 'selected' : null %>><%=country[i].country%></option>      
+                        <%}%>
+                    </select>
         <div class="form-control">
             <label for="">Precio</label>
             <input type="text" name="price" class="price" value="<%= product.price%>">

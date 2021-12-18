@@ -20,8 +20,8 @@
     <div class="form-control">
         <label for="">Categorias</label>
         <div class="checkbox"> 
-            <% for (let j = 0; j < categoria.length; j++){ %>
-            <label for="" class="check"><input type="checkbox" name="category" id="<%categoria[j].category%>" value="<%categoria[j].category%>"class="check"<%= locals.oldData && (categoria[j].category === oldData.category) ? 'checked' : null %>><%=categoria[j].category%></label>
+            <% for (let j = 0; j < Categoria.length; j++){ %>
+            <label for="" class="check"><input type="checkbox" name="category" id="<%Categoria[j].category%>" value="<%=Categoria[j].id%>"class="check"<%= locals.oldData && (Categoria[j].category === oldData.category) ? 'checked' : null %>><%=Categoria[j].category%></label>
             <%}%>
         </div>
         <% if (locals.errors && errors.category) { %>
@@ -59,12 +59,12 @@
             <% } %>
         </div>
         <div class="form-control">
-            <label for="">Color</label>
-            <select name="color" id="color">
-                <% for (let i =0; i < colors.length; i++){ %>
-                <option value="<%=colors[i].color%>" <%= locals.oldData && (colors[i].color === oldData.color) ? 'selected' : null %>><%=colors[i].color%></option>      
+            <label for="">Colores</label>
+            <div class="checkbox"> 
+                <% for (let k = 0; k < Colors.length; k++){ %>
+                <label for="" class="check"><input type="checkbox" name="color"  value="<%=Colors[k].id%>"class="check"<%= locals.oldData && (Colors[k].color === oldData.color) ? 'checked' : null %>><%=Colors[k].color%></label>
                 <%}%>
-            </select>
+            </div>
             <% if (locals.errors && errors.color) { %>
                 <div class="text-danger">
                 <%= errors.color.msg %> 
@@ -73,7 +73,11 @@
         </div>
         <div class="form-control">
             <label for="">Material</label>
-            <input type="text" name="material" class="material" value="<%= locals.oldData ? oldData.material : null %>">
+            <select name="material" id="material">
+                <% for (let i =0; i < Material.length; i++){ %>
+                <option value="<%=Material[i].id%>" <%= locals.oldData && (Material[i].material === oldData.Material) ? 'selected' : null %>><%=Material[i].material%></option>      
+                <%}%>
+            </select>
             <% if (locals.errors && errors.material) { %>
                 <div class="text-danger">
                     <%= errors.material.msg %> 
@@ -81,8 +85,12 @@
             <% } %>
         </div>
         <div class="form-control">
-            <label for="">Pais de origen</label>
-            <input type="text" name="origin" class="origin" value="<%= locals.oldData ? oldData.origin : null %>">
+            <label for="">Origen</label>
+            <select name="origin" id="origin">
+                <% for (let i =0; i < Country.length; i++){ %>
+                <option value="<%=Country[i].id%>" <%= locals.oldData && (Country[i].country === oldData.country) ? 'selected' : null %>><%=Country[i].country%></option>      
+                <%}%>
+            </select>
             <% if (locals.errors && errors.origin) { %>
                 <div class="text-danger">
                     <%= errors.origin.msg %> 

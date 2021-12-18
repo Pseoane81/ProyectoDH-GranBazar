@@ -7,7 +7,7 @@ module.exports=function(sequelize,dataTypes){
             primaryKey:true,
             autoIncrement:true 
         },
-        category_id:{
+        material:{
             type:dataTypes.STRING
         }
     }
@@ -21,7 +21,7 @@ module.exports=function(sequelize,dataTypes){
     Material.associate=function(models) {
         Material.hasMany(models.Product, {
             as: "products",
-            foreingkey: "material_id"
+            foreignKey: "material_id"
         })
     }
     return Material;

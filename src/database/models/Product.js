@@ -37,25 +37,25 @@ module.exports=function(sequelize,dataTypes){
     const Product=sequelize.define(alias,cols,config);
     Product.associate=function(models) {
         Product.belongsTo(models.Country, {
-            as: "countries",
-            foreingkey: "country_id"
+            as: "Country",
+            foreignKey: "country_id"
         }),
         Product.belongsTo(models.Material, {
             as: "materials",
-            foreingkey: "material_id"
+            foreignKey: "material_id"
         }),
         Product.belongsToMany(models.Color, {
             as:"colors",
             through:"product_color",
-            foreignKey:"product_id",
-            otherKey:"color_id",
+            foreignKey:"color_id",
+            otherKey:"product_id",
             timestamps:false
         }),
         Product.belongsToMany(models.Category, {
             as:"categories",
             through:"product_category",
-            foreignKey:"product_id",
-            otherKey:"category_id",
+            foreignKey:"category_id",
+            otherKey:"product_id",
             timestamps:false
         })
     }

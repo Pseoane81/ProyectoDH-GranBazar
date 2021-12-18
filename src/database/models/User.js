@@ -44,7 +44,7 @@ module.exports = function(sequelize,dataTypes){
     User.associate=function(models) {
         User.belongsTo(models.Country, {
             as: "countries",
-            foreingkey: "country_id"
+            foreignKey: "country_id"
             })
         }
     return User;

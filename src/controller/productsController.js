@@ -3,91 +3,60 @@ const fs = require('fs');
 const { validationResult } = require('express-validator');
 const db = require ('../database/models')
 
-/* Logica para traer los productos */
-let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), 'utf-8');
-let products = JSON.parse(jsonProducts); //Convertimos el json a array
-
-const nuevoId = () => {
-    let ultimo = 0;
-    products.forEach(product => {
-        if (product.id > ultimo) {
-            ultimo = product.id;
-        }
-    });
-    return ultimo + 1;
-}
-
-
 let controller = {
     inventory:  (req,res)=> {
-       let inventory=[];
-       products.forEach(product =>{
-           inventory.push(product);
-       });
-       res.render('inventory',{inventory});
-    },      
+        db.Product.findAll()
+         .then(function(inventory){
+             res.render('inventory',{inventory})
+         })    
+     },     
     
     mostrarProductos:  (req,res)=> {
-        let mostrar=[];
-        products.forEach(product =>{
-            mostrar.push(product);
-        });
-        res.render('products',{mostrar});
+        db.Product.findAll()
+        .then(function(mostrar){
+            res.render('inventory',{mostrar})
+        })
      },
+
      decoracion:  (req,res)=> {       
-        let mostrar=[];
-        products.forEach(product =>{
-            if(product.category.indexOf("decoracion")!=-1){ // recorre el array de productos, y trae lo que este en categoria, y lo pushea
-            mostrar.push(product); // uso indexOf porque la categoria puede tener mas de una.
-            }
-        });               
-        res.render('products',{mostrar}); 
+        db.Product.findAll()
+        .then(function(mostrar){
+            res.render('products',{mostrar})
+        })
         },
+
     usopersonal:  (req,res)=> {       
-        let mostrar=[];
-        products.forEach(product =>{
-            if(product.category.indexOf("uso-personal")!=-1){
-            mostrar.push(product);
-            }
-        });               
-        res.render('products',{mostrar}); 
+        db.Product.findAll()
+        .then(function(mostrar){
+            res.render('products',{mostrar})
+        })
         },
+
      muebles:  (req,res)=> {       
-            let mostrar=[];
-            products.forEach(product =>{
-                if(product.category.indexOf("muebles")!=-1){
-                mostrar.push(product);
-                }
-            });               
-            res.render('products',{mostrar}); 
-            },
+            db.Product.findAll()
+        .then(function(mostrar){
+            res.render('products',{mostrar})
+        })
+        },
     
     viajes:  (req,res)=> {       
-         let mostrar=[];
-        products.forEach(product =>{
-            if(product.category.indexOf("viaje")!=-1){
-            mostrar.push(product);
-            }
-        });               
-        res.render('products',{mostrar}); 
+        db.Product.findAll()
+        .then(function(mostrar){
+            res.render('products',{mostrar})
+        })
         },
 
     detallar: function (req, res) { 
-        let mostrar=[];
-        products.forEach(product =>{
-            mostrar.push(product);
-        });
-        let id = req.params.id;
-        
-        let productoMuestra = products.find(product => {
-            return product.id == id;
+        let mostrarlo = db.Product.findAll()
+        let productos = db.Product.findByPk(req.params.id, {
+            include: [{association:"colors"},{association:"materials"},{association:"Country"}]
         })
-   
-        res.render('detail', {product: productoMuestra, mostrar});
-        
-
-    
+        Promise.all([productos,mostrarlo])
+         .then(function([product,mostrar]){
+            res.render('detail', {product,mostrar});
+         })
     },
+
     comprar: (req,res) => {
         res.render('cart');
 
@@ -95,91 +64,126 @@ let controller = {
     create: (req,res) => {
         let categoria = db.Category.findAll()
         let color =db.Color.findAll()
-        Promise.all([color,categoria])
-            .then(function([color,categoria]){
-               return res.render('createproduct',{colors:color,categoria:categoria});
+        let country =db.Country.findAll()
+        let material =db.Material.findAll()
+        Promise.all([color,categoria,country,material])
+            .then(function([color,categoria,country,material]){
+               return res.render('createproduct',{Colors:color,Categoria:categoria,Country:country,Material:material});
                
             }).catch(error => console.log(error));
     },
     edit: (req,res) => {
-        let id = req.params.id;
+        let pedidoproducto = db.Product.findByPk(req.params.id)
+        let categoria = db.Category.findAll()
+        let color =db.Color.findAll()
+        let country =db.Country.findAll()
+        let material =db.Material.findAll()
+            Promise.all([pedidoproducto,color,categoria,country,material])
+                .then(function([product,color,categoria,country,material]){ 
+                    res.render('editproduct', {product,color,categoria,country,material});
         
-        let productoActualizar = products.find(product => {
-            return product.id == id;
-        })
-        res.render('editproduct', {product: productoActualizar});
-
+        }).catch(error => console.log(error));
     },
 
     update:(req,res) => {
         // Editamos el producto buscandolo con una condición
-        products.forEach(product => {
-            if (product.id == req.params.id) {
-                product.name = req.body.name;
-                product.description = req.body.description;
-                product.price = req.body.price;
-                product.category = req.body.category;
-                product.origin = req.body.origin;
-                product.material = req.body.material;
-                product.color = req.body.color;
-                product.measurements = req.body.measurements;
-                product.image = req.file == undefined ? 'img-default.jpeg' : req.file.filename;
+        let productoid = req.params.id
+        db.Product.update({
+            name:req.body.name,
+            description:req.body.description,
+            measure: req.body.measurements,
+            price:req.body.price,
+            img:req.file.filename || 'img-default.jpeg',
+            country_id:req.body.origin,
+            material_id:req.body.material, 
+            }, {
+                where: {
+                    id: productoid
+                }
+            })
+            .then(function(productocreado){
+                db.ProductColor.update({
+                    color_id:req.body.color,
+                    
+                },
+                {
+                    where: {
+                        product_id: productoid
+                            }
+                })
+                db.ProductCategory.update({
+                    category_id:req.body.category,
+                    
+                
+            },
+            {
+                where: {
+                    product_id: productoid
+                        }
             }
-        })
-
-        // let productToEdit = products.find(product => {
-        //     return product.id == req.params.id;
-        // })
-        // productToEdit.name = req.body.name;
-
-        // Pasamos a json todos los productos y sobreescribimos la db
-        let jsonDeProductos = JSON.stringify(products, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
-
+            ).catch(error => console.log(error));          
+            })
+            
         res.redirect('/');
-
-
-    
     },
+
     store (req, res) {
-        const resultValidation = validationResult(req);
+        const resultValidation = validationResult(req);console.log(resultValidation)
         if (resultValidation.errors.length > 0) {
-			return res.render('createproduct', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
+            let categoria = db.Category.findAll()
+            let color =db.Color.findAll()
+            let country =db.Country.findAll()
+            let material =db.Material.findAll()
+                Promise.all([color,categoria,country,material])
+                    .then(function([color,categoria,country,material]){
+			            return res.render('createproduct', {
+			            	errors: resultValidation.mapped(),
+			            	oldData: req.body,
+                            Colors:color,
+                            Categoria:categoria,
+                            Country:country,
+                            Material:material
+                        }).catch(error => console.log(error));
+            });
 		}
-        // Creamos el producto base
-        let product = {
-            id: nuevoId(),
-            ...req.body,
-            //category:[req.body.category],
-             image: req.file.filename || 'img-default.jpeg',
-        }
-        // Agregamos el nuevo producto
-        products.push(product);
-
-        // Pasamos a json todos los productos y sobreescribimos la db
-        let jsonDeProductos = JSON.stringify(products, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
-
+        
+        db.Product.create({
+            name:req.body.name,
+            description:req.body.description,
+            measure: req.body.measurements,
+            price:req.body.price,
+            img:req.file.filename || 'img-default.jpeg',
+            country_id:req.body.origin,
+            material_id:req.body.material, 
+            })
+            .then(function(productocreado){
+                db.ProductColor.create({
+                    color_id:req.body.color,
+                    product_id:productocreado.id
+                })
+                db.ProductCategory.create({
+                    category_id:req.body.category,
+                    product_id:productocreado.id
+                
+            }).catch(error => console.log(error));          
+            })
+            
+            
         res.redirect('/');
     },
 
     delete (req, res) {
 
-        let productosRestantes = products.filter(product => {
-            return product.id != req.params.id;
+        db.Product.destroy({
+            where: {
+                id:req.params.id
+            }
         })
 
-        let borrarimagen = products.filter(product => {
-            return product.id == req.params.id; // me guarda la info del producto a borrar
-        })
-        
-        fs.unlinkSync(path.resolve(__dirname,'../public/img/productos/'+borrarimagen[0].image)); // devuelve el nombre del archivo, me borra la imagen del producto
-
-        let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
+        //ver com borrar la imagen
+       /* db.Productos.findByPk(req.params.id)
+            .then(function(borrarimagen){
+                console.log(borrarimagen)}) */
 
         res.redirect('/');
     }

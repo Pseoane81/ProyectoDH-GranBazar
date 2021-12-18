@@ -24,7 +24,7 @@ router.get('/decoracion', controller.decoracion); // Te lleva a la vista DECORAC
 router.get('/usopersonal', controller.usopersonal); // Te lleva a la vista USO PERSONAL
 router.get('/viajes', controller.viajes); // Te lleva a la vista VIAJES
 router.get('/muebles', controller.muebles); // Te lleva a la vista muebles
-router.post('/', upload.single('image'),validation, controller.store); //Ruta que crea y guarda
+router.post('/', upload.single('image'), controller.store); //Ruta que crea y guarda
 router.get('/cart',controller.comprar);
 router.get('/inventory', controller.inventory); // Te lleva a la vista de todos los productos
 router.get("/createproduct", controller.create); // Vista de crear

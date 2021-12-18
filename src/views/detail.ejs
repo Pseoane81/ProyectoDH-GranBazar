@@ -17,8 +17,8 @@
                 
                     <article class="producto-compra">
                     <div class="foto1">
-                        <a href="/img/productos/<%= product.image%>">
-                    <img src="/img/productos/<%= product.image%>" width="360" alt="taza" class="producto_img">
+                        <a href="/img/productos/<%= product.img%>">
+                    <img src="/img/productos/<%= product.img%>" width="360" alt="taza" class="producto_img">
                     </div></a>
                     </article>
         
@@ -39,19 +39,19 @@
                 </div>
                 <div class="linea">
                     <p class="descripcion-medidas-titulo">Color</p>
-                    <p class="descripcion-medidas"><%=product.color%></p>
+                    <p class="descripcion-medidas"><%=product.colors.color%></p>
                 </div>
                 <div class="linea">
                     <p class="descripcion-medidas-titulo">Medidas</p>
-                    <p class="descripcion-medidas"><%=product.measurements%></p>
+                    <p class="descripcion-medidas"><%=product.measure%></p>
                 </div>
                 <div class="linea">
                     <p class="descripcion-material-titulo">Material</p>
-                    <p class="descripcion-material"><%=product.material%></p>
+                    <p class="descripcion-material"><%=product.materials.material%></p>
                 </div>
                 <div class="linea">
                     <p class="descripcion-material-titulo">Origen</p>
-                    <p class="descripcion-material"><%=product.origin%></p>
+                    <p class="descripcion-material"><%=product.Country.country%></p>
                 </div>
                 <% if (locals.isLogged && locals.userLogged.rol == "admin") { %>
                 <div class="botones">
