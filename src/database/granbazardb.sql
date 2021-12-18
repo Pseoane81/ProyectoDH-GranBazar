@@ -185,7 +185,7 @@ CREATE TABLE `product_category` (
   KEY `product_idx` (`product_id`),
   CONSTRAINT `category` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -194,7 +194,7 @@ CREATE TABLE `product_category` (
 
 LOCK TABLES `product_category` WRITE;
 /*!40000 ALTER TABLE `product_category` DISABLE KEYS */;
-INSERT INTO `product_category` VALUES (11,1,13),(12,1,15),(13,1,16),(14,3,17),(15,6,18),(16,3,19),(18,2,20);
+INSERT INTO `product_category` VALUES (11,1,13),(12,1,15),(13,1,16),(14,3,17),(15,6,18),(16,3,19),(18,2,20),(21,4,25),(22,6,26),(23,3,27);
 /*!40000 ALTER TABLE `product_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -214,7 +214,7 @@ CREATE TABLE `product_color` (
   KEY `FK_productcolor_product_id_idx` (`product_id`),
   CONSTRAINT `FK_productcolor_color_id` FOREIGN KEY (`color_id`) REFERENCES `colors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_productcolor_product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -223,7 +223,7 @@ CREATE TABLE `product_color` (
 
 LOCK TABLES `product_color` WRITE;
 /*!40000 ALTER TABLE `product_color` DISABLE KEYS */;
-INSERT INTO `product_color` VALUES (6,1,13),(7,1,15),(10,5,18),(11,1,19),(16,1,16),(17,4,17),(19,4,20);
+INSERT INTO `product_color` VALUES (6,1,13),(7,1,15),(10,5,18),(11,1,19),(16,1,16),(17,4,17),(19,4,20),(20,2,23),(24,4,27);
 /*!40000 ALTER TABLE `product_color` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -248,7 +248,7 @@ CREATE TABLE `products` (
   KEY `FK_products_country_id_idx` (`country_id`),
   CONSTRAINT `FK_products_country_id` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_products_materials_id` FOREIGN KEY (`material_id`) REFERENCES `materials` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -257,7 +257,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (13,'prducto 13333asasasassdsd','   13 3333 sasasa sdsdd','133333asassasdsdsd',2147483647,'product-1639701916063.jpg',2,3),(14,'xdx<',' zxxz','zxzx',123,'product-1639693414082.jpg',1,3),(15,'asaaddd','  asa dddd','asasdddd',77,'product-1639702023617.jpg',2,1),(16,'destacado',' dd','azul',3,'product-1639694956267.jpg',1,3),(17,'viajes',' sdsd','negro',33,'product-1639694979252.jpg',1,3),(18,'asasa',' saa','asassasasasas',4,'product-1639695294043.jpg',1,2),(19,'19',' sdsddsdsds ','19',1111,'product-1639702278750.jpg',5,2),(20,'dfdfdf',' ddfdf','dfdf',9,'product-1639702904234.jpg',6,1);
+INSERT INTO `products` VALUES (13,'prducto 13333asasasassdsd','   13 3333 sasasa sdsdd','133333asassasdsdsd',2147483647,'product-1639701916063.jpg',2,3),(14,'xdx<',' zxxz','zxzx',123,'product-1639693414082.jpg',1,3),(15,'asaaddd','  asa dddd','asasdddd',77,'product-1639702023617.jpg',2,1),(16,'destacado',' dd','azul',3,'product-1639694956267.jpg',1,3),(17,'viajes',' sdsd','negro',33,'product-1639694979252.jpg',1,3),(18,'asasa',' saa','asassasasasas',4,'product-1639695294043.jpg',1,2),(19,'19',' sdsddsdsds ','19',1111,'product-1639702278750.jpg',5,2),(20,'dfdfdf',' ddfdf','dfdf',9,'product-1639702904234.jpg',6,1),(23,'producto nuevo 21',' usopersona','violeta india plastico',1,'product-1639858300133.jpg',3,2),(24,'cat viajes',' ddd','blanco - metal - china',4,'product-1639859384365.jpg',4,1),(25,'25 - uso',' ssss','rojo - plastico - eeuu',4,'product-1639859777898.jpg',5,2),(26,'deco',' dec','negro - metañ - chile',2,'product-1639860244440.jpg',2,1),(27,'cambiado 27 a deco',' cambiado 27 ','negro-metal-uru',444,'product-1639861077840.jpg',8,1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -333,4 +333,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-17 19:43:14
+-- Dump completed on 2021-12-18 17:58:57
