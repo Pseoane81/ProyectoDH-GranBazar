@@ -5,7 +5,7 @@
     <%- include('partials/header')  %> 
 
         <main class="userprof"> 
-            <h3 >Hola <%= user.name %>!  </h3>
+            <h3 >Hola <%= user.first_name %>!  </h3>
             <form action="">    
                 <div class="img-avatar"><img src="/img/avatars/<%= user.avatar %>" alt="avatar de usuario" width="100" style="border-radius: 100%;">
                     
@@ -13,12 +13,12 @@
                    
                     <div class="form-control">
                     <label for="">Nombre</label>
-                    <input type="text" name="name" value=<%= user.name %>>
+                    <input type="text" name="name" value=<%= user.first_name %>>
                     </div>
             
                     <div class="form-control">
                     <label for="">Apellido</label>
-                    <input type="text" name="lastname" value=<%= user.lastname %>>
+                    <input type="text" name="lastname" value=<%= user.last_name %>>
                     </div>
 
                     <div class="form-control">

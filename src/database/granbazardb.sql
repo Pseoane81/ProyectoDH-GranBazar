@@ -302,16 +302,16 @@ CREATE TABLE `users` (
   `last_name` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `dob` date NOT NULL,
-  `country_id` int(11) NOT NULL,
-  `password` varchar(45) NOT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  `password` varchar(200) NOT NULL,
   `rol` varchar(45) DEFAULT NULL,
-  `avatar` int(11) NOT NULL,
+  `avatar` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`),
   KEY `FK_user_country_id_idx` (`country_id`),
   CONSTRAINT `FK_user_country_id` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -320,7 +320,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Pablo','Seoane','pablito@gmail.com','0000-00-00',1,'123456','admin',0);
+INSERT INTO `users` VALUES (1,'Pablo','Seoane','pablito@gmail.com','0000-00-00',1,'123456','admin','0'),(3,'','','filip@gmail.com','2022-04-27',NULL,'$2a$10$cIlmL/fNl.zK4i7IRsJp7uytNgRs3eVtDe539H',NULL,'2147483647'),(4,'tristan','acevedo','tristan@gmail.com','2022-04-27',1,'$2a$10$v0c.I9m6sKYV.aW6kqRLOeAqvhe03sAbuMme8I',NULL,'2147483647'),(6,'orem','Jerez','orem@gmail.com','2022-09-01',NULL,'$2a$10$W64Tov9fG6A9D7xfxJyBfeKbkAkdU1WD4LJhkf',NULL,'2147483647'),(8,'blanca','ruiz','blanca@gmail.com','2022-08-18',NULL,'$2a$10$UQqmERS8q3/LpAIpAtaAduTMOclESKGoIJdGwQLtfoZAQBMgKSz5q','admin','1639943711336_img.jpeg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -333,4 +333,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-18 17:58:57
+-- Dump completed on 2021-12-19 17:04:49

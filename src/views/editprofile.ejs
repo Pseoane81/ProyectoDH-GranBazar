@@ -12,25 +12,25 @@
               <% } %>
                  
                   <% } %>
-        <div class="crea">Editando al usuario <%= locals.oldData ? oldData.name : user.name %></div>
+        <div class="crea">Editando al usuario <%= locals.oldData ? oldData.firstname: user.first_name %></div>
         
         <form action="/users/edituser/<%= locals.oldData ? oldData.id : user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">              
                 <div class="form-control">
                     <label for="">Nombre</label>
-                    <input type="text" name="name" value=<%= locals.oldData ? oldData.name : user.name %>>
-                    <% if (locals.errors && errors.name ) { %>
+                    <input type="text" name="name" value=<%= locals.oldData ? oldData.first_name : user.first_name %>>
+                    <% if (locals.errors && errors.first_name ) { %>
                         <div class="text-danger">
-                          <p> <%= errors.name.msg %> </p>
+                          <p> <%= errors.first_name.msg %> </p>
                         </div>
                     <% } %>
                 </div>
                 </div>
                 <div class="form-control">
                     <label for="">Apellido</label>
-                    <input type="text" name="lastname" value=<%= locals.oldData ? oldData.lastname : user.lastname %>>
-                    <% if (locals.errors && errors.lastname ) { %>
+                    <input type="text" name="lastname" value=<%= locals.oldData ? oldData.last_name : user.last_name %>>
+                    <% if (locals.errors && errors.last_name ) { %>
                         <div class="text-danger">
-                          <p> <%= errors.lastname.msg %> </p>
+                          <p> <%= errors.last_name.msg %> </p>
                         </div>
                     <% } %>
                 </div>

@@ -29,7 +29,7 @@ module.exports = function(sequelize,dataTypes){
             type:dataTypes.STRING,
         },
         avatar: {
-            type:dataTypes.STRING, // no es string? si recibe nombre del archivo? - CHECKEAR img en modelo de productos
+            type:dataTypes.INTEGER, // no es string? si recibe nombre del archivo? - CHECKEAR img en modelo de productos
         },
         country_id: {
             type:dataTypes.INTEGER, //al final x ser FK?
@@ -38,7 +38,7 @@ module.exports = function(sequelize,dataTypes){
     const config={
         tableName:'users',
         timestamps:false,
-        underscored: true,
+        underscored: true
     }
     const User=sequelize.define(alias,cols,config);
     User.associate=function(models) {
