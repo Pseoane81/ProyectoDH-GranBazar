@@ -38,3 +38,12 @@ Sprint 4:
 4. Hacer menos: No procrastinar. 
 
 
+Sprint 5:
+
+1. Comenzar a hacer: Dividir ciertas tareas. Hablar de prioridades y organizar las tareas segun prioridad.
+
+2. Hacer más: Mejorar la comunicacion entre meet y meet.
+
+3. Continuar haciendo: Codear en equipo. Meets semanales y meets extras. 
+
+4. Hacer menos: No procrastinar. Acumular tareas para que commiteemos todos.

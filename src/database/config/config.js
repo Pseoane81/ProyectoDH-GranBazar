@@ -6,6 +6,19 @@ module.exports= {
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
+  /*Config de DB para Meli */
+  /*"development": {
+    "username": "root",
+    "password": 'root',
+    "database": "granbazardb",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": "8889",
+    "operatorsAliases": false,
+    "dialectOptions": {
+      socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock"
+    }
+  },*/
   "test": {
     "username": "root",
     "password": null,
