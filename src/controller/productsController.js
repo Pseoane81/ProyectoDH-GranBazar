@@ -1,7 +1,9 @@
 const path=require('path');
 const fs = require('fs'); 
-const { validationResult } = require('express-validator');
+const { validationResult, body } = require('express-validator');
 const db = require ('../database/models')
+const { Sequelize } = require('../database/models');
+const { Op } = require('sequelize');
 
 let controller = {
     inventory:  (req,res)=> {
@@ -19,41 +21,53 @@ let controller = {
      },
 
      decoracion:  (req,res)=> {       
-        db.Product.findAll()
+        db.Category.findOne( 
+            {where: { id:6}, 
+            include: [{association:"products"}]}) 
         .then(function(mostrar){
-            res.render('products',{mostrar})
+            res.render('products',{mostrar:mostrar.products})
         })
         },
 
     usopersonal:  (req,res)=> {       
-        db.Product.findAll()
+        db.Category.findOne( 
+            {where: { id:4}, 
+            include: [{association:"products"}]}) 
         .then(function(mostrar){
-            res.render('products',{mostrar})
+            res.render('products',{mostrar:mostrar.products})
         })
         },
 
      muebles:  (req,res)=> {       
-            db.Product.findAll()
+        db.Category.findOne( 
+            {where: { id:1}, 
+            include: [{association:"products"}]}) 
         .then(function(mostrar){
-            res.render('products',{mostrar})
+            res.render('products',{mostrar:mostrar.products})
         })
         },
     
     viajes:  (req,res)=> {       
-        db.Product.findAll()
+        db.Category.findOne( 
+            {where: { id:3}, 
+            include: [{association:"products"}]}) 
         .then(function(mostrar){
-            res.render('products',{mostrar})
+            res.render('products',{mostrar:mostrar.products})
         })
         },
 
     detallar: function (req, res) { 
+        let colores = db.Color.findAll()
         let mostrarlo = db.Product.findAll()
+
         let productos = db.Product.findByPk(req.params.id, {
-            include: [{association:"colors"},{association:"materials"},{association:"Country"}]
+           include: ["colors", "materials", "Country"]
+           /*[{association:"colors"},{association:"materials"},{association:"Country"}]*/
         })
-        Promise.all([productos,mostrarlo])
-         .then(function([product,mostrar]){
-            res.render('detail', {product,mostrar});
+        Promise.all([productos,mostrarlo, colores])
+         .then(function([product,mostrar, colors]){
+           res.render('detail', {product: product,mostrar,colors});
+           /*res.send(product)*/
          })
     },
 
@@ -127,9 +141,39 @@ let controller = {
         res.redirect('/');
     },
 
-    store (req, res) {
-        const resultValidation = validationResult(req);console.log(resultValidation)
-        if (resultValidation.errors.length > 0) {
+    store: (req, res) => {
+        let resultValidation = validationResult(req);console.log(resultValidation)
+        if (resultValidation.length == 0 ) {
+            db.Product.create({
+                name:req.body.name,
+                description:req.body.description,
+                measure: req.body.measurements,
+                price:req.body.price,
+                img:req.file.filename || 'img-default.jpeg',
+                country_id:req.body.origin,
+                material_id:req.body.material, 
+                })
+                .then(function(productocreado){
+                    req.body.color.forEach(color=>{
+                        db.ProductColor.create({
+                        
+                            color_id:color,
+                            product_id:productocreado.id
+                    })
+                    
+                    })
+                    req.body.category.forEach (category => {
+    
+                    db.ProductCategory.create({
+                        category_id:req.body.category,
+                        product_id:productocreado.id
+                    })
+                }).catch(error => console.log(error));          
+                })
+                
+                
+            res.redirect('/');
+        }
             let categoria = db.Category.findAll()
             let color =db.Color.findAll()
             let country =db.Country.findAll()
@@ -145,46 +189,33 @@ let controller = {
                             Material:material
                         }).catch(error => console.log(error));
             });
-		}
+		
         
-        db.Product.create({
-            name:req.body.name,
-            description:req.body.description,
-            measure: req.body.measurements,
-            price:req.body.price,
-            img:req.file.filename || 'img-default.jpeg',
-            country_id:req.body.origin,
-            material_id:req.body.material, 
-            })
-            .then(function(productocreado){
-                db.ProductColor.create({
-                    color_id:req.body.color,
-                    product_id:productocreado.id
-                })
-                db.ProductCategory.create({
-                    category_id:req.body.category,
-                    product_id:productocreado.id
-                
-            }).catch(error => console.log(error));          
-            })
-            
-            
-        res.redirect('/');
+        
     },
 
     delete (req, res) {
 
-        db.Product.destroy({
+        db.ProductColor.destroy({
             where: {
-                id:req.params.id
+                product_id: req.params.id
+            }
+        })
+        
+        db.ProductCategory.destroy({
+            where: {
+                product_id: req.params.id
             }
         })
 
-        //ver com borrar la imagen
-       /* db.Productos.findByPk(req.params.id)
-            .then(function(borrarimagen){
-                console.log(borrarimagen)}) */
-
+        .then(function(borrado) {
+            db.Product.destroy({
+                where: {
+                    id:req.params.id
+                }
+        }) 
+        })
+        .catch(error => console.log(error));    
         res.redirect('/');
     }
 

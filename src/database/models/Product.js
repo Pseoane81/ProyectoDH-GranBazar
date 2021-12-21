@@ -47,15 +47,15 @@ module.exports=function(sequelize,dataTypes){
         Product.belongsToMany(models.Color, {
             as:"colors",
             through:"product_color",
-            foreignKey:"color_id",
-            otherKey:"product_id",
+            foreignKey: "product_id",
+            otherKey:"color_id",
             timestamps:false
         }),
         Product.belongsToMany(models.Category, {
             as:"categories",
             through:"product_category",
-            foreignKey:"category_id",
-            otherKey:"product_id",
+            foreignKey:"product_id",
+            otherKey:"category_id",
             timestamps:false
         })
     }

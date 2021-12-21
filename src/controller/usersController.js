@@ -2,7 +2,6 @@
 const {validationResult, body}=require('express-validator');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
-const User = require("../models/user")
 const db = require ('../database/models') // creo q esta ruta pisaria a la de arriba a la hora de quitar el CRUD con JSON
 const { Sequelize } = require('../database/models');
 const { Op } = require('sequelize');
@@ -14,7 +13,7 @@ module.exports = {
         
     },
     processRegister:(req,res)=>{
-        const resultValidation=validationResult(req)
+        const resultValidation=validationResult(req); console.log(resultValidation)
            
     
          if(resultValidation.errors.length > 0){
@@ -24,17 +23,22 @@ module.exports = {
             });
          }
          
-         let userInDB = User.findByField("email", req.body.email);
-         if (userInDB) {
-            return res.render("register", {
-                errors: {
-                    email: {
-                    msg: "Este EMAIL ya esta registrado"
-                        }
-            },
-            oldData:req.body
-            });            
-         }
+         db.User.findOne({where: 
+            
+                {email:req.body.email}})
+         
+                .then((userInDB) => {
+                    if (userInDB) {
+                       return res.render("register", {
+                           errors: {
+                               email: {
+                               msg: "Este EMAIL ya esta registrado"
+                                   }
+                       },
+                       oldData:req.body
+                       });            
+                    }
+                   })
 
 
          // intento de  CRUD de user

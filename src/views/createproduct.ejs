@@ -73,7 +73,7 @@
         </div>
         <div class="form-control">
             <label for="">Material</label>
-            <select name="material" id="material">
+            <select multiple name="material" id="material">
                 <% for (let i =0; i < Material.length; i++){ %>
                 <option value="<%=Material[i].id%>" <%= locals.oldData && (Material[i].material === oldData.Material) ? 'selected' : null %>><%=Material[i].material%></option>      
                 <%}%>
