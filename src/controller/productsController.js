@@ -143,7 +143,7 @@ let controller = {
 
     store: (req, res) => {
         let resultValidation = validationResult(req);console.log(resultValidation)
-        if (resultValidation.length == 0 ) {
+        if (resultValidation.isEmpty() ) {
             db.Product.create({
                 name:req.body.name,
                 description:req.body.description,
@@ -154,26 +154,38 @@ let controller = {
                 material_id:req.body.material, 
                 })
                 .then(function(productocreado){
+                    if (req.body.color.length > 1){
                     req.body.color.forEach(color=>{
                         db.ProductColor.create({
-                        
                             color_id:color,
                             product_id:productocreado.id
+                    }) 
                     })
-                    
-                    })
-                    req.body.category.forEach (category => {
-    
-                    db.ProductCategory.create({
-                        category_id:req.body.category,
+                } else {
+                    db.ProductColor.create({
+                        color_id:req.body.color,
                         product_id:productocreado.id
                     })
-                }).catch(error => console.log(error));          
+                    }
+
+                    if (req.body.category.length > 1){
+                    req.body.category.forEach (category => {
+                    db.ProductCategory.create({
+                        category_id:category,
+                        product_id:productocreado.id
+                    })
                 })
+            }  else {
+                db.ProductCategory.create({
+                    category_id:req.body.category,
+                    product_id:productocreado.id
+                })
+                }         
+                }).catch(error => console.log(error)); 
                 
                 
             res.redirect('/');
-        }
+        }else {
             let categoria = db.Category.findAll()
             let color =db.Color.findAll()
             let country =db.Country.findAll()
@@ -187,10 +199,10 @@ let controller = {
                             Categoria:categoria,
                             Country:country,
                             Material:material
-                        }).catch(error => console.log(error));
-            });
+                        })
+            }).catch(error => console.log(error));
 		
-        
+        }
         
     },
 
