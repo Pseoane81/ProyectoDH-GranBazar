@@ -70,7 +70,7 @@ Tendremos en cuenta las siguientes tipografias de acuerdo a cual queda mejor en 
 https://trello.com/b/c72HQtHb/equipo-3 
 
 
-### **Usuario Uri-Leo (admin)**
+### **Usuario ADMIN**
 
-Email: urielsosa@dh.com
+Email: admin@mail.com
 Contraseña: 12345678

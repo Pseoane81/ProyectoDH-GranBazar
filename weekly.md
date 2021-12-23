@@ -50,5 +50,12 @@ Meet 16/12
 Puesta en comun del avance sobre CRUD de producto, planteamos dudas para consultar con los profes, volcamos info a Trello, pactamos meet para dia siguiente.
 
 Meet 17/12
+Codeamos inicio de CRUD de usuario y correccion de DB y relaciones
+
+Meet 19/12 
+Terminamos el CRUD de usuario completo, dejamos listado las tareas faltantes y establecimos las prioridades
+
+Meet 20/12
+Corregimos puntos faltantes (especialmente el tema de tablas pivot). Junto con profes terminamos de formar el CRUD de productos y vistas de detalle.
 
 
