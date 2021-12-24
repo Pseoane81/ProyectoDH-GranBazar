@@ -64,6 +64,7 @@ div.logo-barra {
     }
  .search-bar form {
      width: 100%;
+     display:flex
  }
     .search-bar input {
     width: 100%;
@@ -71,13 +72,16 @@ div.logo-barra {
 
     }
     /*lupita */
-    .search-bar i{
+    .search-bar button{
     background-color: #F3F1F0;
     color: black;
     text-align: right;
     align-self:center ;
     display: inline-block;
-    padding: 3px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: #f3f1f0;
     
     
     }

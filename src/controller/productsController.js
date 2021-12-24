@@ -4,6 +4,7 @@ const { validationResult, body } = require('express-validator');
 const db = require ('../database/models')
 const { Sequelize } = require('../database/models');
 const { Op } = require('sequelize');
+const sequelize = require("sequelize");
 
 let controller = {
     inventory:  (req,res)=> {
@@ -229,7 +230,22 @@ let controller = {
         })
         .catch(error => console.log(error));    
         res.redirect('/');
-    }
+    },
+    busqueda: (req, res) => {
+                
+        db.Product.findAll({       
+            order: [['id', 'ASC']], 
+            where: { name : sequelize.where(sequelize.fn('LOWER', sequelize.col('Product.name')), 'LIKE', `%${req.query.search}%`) } 
+        })
+        .then(function(mostrar){ 
+        if (mostrar.length > 0) {
+            res.render("busqueda", { mostrar, notfound: false });
+        } else {
+            res.render("busqueda", {notfound:true })
+               }
+    }).catch(error => console.log(error));    
+
+}
 
 };
 module.exports = controller;
