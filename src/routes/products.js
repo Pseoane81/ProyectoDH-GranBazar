@@ -4,6 +4,7 @@ const path=require('path');
 const controller = require('../controller/productsController')
 const multer = require('multer');
 const validation=require ('../middleware/validatorProductsMiddleware');
+const validationUpate=require ('../middleware/validatorProductsUpdateMiddleware');
 
 /* Configuracion de multer */
 const storage = multer.diskStorage({
@@ -32,7 +33,7 @@ router.get("/createproduct", controller.create); // Vista de crear
 router.get("/editproduct/:id", controller.edit); //vista de editar
 //router.put("/editproduct/:id",upload.single('image'), controller.update); //Edita productos?
 router.get("/:id", controller.detallar); // Muestra detalle de producto
-router.put("/editproduct/:id",upload.single('image'), controller.update); //Edita productos?
+router.put("/editproduct/:id",upload.single('image'),validationUpate, controller.update); //Edita productos?
 router.delete("/:id", controller.delete); // Ruta que elimina el producto
 
 

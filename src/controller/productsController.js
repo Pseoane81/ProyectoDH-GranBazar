@@ -103,6 +103,9 @@ let controller = {
     update:(req,res) => {
         // Editamos el producto buscandolo con una condición
         let productoid = req.params.id
+        let resultValidation = validationResult(req); 
+        console.log(validationResult(req))
+        if (resultValidation.isEmpty() ) {
         db.Product.update({
             name:req.body.name,
             description:req.body.description,
@@ -117,6 +120,18 @@ let controller = {
                 }
             })
             .then(function(productocreado){
+                if (req.body.color > 1){
+                req.body.color.forEach(color=>{
+                db.ProductColor.update({
+                    color_id:color,
+                     },
+                {
+                    where: {
+                        product_id: productoid
+                            }
+                })
+            }) 
+            } else {
                 db.ProductColor.update({
                     color_id:req.body.color,
                     
@@ -126,20 +141,47 @@ let controller = {
                         product_id: productoid
                             }
                 })
+            }
+            if (req.body.color > 1){
+                req.body.category.forEach(category=>{
                 db.ProductCategory.update({
-                    category_id:req.body.category,
+                    category_id:category,
                     
-                
+                   
             },
             {
                 where: {
                     product_id: productoid
                         }
-            }
-            ).catch(error => console.log(error));          
             })
+        })
+    } else {
+        db.ProductCategory.update({
+            category_id:req.body.category,     
+        },
+    {
+        where: {
+            product_id: productoid
+                }
+    }
+    )
+    }          
+    }).catch(error => console.log(error));
             
         res.redirect('/');
+    }else {console.log(resultValidation)
+        let pedidoproducto = db.Product.findByPk(req.params.id)
+        let categoria = db.Category.findAll()
+        let color =db.Color.findAll()
+        let country =db.Country.findAll()
+        let material =db.Material.findAll()
+            Promise.all([pedidoproducto,color,categoria,country,material])
+                .then(function([product,color,categoria,country,material]){ 
+                    res.render('editproduct', {errors: resultValidation.mapped(),
+                        oldData: req.body,product,color,categoria,country,material});
+        
+        }).catch(error => console.log(error));
+    }
     },
 
     store: (req, res) => {

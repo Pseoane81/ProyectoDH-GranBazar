@@ -11,7 +11,7 @@
     <div class="form-control">
         <label for="">Nombre</label>
         <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>">
-        <% if (locals.errors && errors.name) { %>
+             <% if (locals.errors && errors.name) { %>
             <div class="text-danger">
                 <%= errors.name.msg %> 
             </div>
