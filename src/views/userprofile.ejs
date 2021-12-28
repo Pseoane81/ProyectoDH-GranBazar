@@ -5,37 +5,37 @@
     <%- include('partials/header')  %> 
 
         <main class="userprof"> 
-            <h3 >Hola <%= user.first_name %>!  </h3>
+            <h3 class="userprofile">Hola <%= user.first_name %>!  </h3>
             <form action="">    
-                <div class="img-avatar"><img src="/img/avatars/<%= user.avatar %>" alt="avatar de usuario" width="100" style="border-radius: 100%;">
-                    
+                
                 <div class="user-info">
-                   
-                    <div class="form-control">
-                    <label for="">Nombre</label>
-                    <input type="text" name="name" value=<%= user.first_name %>>
-                    </div>
-            
-                    <div class="form-control">
-                    <label for="">Apellido</label>
-                    <input type="text" name="lastname" value=<%= user.last_name %>>
-                    </div>
-
-                    <div class="form-control">
-                    <label for="">Email</label>
-                    <input type="email" name="email" value=<%= user.email %>>
-                     </div>
-
-                    <div class="form-control">
-                    <label for="">Fecha de nacimiento</label>
-                    <input type="date" name="dob" value=<%= user.dob %>>
-                    </div>
+                    <div class="img-avatar"><img src="/img/avatars/<%= user.avatar %>" alt="avatar de usuario" width="100" style="border-radius: 100%;"></div>  
+                    <table class="user-info">
+                        <tr>
+                            <td>Nombre:</td>
+                            <td><%= user.first_name %></td>
+                        </tr>
+                        <tr>
+                            <td>Apellido:</td>
+                            <td><%= user.last_name %></td>
+                        </tr>
+                        <tr>
+                            <td>Correo electronico:</td>
+                            <td><%= user.email %></td>
+                        </tr>
+                        <tr>
+                            <td>Fecha de nacimiento:</td>
+                            <td><%= user.dob %></td>
+                        </tr>
+                    </table>
+                
+                
                     <div class="buttons">
                     <a href="/users/edituser/<%= user.id %>" class="action-buttonedit">Editar</a>
                     </form> 
                     <form action="/users/<%=user.id %>?_method=DELETE" method="post" >
                         <button class="action-buttondelete">Borrar</button>
-                </form> </div>        
+                </form>       
         </main>
 
 

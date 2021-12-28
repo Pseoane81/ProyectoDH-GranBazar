@@ -49,7 +49,8 @@ module.exports = {
             password:bcrypt.hashSync(req.body.password, 10),
             email: req.body.email,
             dob: req.body.dob,
-            avatar: req.file.filename,
+            avatar : req.file == undefined ? 'avatar-by-default.png' : req.file.filename,
+           
             
             
         })

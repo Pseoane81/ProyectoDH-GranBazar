@@ -8,7 +8,7 @@ module.exports=[
     .notEmpty().withMessage('Debes escribir una direccion de correo').bail()
     .isEmail().withMessage('El formato de la direccion de correo no es correcta'),
     body('password').notEmpty().withMessage('Debes escribir una contraseña'),
-    body('avatar').custom((value, {req})=>{
+    /*body('avatar').custom((value, {req})=>{
         let file=req.file;
         let acceptedExtensions = ['.jpg','.png','.gif','.jpeg'];
         
@@ -22,5 +22,5 @@ module.exports=[
         }
        
         return true;
-    })
+    })*/
 ]; //validaciones que nos da express-generator

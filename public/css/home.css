@@ -277,6 +277,8 @@ li.articulos{
     display: inline-block;
     margin-left: 5px;
     margin-right: 5px;
+    text-align: center;
+    color: #3D405B;
 }
 img.product-img {
     width: 200px;

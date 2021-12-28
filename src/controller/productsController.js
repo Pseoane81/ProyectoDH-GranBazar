@@ -111,9 +111,10 @@ let controller = {
             description:req.body.description,
             measure: req.body.measurements,
             price:req.body.price,
-            img:req.file.filename || 'img-default.jpeg',
+            
             country_id:req.body.origin,
             material_id:req.body.material, 
+            img:req.file.filename || 'product-by-default.png',
             }, {
                 where: {
                     id: productoid
@@ -192,9 +193,10 @@ let controller = {
                 description:req.body.description,
                 measure: req.body.measurements,
                 price:req.body.price,
-                img:req.file.filename || 'img-default.jpeg',
+                
                 country_id:req.body.origin,
                 material_id:req.body.material, 
+                img:req.file.filename || 'product-by-default.png',
                 })
                 .then(function(productocreado){
                     if (req.body.color.length > 1){
