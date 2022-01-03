@@ -15,13 +15,13 @@ function userloggedmiddleware(req,res,next){
 		}
 	})
 	.catch(noLogged =>{
-		console.log("No hay nadie logueado")
+		console.log(noLogged)
 	})
 
 	
 
 	if (req.session.userLogged) {
-		console.log("Hay alguien logueado ")
+		
 		res.locals.isLogged = true;
 		res.locals.userLogged = req.session.userLogged;
 	}

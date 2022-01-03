@@ -121,56 +121,49 @@ let controller = {
                 }
             })
             .then(function(productocreado){
-                if (req.body.color > 1){
-                req.body.color.forEach(color=>{
-                db.ProductColor.update({
-                    color_id:color,
-                     },
-                {
+                db.ProductColor.destroy({
                     where: {
-                        product_id: productoid
-                            }
+                        product_id: req.params.id
+                    }
                 })
-            }) 
-            } else {
-                db.ProductColor.update({
-                    color_id:req.body.color,
-                    
-                },
-                {
+                
+                db.ProductCategory.destroy({
                     where: {
-                        product_id: productoid
-                            }
+                        product_id: req.params.id
+                    }
                 })
-            }
-            if (req.body.color > 1){
-                req.body.category.forEach(category=>{
-                db.ProductCategory.update({
-                    category_id:category,
-                    
-                   
-            },
-            {
-                where: {
-                    product_id: productoid
-                        }
-            })
-        })
-    } else {
-        db.ProductCategory.update({
-            category_id:req.body.category,     
-        },
-    {
-        where: {
-            product_id: productoid
-                }
-    }
-    )
-    }          
-    }).catch(error => console.log(error));
+                
+                    if (req.body.color.length > 1){
+                    req.body.color.forEach(color=>{
+                        db.ProductColor.create({
+                            color_id:color,
+                            product_id:req.params.id
+                    }) 
+                    })
+                } else {
+                    db.ProductColor.create({
+                        color_id:req.body.color,
+                        product_id:req.params.id
+                    })
+                    }
+
+                    if (req.body.category.length > 1){
+                    req.body.category.forEach (category => {
+                    db.ProductCategory.create({
+                        category_id:category,
+                        product_id:req.params.id
+                    })
+                })
+            }  else {
+                db.ProductCategory.create({
+                    category_id:req.body.category,
+                    product_id:req.params.id
+                })
+                }         
+                }).catch(error => console.log(error)); 
             
         res.redirect('/');
-    }else {console.log(resultValidation)
+    } else {console.log(resultValidation)
         let pedidoproducto = db.Product.findByPk(req.params.id)
         let categoria = db.Category.findAll()
         let color =db.Color.findAll()
