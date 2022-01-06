@@ -6,10 +6,12 @@
 
         <main> 
         <div class="ingresa">INGRESÁ A TU CUENTA</div>
-        <form  method="POST" action="/users/login" class="login">
+        <form  method="POST" id="login" action="/users/login" class="login">
+
         <div class="form-control">
             <label for="">Email</label>
-            <input type="email" name="email">
+            <input type="email" name="email" id="email">
+            <span  style="color:#b60b0b" id="correo" ></span>
             <% if (locals.errors && errors.email) { %> 
                 <div class="text-danger">
                     <%= errors.email.msg %> 
@@ -18,9 +20,11 @@
         </div>
 
         
-        <div class="form-control">
+        <div class="form-control position">
             <label for="">Contraseña</label>
-            <input type="password" name="password">
+            <span class="fas fa-eye-slash"  id="ojo" ></span>
+            <input type="password" name="password" id="password" >
+            <span  style="color:#b60b0b" id="contraseña" ></span>
         </div>
 
         <input type="checkbox" name="recordame" id=""><label for="">Recordame</label>
@@ -35,6 +39,6 @@
 
 
         <%- include('partials/footer')  %> 
-       
+        <script src="/js/loginValidations.js" ></script>
     </body>
     </html>

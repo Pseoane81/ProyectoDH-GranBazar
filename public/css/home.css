@@ -162,7 +162,7 @@ input[id="4"]:checked ~ .slider{
     transform:translate3d(calc(-100% * 0), 0, 0) ;
 }
 input[id="4"]:checked ~ .pagination .pagination-item [for="4"]{
-    background: #81B29A;
+    background: #81b19a;
 }
 /*linea divisora*/
  .lines-effect{
