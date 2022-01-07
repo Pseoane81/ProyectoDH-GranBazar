@@ -1,5 +1,5 @@
 module.exports= {
-/* "development": {
+ "development": {
     "username": "root",
     "password": "",
     "database": "granbazardb",
@@ -7,7 +7,7 @@ module.exports= {
     "dialect": "mysql"
   },
   /*Config de DB para Meli */
-  "development": {
+  /*"development": {
     "username": "root",
     "password": 'root',
     "database": "granbazardb",
@@ -18,7 +18,7 @@ module.exports= {
     "dialectOptions": {
       socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock"
     }
-  },
+  },*/
   "test": {
     "username": "root",
     "password": null,

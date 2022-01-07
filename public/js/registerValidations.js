@@ -42,8 +42,8 @@ form.addEventListener("submit",function(e){
         errors.name='El campo del nombre no debe estar vacio'
         spanNombre.style.fontStyle ='italic';
         qs("#name").innerText=errors.name;
-    }else if(form.name.value.length <=5){
-        errors.name='El campo del Nombre debe  tener como minimo 8 caracteres'
+    }else if(form.name.value.length <2){
+        errors.name='El campo del Nombre debe  tener como minimo 2 caracteres'
         qs("#name").innerText=errors.name;
     }else{
         delete errors.name
@@ -54,8 +54,8 @@ form.addEventListener("submit",function(e){
         errors.lastname='El campo del Apellido no debe estar vacio'
         spanApellido.style.fontStyle ='italic';
         qs("#lastname").innerText=errors.lastname;
-    }else if(form.lastname.value.length <=2){
-        errors.lastname='El campo del Apellido debe tener como minimo 5 caracteres'
+    }else if(form.lastname.value.length <2){
+        errors.lastname='El campo del Apellido debe tener como minimo 2 caracteres'
         qs("#lastname").innerText=errors.lastname;
     }else{
         delete errors.name
@@ -67,7 +67,7 @@ form.addEventListener("submit",function(e){
         errors.email='El campo de email no debe estar vacio'
         spanEmail.style.fontStyle ='italic';
         qs("#email").innerText=errors.email;
-    }else if(regexEmail.test(form.email.value)){
+    }else if(!regexEmail.test(form.email.value)){
         errors.email='Debe ser un email valido';
         qs("#email").innerText=errors.email;
     }
@@ -80,7 +80,7 @@ form.addEventListener("submit",function(e){
         errors.password='El campo del password no debe estar vacio'
         spanPassword.style.fontStyle ='italic';
         qs("#repassword").innerText=errors.password;
-    }else if(form.name.value.length <=8){
+    }else if(form.password.value.length <8){
         errors.password='El campo del password contener 8 caracteres y un numero';
         qs("#repassword").innerText=errors.password;
     }

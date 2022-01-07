@@ -17,8 +17,7 @@ form.addEventListener("submit",function(e){
         error.email='El campo del email no debe estar vacio';
         spanemail.style.fontStyle ='italic';
         qs("#correo").innerText=error.email;
-    }else {(regexEmail.test(form.email.value))
-    
+    }else if(!regexEmail.test(form.email.value)){
         error.email='tiene que ser un email valido'
         qs("#correo").innerText=error.email;
     }
@@ -31,7 +30,7 @@ form.addEventListener("submit",function(e){
         error.password='El campo del password no debe estar vacio'
         spanpassword.style.fontStyle ='italic';
         qs("#contraseña").innerText=error.password;
-    }else if(form.name.value.length <=8){
+    }else if(form.password.value.length <8){
         error.password='El campo del password contener 8 caracteres y un numero';
         qs("#contraseña").innerText=error.password;
     }
