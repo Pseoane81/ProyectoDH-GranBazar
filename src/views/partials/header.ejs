@@ -30,7 +30,8 @@
             <li><a href="/users/logout">Salir <i class="fas fa-sign-out-alt"></i></a></li>
         </ul>
         <% } else if (locals.isLogged){ %>
-            <ul class="left-navbar" >          
+            <ul class="left-navbar" >   
+                <li><a href="/products/all">Todo</a></li>       
                 <li><a href="/products/decoracion">Decoracion</a></li>
                 <li><a href="/products/usopersonal">Uso personal</a></li> 
                 <li><a href="/products/viajes">Viajes</a></li>
@@ -44,7 +45,8 @@
                 <li><a href="/users/logout">Salir <i class="fas fa-sign-out-alt"></i></a></li>
             </ul>
             <% } else { %>
-            <ul class="left-navbar" >          
+            <ul class="left-navbar" > 
+                <li><a href="/products/all">Todo</a></li>            
             <li><a href="/products/decoracion">Decoracion</a></li>
             <li><a href="/products/usopersonal">Uso personal</a></li> 
             <li><a href="/products/viajes">Viajes</a></li>

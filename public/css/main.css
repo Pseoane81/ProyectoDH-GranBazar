@@ -334,29 +334,17 @@ header.abajo ul li {
         justify-content: space-between;
     }
     .main-navbar{
-        display: flex;
-        justify-content: space-between;
+        display: none;
+        
         
     }
-    .main-navbar ul{
-        display: flex;
-    }
-    .main-navbar li{
-        margin:  0 10px;
-        font-size: 16px;
-    }
+   
 
     main section div.productos article{
         width: 22%;
    
         }
-     div.burger-menu i{
-         display: none;
-        }
-
-    div.enlaces-1, div.enlaces-2 {
-            display: block;
-        }
+   
     article.sub-titulo {
             display: block;
             font-size: 12px;
@@ -388,4 +376,25 @@ header.abajo ul li {
         padding: 0 11px;
     }
     
+    }
+
+    @media (min-width: 882px) {
+        .main-navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-navbar ul{
+            display: flex;
+        }
+        .main-navbar li{
+            margin:  0 10px;
+            font-size: 16px;
+        }
+        div.burger-menu i{
+            display: none;
+           }
+   
+       div.enlaces-1, div.enlaces-2 {
+               display: block;
+           }
     }

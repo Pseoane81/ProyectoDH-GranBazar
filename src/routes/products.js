@@ -21,6 +21,7 @@ const upload = multer({ storage })
 
 /*envio de vistas*/
 router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
+router.get('/all', controller.allproducts);
 router.get("/busqueda", controller.busqueda); // busqueda
 router.get('/decoracion', controller.decoracion); // Te lleva a la vista DECORACION
 router.get('/usopersonal', controller.usopersonal); // Te lleva a la vista USO PERSONAL

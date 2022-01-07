@@ -7,12 +7,22 @@ const { Op } = require('sequelize');
 const sequelize = require("sequelize");
 
 let controller = {
+    
+
     inventory:  (req,res)=> {
         db.Product.findAll()
          .then(function(inventory){
              res.render('inventory',{inventory})
          })    
-     },     
+     },   
+
+     allproducts: (req,res) => {
+        db.Product.findAll()
+        .then(function(inventory) {
+        res.render('all', {inventory})
+        })
+     },
+
     
     mostrarProductos:  (req,res)=> {
         db.Product.findAll()
