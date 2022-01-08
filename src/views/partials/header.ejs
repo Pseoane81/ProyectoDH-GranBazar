@@ -13,7 +13,8 @@
       
     <nav class="main-navbar">
         <% if (locals.isLogged && locals.userLogged.rol == "admin") { %>
-        <ul class="left-navbar" >          
+        <ul class="left-navbar" >
+            <li><a href="/products/all">Todo</a></li>          
             <li><a href="/products/decoracion">Decoracion</a></li>
             <li><a href="/products/usopersonal">Uso personal</a></li> 
             <li><a href="/products/viajes">Viajes</a></li>

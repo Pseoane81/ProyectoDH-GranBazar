@@ -4,7 +4,7 @@ const app = express();
 const ejs = require ('ejs');
 const methodOverride = require('method-override'); // agregamos method override
 const session = require("express-session"); // requerimos session para usuarios
-//const usserloggedmiddleware = require("./middleware/userloggedmiddleware");
+const usserloggedmiddleware = require("./middleware/userloggedmiddleware");
 const cookies = require("cookie-parser");
 
 
@@ -27,7 +27,7 @@ app.use(session({
 app.use(cookies())
 
 /*chequeando si hay usuarios logueados */
-//app.use(usserloggedmiddleware);
+app.use(usserloggedmiddleware);
 
 
 /*Config express */
