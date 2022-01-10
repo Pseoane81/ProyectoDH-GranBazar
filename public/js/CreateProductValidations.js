@@ -4,11 +4,14 @@ const textarea = document.querySelectorAll("#formulario-product textarea")
 
 
 
+
+
 const expresiones = {
 	name: /^[a-zA-Z0-9\s]{5,30}$/, // Letras, numeros
 	description: /^[a-zA-ZÀ-ÿ\s]{20,30}$/, // Letras y espacios, pueden llevar acentos.
 	measurements:/^[a-zA-ZÀ-ÿ-0-9\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.	
-	price: /^[0-9]*$/ // 7 a 14 numeros.
+	price: /^[0-9]*$/, // 7 a 14 numeros.
+    img: /\.(jpg|png|gif|jpeg)$/i
 }
 
 
@@ -23,8 +26,10 @@ const validarFormulario = (e) => {
         case "price":
             validarCampo(expresiones.price, e.target, "price")
         break;
+                 
     }
 }
+
 
 const validarFormularioText = (e) => {
     switch (e.target.name){
@@ -33,6 +38,25 @@ const validarFormularioText = (e) => {
         break;
     }
 }
+const validarFormularioImg = (e) => {
+    switch (e.target.name){
+        case "image":
+            if(!expresiones.img.test(e.target.files[0].name)){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'EL archivo no es de los permitidos!',
+                    footer: 'Solo acepta .png, .jpg, .jpeg .gif'
+                  })
+                  
+                
+            }
+        
+        break;
+    }
+}
+
+
 
 const validarCampo = (expresion, input, campo) => {
     if(expresion.test(input.value)){
@@ -57,12 +81,16 @@ const validarCampo = (expresion, input, campo) => {
 
 inputs.forEach((input) => {
     input.addEventListener("keyup", validarFormulario);
-    input.addEventListener("blur", validarFormulario);
+    input.addEventListener("blur", validarFormulario)
+    input.addEventListener("change", validarFormularioImg);
 })
 textarea.forEach((textarea) => {
     textarea.addEventListener("keyup", validarFormularioText);
     textarea.addEventListener("blur", validarFormularioText);
 })
+
+
+
 
 
 

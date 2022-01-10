@@ -34,9 +34,9 @@
             </div>
         <% } %>
     
-        <div class="form-control">
+        <div class="form-control" id="grupo_image">
             <label for="image" class="">Selecciona las imagenes para tu producto</label>
-            <input type="file" name="image" accept=".png, .jpg, .jpeg" multiple>
+            <input type="file" name="image" accept=".png, .jpg, .jpeg" src="" multiple>
             <span class="imgs">Solo acepta .png, .jpg, .jpeg .gif</span>
             <% if (locals.errors && errors.image) { %>
                 <div class="text-danger">
@@ -136,6 +136,7 @@
 
        <%- include('partials/footer')  %> 
        <script src="/js/CreateProductValidations.js"></script>
+
     </body>
     </html>
 
