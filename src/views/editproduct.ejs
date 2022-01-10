@@ -5,11 +5,15 @@
     <%- include('partials/header')  %> 
         <main>
             <h3 class="addedit">EDITANDO PRODUCTO: <%= product.name%> </h3>
-        <form action="/products/editproduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">
+        <form action="/products/editproduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit" id="formulario-product">
   
-    <div class="form-control">
-        <label for="">Nombre</label>
-        <input type="text" name="name" value="<%= product.name%>" >
+    <div class="form-control" id="grupo_name">
+        <label for="name" class="formulario_label">Nombre</label>
+        <div class="formulario_grupo_input">
+        <input type="text" name="name" id="name" class="formulario_input" value="<%= product.name%>" >
+        <i class="formulario_validacion_estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario_input_error">El nobre debe tener minimo 2 caracteres y solo puede contener letras y numeros</p>
         <% if (locals.errors && errors.name) { %>
             <div class="text-danger">
                 <%= errors.name.msg %> 
@@ -28,7 +32,7 @@
                 </div>
             <% } %>
         </div>
-        <div class="form-control">
+        <div class="form-control" id="grupo_image">
             <label for="">Selecciona las imagenes para tu producto</label>
             <input type="file" name="image" accept=".png, .jpg, .jpeg" multiple value="<%= product.image%>">
             <span class="imgs">Solo acepta .png, .jpg, .jpeg</span>
@@ -38,18 +42,27 @@
                 </div>
             <% } %>
         </div>
-        <div class="form-control descripcion" >
-        <label for="descripcion">Descripcion del producto</label>
-        <textarea class="text-description" name="description" id="text-description"> <%= product.description%> </textarea>
+        <div class="form-control descripcion" id="grupo_description" >
+            <label for="description" class="formulario_label">Descripcion del producto</label>
+            <div class="formulario_grupo_input">
+                <textarea class="text-description" name="description" id="text-description"> <%= product.description%> </textarea>
+            <i class="formulario_validacion_estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario_input_error">La descripcion debe tener minimo 20 caracteres</p>  
+
         <% if (locals.errors && errors.description) { %>
             <div class="text-danger">
                 <%= errors.description.msg %> 
             </div>
         <% } %>
         </div>
-        <div class="form-control">
-            <label for="">Medidas:</label>
+        <div class="form-control" id="grupo_measurements">
+            <label for="measurements" class="formulario_label">Medidas:</label>
             <input type="text" name="measurements" value="<%= product.measure%>">
+            <div class="formulario_grupo_input">
+            <i class="formulario_validacion_estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario_input_error">Las medidas no debe quedar Vacio</p>
             <% if (locals.errors && errors.measurements) { %>
                 <div class="text-danger">
                     <%= errors.measurements.msg %> 
@@ -92,9 +105,13 @@
                             <%= errors.origin.msg %> 
                         </div>
                     <% } %>
-        <div class="form-control">
-            <label for="">Precio</label>
+                    <div class="form-control" id="grupo_price">
+                        <label for="price" class="formulario_label">Precio</label>
+                        <div class="formulario_grupo_input">
             <input type="text" name="price" class="price" value="<%= product.price%>">
+            <i class="formulario_validacion_estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario_input_error">El precio tiene que ser un numero y no puede sser vacio</p>
             <% if (locals.errors && errors.price) { %>
                 <div class="text-danger">
                     <%= errors.price.msg %> 
@@ -115,6 +132,7 @@
 
 
        <%- include('partials/footer')  %> 
+       <script src="/js/CreateProductValidations.js"></script>
     </body>
     </html>
 
