@@ -255,7 +255,7 @@ let controller = {
     },
 
     delete (req, res) {
-
+        
         db.ProductColor.destroy({
             where: {
                 product_id: req.params.id

@@ -43,11 +43,12 @@
 								<a href="/products/<%= product.id %>" class="action-buttonedit">Detalle</a>
 								<a href="/products/editproduct/<%= product.id %>" class="action-buttonedit">Editar</a>
 							
-								<form action="/products/<%= product.id %>?_method=DELETE" method="post" class="d-inline">
-									<button class="action-buttondelete">Borrar</button>
+								<form action="/products/<%= product.id %>?_method=DELETE" method="post" class="d-inline" id="borrado">
+									<button type="submit" class="action-buttondelete">Borrar</button>
 								</form>
 							</td>
 						</tr>
+                        
 					<% }) %>
 				</tbody>
 
@@ -59,6 +60,7 @@
         
    </main>
    <%- include('partials/footer')  %> 
+   <script src="/js/AlertaBorrado.js"></script>
    
 </body>
 </html>
