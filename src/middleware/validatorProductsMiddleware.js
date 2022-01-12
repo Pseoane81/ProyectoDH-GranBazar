@@ -2,8 +2,10 @@ const path=require('path');
 const {body}=require('express-validator');//requiriendo validator-express
 
 module.exports=[
-  body("name").notEmpty().withMessage('Tienes que escribir un nombre'),
-  body('description').notEmpty().withMessage('Tienes que escribir una descripcion'),
+  body("name").notEmpty().withMessage('Tienes que escribir un nombre').bail()
+	.isLength({min: 5}).withMessage('Tiene que tener al menos 5 caracteres'),
+  body('description').notEmpty().withMessage('Tienes que escribir una descripcion').bail()
+  .isLength({min: 20}).withMessage('Tiene que tener al menos 20 caracteres'),
   body('category').notEmpty().withMessage('Tienes que elegir una categoria'),
   body('measurements').notEmpty().withMessage('Tienes que poner una medida'),
   body('color').notEmpty().withMessage('Tienes que elegir un color'),

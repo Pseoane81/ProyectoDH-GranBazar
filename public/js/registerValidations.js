@@ -8,9 +8,40 @@ let spanNombre=qs("#name");
 let spanApellido=qs("#lastname");
 let spanEmail=qs("#email");
 let spanPassword=qs("#repassword");
+let inputs = qsa("#avatar input") ;
 
+const expresiones = {
+	name: /^[a-zA-Z0-9\s]{5,30}$/, // Letras, numeros
+	description: /^[a-zA-ZÀ-ÿ\s]{20,30}$/, // Letras y espacios, pueden llevar acentos.
+	measurements:/^[a-zA-ZÀ-ÿ-0-9\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.	
+	price: /^[0-9]*$/, // 7 a 14 numeros.
+    img: /\.(jpg|png|gif|jpeg)$/i
+}
 
+ /*validacion img*/
+    
+   
+ const validarFormularioImg = (e) => {
+    switch (e.target.name){
+        case "avatar":
+            if(!expresiones.img.test(e.target.files[0].name)){
+                Swal.fire({
+                    icon:'error',
+                    title:'Oops...',
+                    text:'EL archivo no es de los permitidos!',
+                    footer:'Solo acepta .png, .jpg, .jpeg .gif'
+                  })
+                  form.reset();
+                
+            }
+        
+        break;
+    }
+}
 
+inputs.forEach((input) => {
+    input.addEventListener("change", validarFormularioImg)
+})
 
 /*
 
@@ -72,7 +103,6 @@ form.addEventListener("submit",function(e){
         qs("#email").innerText=errors.email;
     }
 
-
    
 
     /*validaciones del password*/
@@ -90,6 +120,9 @@ form.addEventListener("submit",function(e){
     }
 
 });
+
+
+
 
 /*
 

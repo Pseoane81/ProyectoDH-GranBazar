@@ -1,8 +1,8 @@
-const formBorrado = document.getElementById("borrado")
-//const button = document.querySelectorAll("#borrado button")
+const formBorrado = document.querySelectorAll(".borrado")
 
-//button.forEach(elemento => {    
-    formBorrado.addEventListener("submit", (e) => {
+
+formBorrado.forEach(elemento => {    
+    elemento.addEventListener("submit", (e) => {
     e.preventDefault()
     Swal.fire({
         title: 'Estas seguro?',
@@ -19,9 +19,9 @@ const formBorrado = document.getElementById("borrado")
             'El archivo se borro de la base.',
             'success'
           )
-          formBorrado.submit()          
+          elemento.submit()          
         } 
       })
     
 });
-//});
+});

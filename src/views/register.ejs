@@ -59,9 +59,9 @@
                     <input type="date" name="dob">
                 </div>
                 
-                <div class="form-control">
+                <div class="form-control" id="avatar">
                     <label for="image">Imagen de perfil</label>
-                    <input type="file" name="avatar" accept=".png, .jpg, .jpeg" >
+                    <input type="file" id="fotoperfil" name="avatar" accept=".png, .jpg, .jpeg" >
                     <samp  style="color:#b60b0b" id="avatar" ></samp>
                     <% if (locals.errors && errors.avatar ) { %>
                         <div class="text-danger">
