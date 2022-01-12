@@ -23,6 +23,25 @@ let controller = {
         })
      },
 
+     favoritos:  (req,res)=> {
+        db.User.findOne( 
+            {where: { id:res.locals.userLogged.id}, 
+            include: [{association:"favorites"}]}) 
+        
+        .then(function(resultado){//console.log(resultado)
+            res.render('favoritos',{resultado:resultado.favorites})
+        })
+        
+     
+     },
+     favoritosGuardar:(req,res)=>{
+        db.Favoritos.create({
+            product_id:req.params.id,
+            user_id:res.locals.userLogged.id,
+            
+        })
+     },
+
     
     mostrarProductos:  (req,res)=> {
         db.Product.findAll()

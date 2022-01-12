@@ -114,9 +114,9 @@
                                <% destacados.forEach((product,j) => { %>
                                 <% if (j<4) { %>  <!-- pone solo 4 productos-->
                                 <section class="prod-box">
-                               <a href="products/<%= product.id%>">
+                                    <a href="/products/favoritos"><i  class="agreagar-favoritos far fa-heart"></i></a>
+                               <a href="products/<%= product.id%>"> 
                                 <div class="highlight-prod">
-                               
                                      <img src="/img/productos/<%= product.img%>" alt="mueble" class="product-img"></a>
                                     <p>$<%= product.price%></p>
                                         <p><%= product.name%></p>

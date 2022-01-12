@@ -60,11 +60,14 @@
                 <div class="botones">
                    <a href="/products/editproduct/<%= product.id  %>">
                     <button type="submit" class="action-buttonedit">EDITAR </button></a>
-                    <form action="/products/<%= product.id  %>?_method=DELETE" method="POST" style="display: inline-flex" class="borrado">
+                    <form action="/products/<%= product.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
                     <button type="submit" class="action-buttondelete">ELIMINAR</button>
                     </form>
                 </div>
-                <% } %>  
+                <% } %> 
+                <form action="/products/favoritos/<%= product.id  %>" method="POST" style="display: inline-flex">
+                    <button type="submit" class="action-buttondelete">Agregar a Favoritos</button>
+                    </form> 
                 <div class="boton">
                     <!-- <input type="button" value="AGREGAR AL CARRITO" class="boton-compra">
                     <p class="carrito"><i class="fas fa-shopping-cart"></i></p> -->
@@ -100,7 +103,6 @@
 
    </main>
    <%- include('partials/footer')  %> 
-   <script src="/js/AlertaBorrado.js"></script>
    
 </body>
 </html>

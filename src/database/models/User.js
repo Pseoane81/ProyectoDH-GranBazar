@@ -45,7 +45,15 @@ module.exports = function(sequelize,dataTypes){
         User.belongsTo(models.Country, {
             as: "countries",
             foreignKey: "country_id"
+            }),
+            User.belongsToMany(models.Product, {
+                as:"favorites",
+                through:"Favoritos",
+                foreignKey:"user_id",
+                otherKey:"product_id",
+                timestamps:false
             })
-        }
+            }
+        
     return User;
 }

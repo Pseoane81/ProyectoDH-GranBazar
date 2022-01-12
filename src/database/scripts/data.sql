@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: granbazardb
+-- Host: 127.0.0.1    Database: granbazardb
 -- ------------------------------------------------------
--- Server version	5.7.34
+-- Server version	5.5.5-10.4.21-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -21,7 +21,7 @@
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Muebles'),(2,'Destacados'),(3,'Viajes'),(4,'Uso personal'),(6,'Decoracion');
+INSERT INTO `categories` VALUES (0,''),(1,'Muebles'),(2,'Destacados'),(3,'Viajes'),(4,'Uso personal'),(6,'Decoracion');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -43,6 +43,16 @@ LOCK TABLES `countries` WRITE;
 /*!40000 ALTER TABLE `countries` DISABLE KEYS */;
 INSERT INTO `countries` VALUES (1,'Argentina'),(7,'Brasil'),(6,'Canada'),(2,'Chile'),(4,'China'),(5,'EEUU'),(3,'India'),(8,'Uruguay');
 /*!40000 ALTER TABLE `countries` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `favorites`
+--
+
+LOCK TABLES `favorites` WRITE;
+/*!40000 ALTER TABLE `favorites` DISABLE KEYS */;
+INSERT INTO `favorites` VALUES (1,29,53),(2,32,53),(3,38,53);
+/*!40000 ALTER TABLE `favorites` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -118,7 +128,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (3,'','','filip@gmail.com','2022-04-27',NULL,'$2a$10$cIlmL/fNl.zK4i7IRsJp7uytNgRs3eVtDe539H',NULL,'2147483647'),(4,'tristan','acevedo','tristan@gmail.com','2022-04-27',1,'$2a$10$v0c.I9m6sKYV.aW6kqRLOeAqvhe03sAbuMme8I',NULL,'2147483647'),(6,'orem','Jerez','orem@gmail.com','2022-09-01',NULL,'$2a$10$W64Tov9fG6A9D7xfxJyBfeKbkAkdU1WD4LJhkf',NULL,'2147483647'),(8,'blanca','ruiz','blanca@gmail.com','2022-08-18',NULL,'$2a$10$qNHpprB/HB3PzUwvTq/Mte85TijJuMyKHYOLEjNd0FTOLBFP6g27S','admin','1639945948343_img.png'),(9,'Pablo','Seoane','pablitoseoane@gmail.com','1981-10-14',NULL,'$2a$10$OG3vFvxGD9eQvPIZrZiUJegeeA.k.oTG2S9.wKgCOvK3Rll8V6ja6','admin','1640261486926_img.jpg'),(10,'Admin','admin','admin@mail.com','2021-12-23',NULL,'$2a$10$MG7AWhP7F9Ng8IIUi.iZX.A0K4m4MJil4WcZW1LmmTDzBQ41W7xR.','admin','1640289875492_img.png'),(11,'Melina','Bassano','mbassano@gmail.com','1990-02-14',NULL,'$2a$10$anm.JSHV1WW4wIygiTrC5.mdvlmDT.M7Ixc.LUuWvxjfOyylBwbt.',NULL,'1640289972203_img.jpg'),(13,'Jonathan Eskesen',NULL,'jona91_eskesen@hotmail.com','2021-12-29',NULL,'$2a$10$gLxwc1Ordi/Tf/MzwLUk1eCiv5WwGjqGUe2OnvDRpOZS22/ZEYdSm',NULL,'1640302334868_img.png');
+INSERT INTO `users` VALUES (3,'','','filip@gmail.com','2022-04-27',NULL,'$2a$10$cIlmL/fNl.zK4i7IRsJp7uytNgRs3eVtDe539H',NULL,'2147483647'),(4,'tristan','acevedo','tristan@gmail.com','2022-04-27',1,'$2a$10$v0c.I9m6sKYV.aW6kqRLOeAqvhe03sAbuMme8I',NULL,'2147483647'),(6,'orem','Jerez','orem@gmail.com','2022-09-01',NULL,'$2a$10$W64Tov9fG6A9D7xfxJyBfeKbkAkdU1WD4LJhkf',NULL,'2147483647'),(8,'blanca','ruiz','blanca@gmail.com','2022-08-18',NULL,'$2a$10$qNHpprB/HB3PzUwvTq/Mte85TijJuMyKHYOLEjNd0FTOLBFP6g27S','admin','1639945948343_img.png'),(9,'Pablo','Seoane','pablitoseoane@gmail.com','1981-10-14',NULL,'$2a$10$OG3vFvxGD9eQvPIZrZiUJegeeA.k.oTG2S9.wKgCOvK3Rll8V6ja6','admin','1640261486926_img.jpg'),(10,'Admin','admin','admin@mail.com','2021-12-23',NULL,'$2a$10$MG7AWhP7F9Ng8IIUi.iZX.A0K4m4MJil4WcZW1LmmTDzBQ41W7xR.','admin','1640289875492_img.png'),(11,'Melina','Bassano','mbassano@gmail.com','1990-02-14',NULL,'$2a$10$anm.JSHV1WW4wIygiTrC5.mdvlmDT.M7Ixc.LUuWvxjfOyylBwbt.',NULL,'1640289972203_img.jpg'),(13,'Jonathan Eskesen','','jona91_eskesen@hotmail.com','2021-12-29',NULL,'$2a$10$gLxwc1Ordi/Tf/MzwLUk1eCiv5WwGjqGUe2OnvDRpOZS22/ZEYdSm',NULL,'1640302334868_img.png'),(14,'tomi','acevedo','tomito@gmail.com','2023-08-19',NULL,'$2a$10$JMxFu3eKwBvi2AArCI3SH.C4nreM2xeIC4lOgDuOFy/zm30f8p8py',NULL,'1640882218769_img.jpeg'),(15,'','','','0000-00-00',NULL,'$2a$10$dXIoVbs4i0799THK5Gs2ceSsvcjlD9BrLhJ6C8Eul8aDxq4/RkrBO',NULL,'avatar-by-default.png'),(22,'alexios','acevedo','all@gmail.com','2021-03-11',NULL,'$2a$10$rPbPLKv33RAUeekczPgkSuNXcCaVwK0AaodxlpG1xrrxn5yyy6O/W',NULL,'1641418093714_img.jpg'),(35,'carla','blancos','carla@gmail.com','2021-06-10',NULL,'$2a$10$.nM4Loa9NpsToRXuPIZqFurq7UqWzQh4DMggSFC0ar4fXX02A7dwy',NULL,'1641421119865_img.jpeg'),(52,'dario','perez','dario@gmail.com','2020-12-10',NULL,'$2a$10$rErQ7hvQA/FnVAzFJldXTeFwMcPKwSoafmGYHjbAsnpBmESSVa/.G','admin','1641677031221_img.jpeg'),(53,'niota','perezo','niota@gmail.com','2022-08-18',NULL,'$2a$10$NThAd4RO5SQW/F9L/v4vKOHTmzsjoPMfSeMWk2D1/yOG.8qdq9iNa','admin','1641942259144_img.jpeg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -131,4 +141,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-23 21:12:21
+-- Dump completed on 2022-01-12 20:30:06

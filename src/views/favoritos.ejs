@@ -4,18 +4,20 @@
 <body>
     <%- include('partials/header')  %> 
     <main class="body-product">
+
+
+        <div class="linea divisora">
+            <h2 class="efecto-lineas"> ACÁ ESTAN TODOS TUS PRODUCTOS FAVORITOS </h2>
+        </div> 
+       
         
-        <section class="visita">
-            <h3>TODOS LOS PRODUCTOS</h3>
-        </section>
     
-        <div class="menu-imagenes"> 
+        <div class="menu-imagenes-favoritos"> 
            
             <div class="products">
                 
-                <% inventory.forEach(product => { %>
+                <% resultado.forEach(product => { %>
                     <div class="highlight-prod">
-                        <a href="/products/favoritos"><i  class="agreagar-favoritos far fa-heart"></i></a>   
                         <a href="/products/<%= product.id %> " class="unit-product">
                         <img src="/img/productos/<%= product.img %>" width="200" alt="taza" class="producto_img"></a> 
                         <div class="precio-products">
