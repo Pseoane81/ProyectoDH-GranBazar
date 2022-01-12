@@ -80,6 +80,10 @@ table thead.encabezado {
     font-size: 20px;
     font-weight: bold;
 }
+div.action-buttonedit.creaprod{
+    width: 200px;
+    display: flex;
+}
 
 
 @media (min-width:361px) {
