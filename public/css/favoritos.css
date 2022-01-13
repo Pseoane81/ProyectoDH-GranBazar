@@ -23,19 +23,21 @@
     right: 100px;
 }
 .menu-imagenes-favoritos {
-    display: block;
+    display:flex;
     flex-wrap: wrap;
     top:43px;
-    border:dotted 1px red;
+    margin: 10px;
+    
     
 
 }.agreagar-favoritos{ 
 border-radius: 8px;
 transition: background-color 1s;
+
 }
 
  .agreagar-favoritos:focus,.agreagar-favoritos:hover{
-  color: #81B29A ;
+  color: #a20714 ;
 }
 .agreagar-favoritos{
 position: relative;

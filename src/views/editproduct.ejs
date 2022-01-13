@@ -1,124 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include ('partials/head') %> 
-<body>
-    <%- include('partials/header')  %> 
+    <body>
+     <%- include('partials/header')  %> 
         <main>
-            <h3 class="addedit">EDITANDO PRODUCTO: <%= product.name%> </h3>
-        <form action="/products/editproduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">
-  
-    <div class="form-control">
-        <label for="">Nombre</label>
-        <input type="text" name="name" value="<%= product.name%>" >
-        <% if (locals.errors && errors.name) { %>
-            <div class="text-danger">
-                <%= errors.name.msg %> 
-            </div>
-        <% } %>
-    </div>
-    <div class="form-control">
-        <label for="">Categorias</label>
-        <div class="checkbox"> 
-            <% for (let j = 0; j < categoria.length; j++){ %>
-            <label for="" class="check"><input type="checkbox" name="category"  value="<%=categoria[j].id%>"class="check"<%= locals.oldData && (categoria[j].category === oldData.category) ? 'checked' : null %>><%=categoria[j].category%></label>
-            <%}%>
-            <% if (locals.errors && errors.category) { %>
-                <div class="text-danger">
-                    <%= errors.category.msg %> 
-                </div>
-            <% } %>
-        </div>
-        <div class="form-control">
-            <label for="">Selecciona las imagenes para tu producto</label>
-            <input type="file" name="image" accept=".png, .jpg, .jpeg" multiple value="<%= product.image%>">
-            <span class="imgs">Solo acepta .png, .jpg, .jpeg</span>
-            <% if (locals.errors && errors.image) { %>
-                <div class="text-danger">
-                    <%= errors.image.msg %> 
-                </div>
-            <% } %>
-        </div>
-        <div class="form-control descripcion" >
-        <label for="descripcion">Descripcion del producto</label>
-        <textarea class="text-description" name="description" id="text-description"> <%= product.description%> </textarea>
-        <% if (locals.errors && errors.description) { %>
-            <div class="text-danger">
-                <%= errors.description.msg %> 
-            </div>
-        <% } %>
-        </div>
-        <div class="form-control">
-            <label for="">Medidas:</label>
-            <input type="text" name="measurements" value="<%= product.measure%>">
-            <% if (locals.errors && errors.measurements) { %>
-                <div class="text-danger">
-                    <%= errors.measurements.msg %> 
-                </div>
-            <% } %>
-        </div>
-        <div class="form-control">
-            <label for="">Colores</label>
-            <div class="checkbox"> 
-                <% for (let k = 0; k < color.length; k++){ %>
-                <label for="" class="check"><input type="checkbox" name="color"  value="<%=color[k].id%>"class="check"<%= locals.oldData && (color[k].color === oldData.color) ? 'checked' : null %>><%=color[k].color%></label>
-                <%}%>
-                <% if (locals.errors && errors.color) { %>
+                <h3 class="addedit">EDITANDO PRODUCTO: <%= product.name%> </h3>
+            <form action="/products/editproduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">
+        
+            <div class="form-control">
+                <label for="">Nombre</label>
+                <input type="text" name="name" value="<%= product.name%>" >
+                <% if (locals.errors && errors.name) { %>
                     <div class="text-danger">
-                    <%= errors.color.msg %> 
+                        <%= errors.name.msg %> 
                     </div>
                 <% } %>
             </div>
             <div class="form-control">
-                <label for="">Material</label>
-                <select name="material" id="material">
-                    <% for (let i =0; i < material.length; i++){ %>
-                    <option value="<%=material[i].id%>" <%= locals.oldData && (material[i].material === oldData.material) ? 'selected' : null %>><%=material[i].material%></option>      
-                    <%}%>
-                    <% if (locals.errors && errors.material) { %>
-                        <div class="text-danger">
-                            <%= errors.material.msg %> 
-                        </div>
-                    <% } %>
-                </select>
-                <div class="form-control">
-                    <label for="">Origen</label>
-                    <select name="origin" id="origin">
-                        <% for (let i =0; i < country.length; i++){ %>
-                        <option value="<%=country[i].id%>" <%= locals.oldData && (country[i].country === oldData.country) ? 'selected' : null %>><%=country[i].country%></option>      
-                        <%}%>
-                    </select>
-                    <% if (locals.errors && errors.origin) { %>
-                        <div class="text-danger">
-                            <%= errors.origin.msg %> 
-                        </div>
-                    <% } %>
-        <div class="form-control">
-            <label for="">Precio</label>
-            <input type="text" name="price" class="price" value="<%= product.price%>">
-            <% if (locals.errors && errors.price) { %>
+            <label for="">Categorias</label>
+            <div class="checkbox"> 
+                <% for (let j = 0; j < categoria.length; j++){ %>
+                <label for="" class="check"><input type="checkbox" name="category"  value="<%=categoria[j].id%>"class="check"<%= locals.oldData && (categoria[j].category === oldData.category) ? 'checked' : null %>><%=categoria[j].category%></label>
+                <%}%>
+                <% if (locals.errors && errors.category) { %>
+                    <div class="text-danger">
+                        <%= errors.category.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            <div class="form-control">
+                <label for="">Selecciona las imagenes para tu producto</label>
+                <input type="file" name="image" accept=".png, .jpg, .jpeg" multiple value="<%= product.image%>">
+                <span class="imgs">Solo acepta .png, .jpg, .jpeg</span>
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-danger">
+                        <%= errors.image.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            <div class="form-control descripcion" >
+            <label for="descripcion">Descripcion del producto</label>
+            <textarea class="text-description" name="description" id="text-description"> <%= product.description%> </textarea>
+            <% if (locals.errors && errors.description) { %>
                 <div class="text-danger">
-                    <%= errors.price.msg %> 
+                    <%= errors.description.msg %> 
                 </div>
             <% } %>
-        </div>
+            </div>
+            <div class="form-control">
+                <label for="">Medidas:</label>
+                <input type="text" name="measurements" value="<%= product.measure%>">
+                <% if (locals.errors && errors.measurements) { %>
+                    <div class="text-danger">
+                        <%= errors.measurements.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            <div class="form-control">
+                <label for="">Colores</label>
+                <div class="checkbox"> 
+                    <% for (let k = 0; k < color.length; k++){ %>
+                    <label for="" class="check"><input type="checkbox" name="color"  value="<%=color[k].id%>"class="check"<%= locals.oldData && (color[k].color === oldData.color) ? 'checked' : null %>><%=color[k].color%></label>
+                    <%}%>
+                    <% if (locals.errors && errors.color) { %>
+                        <div class="text-danger">
+                        <%= errors.color.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+                <div class="form-control">
+                    <label for="">Material</label>
+                    <select name="material" id="material">
+                        <% for (let i =0; i < material.length; i++){ %>
+                        <option value="<%=material[i].id%>" <%= locals.oldData && (material[i].material === oldData.material) ? 'selected' : null %>><%=material[i].material%></option>      
+                        <%}%>
+                        <% if (locals.errors && errors.material) { %>
+                            <div class="text-danger">
+                                <%= errors.material.msg %> 
+                            </div>
+                        <% } %>
+                    </select>
+                    <div class="form-control">
+                        <label for="">Origen</label>
+                        <select name="origin" id="origin">
+                            <% for (let i =0; i < country.length; i++){ %>
+                            <option value="<%=country[i].id%>" <%= locals.oldData && (country[i].country === oldData.country) ? 'selected' : null %>><%=country[i].country%></option>      
+                            <%}%>
+                        </select>
+                        <% if (locals.errors && errors.origin) { %>
+                            <div class="text-danger">
+                                <%= errors.origin.msg %> 
+                            </div>
+                        <% } %>
+            <div class="form-control">
+                <label for="">Precio</label>
+                <input type="text" name="price" class="price" value="<%= product.price%>">
+                <% if (locals.errors && errors.price) { %>
+                    <div class="text-danger">
+                        <%= errors.price.msg %> 
+                    </div>
+                <% } %>
+            </div>
 
-        <div>
-            <a href="/products/favoritos"><i class="agreagar-favoritos far fa-heart"></i></a>
-        </div>
-        <div class="buttons">
-        <button type="submit" class="enviar">GUARDAR CAMBIOS</button>
-        <button type="reset" class="borrar">BORRAR</button> </div>
-    </div>  
-    
-    </form>
-    
-    
+            
+            <div class="buttons">
+                <button type="submit" class="enviar">GUARDAR CAMBIOS</button>
+                <button type="reset" class="borrar">BORRAR</button> </div>
+            </div>  
+        
+            <div>
+                <a href="/products/favoritos"><i class="agreagar-favoritos far fa-heart"></i></a>
+            </div>
     
     
-       </main>
+    
+    
+        </main>
 
 
        <%- include('partials/footer')  %> 
     </body>
-    </html>
+</html>
 
