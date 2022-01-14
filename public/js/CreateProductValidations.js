@@ -48,7 +48,7 @@ const validarFormularioImg = (e) => {
                     text: 'EL archivo no es de los permitidos!',
                     footer: 'Solo acepta .png, .jpg, .jpeg .gif'
                   })
-                  formulario.reset();
+                  e.target.value = ""
                 
             }
         

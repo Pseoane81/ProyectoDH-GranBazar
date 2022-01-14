@@ -178,5 +178,13 @@ module.exports = {
                 res.redirect("/users/register")
 
           
+        },
+        list: (req,res) => {
+            db.User.findAll()
+            .then(mail => {
+                return res.json(mail)
+                
+            } )
+
         }
  }

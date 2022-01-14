@@ -35,4 +35,7 @@ router.put("/edituser/:id",uploadFile.single('avatar'),changemiddleware, control
 /*Borrar Usuario*/
 router.delete("/:id", controller.delete);
 
+/*listado usuarios*/
+router.get("/list/", controller.list);
+
 module.exports=router; 

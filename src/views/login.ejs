@@ -8,7 +8,7 @@
         <div class="ingresa">INGRESÁ A TU CUENTA</div>
         <form  method="POST" id="login" action="/users/login" class="login">
 
-        <div class="form-control">
+        <div class="form-control" id="email-validacion">
             <label for="">Email</label>
             <input type="email" name="email" id="email">
             <span  style="color:#b60b0b" id="correo" ></span>
@@ -40,5 +40,6 @@
 
         <%- include('partials/footer')  %> 
         <script src="/js/loginValidations.js" ></script>
+        <script src="/js/validaEmail.js" ></script>
     </body>
     </html>
