@@ -47,3 +47,13 @@ Sprint 5:
 3. Continuar haciendo: Codear en equipo. Meets semanales y meets extras. 
 
 4. Hacer menos: No procrastinar. Acumular tareas para que commiteemos todos.
+
+Sprint 6:
+
+1. Comenzar a hacer: comunicar problemas de evolucion del codigo para resolver entre todos y llegar ok a las meet.
+
+2. Hacer más: Mejorar la comunicacion entre meet y meet. Division de tareas equitativamente.
+
+3. Continuar haciendo: Codear en equipo. Meets semanales y meets extras. 
+
+4. Hacer menos: No procrastinar. Acumular tareas para que commiteemos todos. Carga de tarea individual

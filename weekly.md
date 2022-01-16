@@ -58,4 +58,11 @@ Terminamos el CRUD de usuario completo, dejamos listado las tareas faltantes y e
 Meet 20/12
 Corregimos puntos faltantes (especialmente el tema de tablas pivot). Junto con profes terminamos de formar el CRUD de productos y vistas de detalle.
 
+Meets para sprint 7
+Division de tareas entre compañeros, correccion y limpieza de codigo grupal. Nos pusimos de acuerdo sobre que temas/videos habia que indagar. Sobre todo para crear la API propia y consumirla en el front.
+
+Meet 16/01
+
+
+
 

@@ -18,26 +18,31 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage })
 
+/* proceso datos */
+router.post('/favoritos/:id',controller.favoritosGuardar);
+router.post('/', upload.single('image'),validation, controller.store); //Ruta que crea y guarda
+router.put("/editproduct/:id",upload.single('image'),validationUpate, controller.update); //Edita productos?
+router.delete("/:id", controller.delete); // Ruta que elimina el producto
+
 
 /*envio de vistas*/
 router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
 router.get('/favoritos', controller.favoritos);
-router.post('/favoritos/:id',controller.favoritosGuardar);
+
 router.get('/all', controller.allproducts);
 router.get("/busqueda", controller.busqueda); // busqueda
 router.get('/decoracion', controller.decoracion); // Te lleva a la vista DECORACION
 router.get('/usopersonal', controller.usopersonal); // Te lleva a la vista USO PERSONAL
 router.get('/viajes', controller.viajes); // Te lleva a la vista VIAJES
 router.get('/muebles', controller.muebles); // Te lleva a la vista muebles
-router.post('/', upload.single('image'),validation, controller.store); //Ruta que crea y guarda
+
 router.get('/cart',controller.comprar);
 router.get('/inventory', controller.inventory); // Te lleva a la vista de todos los productos
 router.get("/createproduct", controller.create); // Vista de crear
 router.get("/editproduct/:id", controller.edit); //vista de editar
-//router.put("/editproduct/:id",upload.single('image'), controller.update); //Edita productos?
+
 router.get("/:id", controller.detallar); // Muestra detalle de producto
-router.put("/editproduct/:id",upload.single('image'),validationUpate, controller.update); //Edita productos?
-router.delete("/:id", controller.delete); // Ruta que elimina el producto
+
 
 
 

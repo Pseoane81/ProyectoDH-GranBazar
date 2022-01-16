@@ -12,14 +12,14 @@ let controller = {
     inventory:  (req,res)=> {
         db.Product.findAll()
          .then(function(inventory){
-             res.render('inventory',{inventory})
+             res.render('products/inventory',{inventory})
          })    
      },   
 
      allproducts: (req,res) => {
         db.Product.findAll()
         .then(function(inventory) {
-        res.render('all', {inventory})
+        res.render('products/all', {inventory})
         })
      },
 
@@ -46,7 +46,7 @@ let controller = {
     mostrarProductos:  (req,res)=> {
         db.Product.findAll()
         .then(function(mostrar){
-            res.render('inventory',{mostrar})
+            res.render('products/inventory',{mostrar})
         })
      },
 
@@ -55,7 +55,7 @@ let controller = {
             {where: { id:6}, 
             include: [{association:"products"}]}) 
         .then(function(mostrar){
-            res.render('products',{mostrar:mostrar.products})
+            res.render('products/products',{mostrar:mostrar.products})
         })
         },
 
@@ -64,7 +64,7 @@ let controller = {
             {where: { id:4}, 
             include: [{association:"products"}]}) 
         .then(function(mostrar){
-            res.render('products',{mostrar:mostrar.products})
+            res.render('products/products',{mostrar:mostrar.products})
         })
         },
 
@@ -73,7 +73,7 @@ let controller = {
             {where: { id:1}, 
             include: [{association:"products"}]}) 
         .then(function(mostrar){
-            res.render('products',{mostrar:mostrar.products})
+            res.render('products/products',{mostrar:mostrar.products})
         })
         },
     
@@ -82,7 +82,7 @@ let controller = {
             {where: { id:3}, 
             include: [{association:"products"}]}) 
         .then(function(mostrar){
-            res.render('products',{mostrar:mostrar.products})
+            res.render('products/products',{mostrar:mostrar.products})
         })
         },
 
@@ -96,7 +96,7 @@ let controller = {
         })
         Promise.all([productos,mostrarlo, colores])
          .then(function([product,mostrar, colors]){
-           res.render('detail', {product: product,mostrar,colors});
+           res.render('products/detail', {product: product,mostrar,colors});
            /*res.send(product)*/
          })
     },
@@ -112,7 +112,7 @@ let controller = {
         let material =db.Material.findAll()
         Promise.all([color,categoria,country,material])
             .then(function([color,categoria,country,material]){
-               return res.render('createproduct',{Colors:color,Categoria:categoria,Country:country,Material:material});
+               return res.render('products/createproduct',{Colors:color,Categoria:categoria,Country:country,Material:material});
                
             }).catch(error => console.log(error));
     },
@@ -124,7 +124,7 @@ let controller = {
         let material =db.Material.findAll()
             Promise.all([pedidoproducto,color,categoria,country,material])
                 .then(function([product,color,categoria,country,material]){ 
-                    res.render('editproduct', {product,color,categoria,country,material});
+                    res.render('products/editproduct', {product,color,categoria,country,material});
         
         }).catch(error => console.log(error));
     },

@@ -9,7 +9,7 @@ const { Op } = require('sequelize');
 module.exports = {
     register:  (req,res)=> {
         
-        res.render('register')
+        res.render('users/register')
         
     },
     processRegister:(req,res)=>{
@@ -55,13 +55,13 @@ module.exports = {
             
         })
          
-         return res.redirect("login")
+        return res.render('users/login')
          
        
         },
 
     login: (req,res) => {
-        return res.render('login');
+        return res.render('users/login');
     }, 
     logged: (req,res) => {
             
@@ -163,7 +163,7 @@ module.exports = {
         
          res.clearCookie("email")
          req.session.destroy();
-          res.redirect("/users/login")
+          res.redirect("/login")
         },
     
 
@@ -175,7 +175,7 @@ module.exports = {
                 })
                 res.clearCookie("email")
                 req.session.destroy();
-                res.redirect("/users/register")
+                res.redirect("/register")
 
           
         },
