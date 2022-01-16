@@ -15,12 +15,21 @@
                 
                 <% inventory.forEach(product => { %>
                     <div class="highlight-prod">
-                        <a href="/products/favoritos"><i  class="agreagar-favoritos far fa-heart"></i></a>   
+                        <% if (locals.isLogged) { %>
+                        <a href="/products/favoritos"><i  class="agreagar-favoritos far fa-heart"></i></a>
                         <a href="/products/<%= product.id %> " class="unit-product">
-                        <img src="/img/productos/<%= product.img %>" width="200" alt="taza" class="producto_img"></a> 
-                        <div class="precio-products">
-                        <p>$<%= product.price%></p>
-                        <p><%= product.name%></p>
+                            <img src="/img/productos/<%= product.img %>" width="200" alt="taza" class="producto_img"></a> 
+                            <div class="precio-products">
+                            <p>$<%= product.price%></p>
+                            <p><%= product.name%></p>
+                        <% } else { %>
+                        <a href="/users/login"><i  class="agreagar-favoritos far fa-heart"></i></a> 
+                        <a href="/products/<%= product.id %> " class="unit-product">
+                            <img src="/img/productos/<%= product.img %>" width="200" alt="taza" class="producto_img"></a> 
+                            <div class="precio-products">
+                            <p>$<%= product.price%></p>
+                            <p><%= product.name%></p>
+                            <% } %>
                     </div>
                     </div>
                    <% }) %> 

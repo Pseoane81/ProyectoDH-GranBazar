@@ -9,7 +9,7 @@ const mail = fetch("http://localhost:3000/users/list")
                     })
 
 
-const validarmail =  (e) => {console.log(array,e.target.value)
+const validarmail =  (e) => {
    let valido = array.find(mail => mail == e.target.value)
     
         if(!valido){

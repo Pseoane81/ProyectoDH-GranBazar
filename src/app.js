@@ -6,6 +6,7 @@ const methodOverride = require('method-override'); // agregamos method override
 const session = require("express-session"); // requerimos session para usuarios
 const usserloggedmiddleware = require("./middleware/userloggedmiddleware");
 const cookies = require("cookie-parser");
+require("dotenv").config()
 
 
 /* config template ejs*/
