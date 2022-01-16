@@ -113,7 +113,7 @@ module.exports = {
 
     userProfile: (req,res) => { 
         
-        return res.render('userprofile', {
+        return res.render('users/userprofile', {
             user: req.session.userLogged,
         });
     
