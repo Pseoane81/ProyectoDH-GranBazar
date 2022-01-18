@@ -6,9 +6,11 @@ const authmiddelware = require("../middleware/authmiddleware");
 const changemiddleware = require("../middleware/validatorchangeMiddleware")
 
 
+
 /*middleware*/
 const uploadFile =require('../middleware/multerMiddleware');
 const validation=require ('../middleware/validatorRegisterMiddleware');
+
 
 
 

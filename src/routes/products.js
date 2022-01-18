@@ -5,6 +5,7 @@ const controller = require('../controller/productsController')
 const multer = require('multer');
 const validation=require ('../middleware/validatorProductsMiddleware');
 const validationUpate=require ('../middleware/validatorProductsUpdateMiddleware');
+const adminMiddelware = require("../middleware/adminMidleware")
 
 /* Configuracion de multer */
 const storage = multer.diskStorage({
@@ -21,8 +22,8 @@ const upload = multer({ storage })
 /* proceso datos */
 router.post('/favoritos/:id',controller.favoritosGuardar);
 router.post('/', upload.single('image'),validation, controller.store); //Ruta que crea y guarda
-router.put("/editproduct/:id",upload.single('image'),validationUpate, controller.update); //Edita productos?
-router.delete("/:id", controller.delete); // Ruta que elimina el producto
+router.put("/editproduct/:id",upload.single('image'),validationUpate,adminMiddelware, controller.update); //Edita productos?
+router.delete("/:id",adminMiddelware, controller.delete); // Ruta que elimina el producto
 
 
 /*envio de vistas*/
@@ -37,9 +38,9 @@ router.get('/viajes', controller.viajes); // Te lleva a la vista VIAJES
 router.get('/muebles', controller.muebles); // Te lleva a la vista muebles
 
 router.get('/cart',controller.comprar);
-router.get('/inventory', controller.inventory); // Te lleva a la vista de todos los productos
-router.get("/createproduct", controller.create); // Vista de crear
-router.get("/editproduct/:id", controller.edit); //vista de editar
+router.get('/inventory',adminMiddelware, controller.inventory); // Te lleva a la vista de todos los productos
+router.get("/createproduct",adminMiddelware, controller.create); // Vista de crear
+router.get("/editproduct/:id",adminMiddelware, controller.edit); //vista de editar
 
 router.get("/:id", controller.detallar); // Muestra detalle de producto
 
