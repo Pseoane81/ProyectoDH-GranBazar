@@ -1,0 +1,42 @@
+const path = require('path');
+const fs = require('fs');
+const db = require ('../database/models')
+const Op = db.sequelize.Op;
+
+module.exports = {
+    list : (req, res) => {
+        db.User.findAll()
+        .then(usuarios => {
+        let detail = []
+            usuarios.forEach(usuario => {
+                detail.push({
+                id : usuario.id,
+                name : usuario.first_name + " " + usuario.last_name,
+                email : usuario.email,
+                detail : "http://localhost3000:/api/list/" + usuario.id,
+                })
+            })
+
+            return res.status(200).json({
+                count :  usuarios.length,
+                users : detail,
+                status : 200  
+            })
+        })
+        
+    },
+    detail : (req , res) => {
+        db.User.findByPk(req.params.id)
+        .then(usuario => {
+            return res.status(200).json({
+                Name : usuario.first_name,
+                Apellido : usuario.last_name,
+                Email : usuario.email,
+                Nac : usuario.dob,
+                imagen : "http://localhost3000:/public/img/avatars/" + usuario.avatar,
+                status : 200  
+            })
+        })
+    },
+
+}
