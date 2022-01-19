@@ -63,6 +63,9 @@ Division de tareas entre compañeros, correccion y limpieza de codigo grupal. No
 
 Meet 16/01
 
+    Nos pusimos al dia, acomodamos tareas y prioridades en trello. Nos tiramos flores por el laburo realizado. Quedamos en investigar carritos! 
+
+
 
 
 

@@ -7,8 +7,8 @@ module.exports= {
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  /*Config de DB para Meli
-  "development": {
+  /*Config de DB para Meli*/
+  /*"development": {
     "username": "root",
     "password": 'root',
     "database": "gb",

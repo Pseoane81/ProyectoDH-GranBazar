@@ -57,3 +57,15 @@ Sprint 6:
 3. Continuar haciendo: Codear en equipo. Meets semanales y meets extras. 
 
 4. Hacer menos: No procrastinar. Acumular tareas para que commiteemos todos. Carga de tarea individual
+
+
+
+Sprint 7:
+
+1. Comenzar a hacer: ..
+
+2. Hacer más: trabajar equitativamente, mayor responsabilidad a la hora de juntarnos a trabajar en equipo.
+
+3. Continuar haciendo: dividir tareas, analizar Trello y priorizar tasks.
+
+4. Hacer menos: ignorar trello y retros. Reveer lo que queremos implementar en cada Sprint.

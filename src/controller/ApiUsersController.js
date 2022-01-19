@@ -11,7 +11,7 @@ module.exports = {
                 id : usuario.id,
                 name : usuario.first_name + " " + usuario.last_name,
                 email : usuario.email,
-                detail : "http://localhost3000:/api/list/" + usuario.id,
+                detail : "http://localhost:3000/api/users/" + usuario.id,
                 })
             })
 
@@ -31,7 +31,7 @@ module.exports = {
                 Apellido : usuario.last_name,
                 Email : usuario.email,
                 Nac : usuario.dob,
-                imagen : "http://localhost3000:/public/img/avatars/" + usuario.avatar,
+                imagen : "http://localhost:3000/public/img/avatars/" + usuario.avatar,
                 status : 200  
             })
         })
