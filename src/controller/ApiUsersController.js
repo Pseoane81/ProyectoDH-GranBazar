@@ -1,7 +1,5 @@
-const path = require('path');
-const fs = require('fs');
 const db = require ('../database/models')
-const Op = db.sequelize.Op;
+
 
 module.exports = {
     list : (req, res) => {
