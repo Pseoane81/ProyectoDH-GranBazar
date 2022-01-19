@@ -1,4 +1,5 @@
 const db = require ('../database/models')
+const path = require ('path');
 
 
 module.exports = {
@@ -31,7 +32,7 @@ module.exports = {
                 Apellido : usuario.last_name,
                 Email : usuario.email,
                 Nac : usuario.dob,
-                imagen : "http://localhost:3000/public/img/avatars/" + usuario.avatar,
+                imagen : path.resolve(__dirname,'../../public/img/avatars') +"/" + usuario.avatar,
                 status : 200  
             })
         })

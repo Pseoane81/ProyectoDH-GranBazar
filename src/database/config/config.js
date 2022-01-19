@@ -1,14 +1,14 @@
 require ("dotenv").config()
 module.exports= {
- "development": {
+ /*"development": {
     "username": "root",
     "password": "",
     "database": "granbazardb",
     "host": "127.0.0.1",
     "dialect": "mysql"
-  },
+  },*/
   /*Config de DB para Meli*/
-  /*"development": {
+  "development": {
     "username": "root",
     "password": 'root',
     "database": "gb",
@@ -19,7 +19,7 @@ module.exports= {
     "dialectOptions": {
       socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock"
     }
-  },*/
+  },
   "test": {
     "username": "root",
     "password": null,

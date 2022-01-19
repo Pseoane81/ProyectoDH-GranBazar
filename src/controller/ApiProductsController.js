@@ -12,9 +12,9 @@ module.exports = {
                 name : producto.name,
                 descripcion : producto.description,
                 //color: colors,
-                material: producto.materials.material,
-                Origen : producto.Country.country,
-                detail : "http://localhost:3000/api/product/" + producto.id,
+                //material: producto.materials.material,
+                //Origen : producto.Country.country,
+                detail : "http://localhost:3000/api/products/" + producto.id,
                 })
             })
 
