@@ -12,7 +12,7 @@ module.exports = {
                 id : usuario.id,
                 name : usuario.first_name + " " + usuario.last_name,
                 email : usuario.email,
-                detail : "http://localhost:3000/api/users/" + usuario.id,
+                detail : "http://localhost:3001/api/users/" + usuario.id,
                 })
             })
 
@@ -32,7 +32,7 @@ module.exports = {
                 Apellido : usuario.last_name,
                 Email : usuario.email,
                 Nac : usuario.dob,
-                imagen : path.resolve(__dirname,'../../public/img/avatars') +"/" + usuario.avatar,
+                imagen : "http://localhost:3001/img/avatars/" + usuario.avatar,
                 status : 200  
             })
         })

@@ -14,7 +14,7 @@ module.exports = {
                 //color: colors,
                 //material: producto.materials.material,
                 //Origen : producto.Country.country,
-                detail : "http://localhost:3000/api/products/" + producto.id,
+                detail : "http://localhost:3001/api/products/" + producto.id,
                 })
             })
 
@@ -47,7 +47,7 @@ module.exports = {
                 Origen : producto.Country.country,
                 Color : colores,
                 Categoria : categorias,
-                Imagen : "http://localhost:3000/public/img/productos/" + producto.img,
+                Imagen : "http://localhost:3001/img/productos/" + producto.img,
                 status : 200  
             })
         })
