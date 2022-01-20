@@ -1,25 +1,36 @@
 const db = require ('../database/models')
-const Op = db.sequelize.Op;
+
 
 module.exports = {
     list : (req, res) => {
-        db.Product.findAll({include:{all: true}})
-        .then(productos => {
+        let categoria = db.Category.findAll({include: {all: true}})
+        let productos = db.Product.findAll({include:{all: true}})
+        Promise.all([productos,categoria])
+        .then(function([productos,categoria]){
             let detail = []
+            let countbyCategory = []
             productos.forEach(producto => {
                 detail.push({
                 id : producto.id,
                 name : producto.name,
                 descripcion : producto.description,
-                //color: colors,
+                color: producto.colors,
+                categoria: producto.categories,
                 //material: producto.materials.material,
                 //Origen : producto.Country.country,
                 detail : "http://localhost:3001/api/products/" + producto.id,
                 })
             })
+            categoria.forEach(categoria => {
+                countbyCategory.push({
+                Nombre: categoria.category,
+                Cantidad: categoria.products.length,
+                }) 
+            })
 
             return res.status(200).json({
                 count :  productos.length,
+                CountByCategory : countbyCategory,
                 products : detail,
                 status : 200  
             })
