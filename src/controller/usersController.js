@@ -1,4 +1,4 @@
-//const path=require('path');
+const path=require('path');
 const {validationResult, body}=require('express-validator');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');

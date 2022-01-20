@@ -1,6 +1,6 @@
 const email = document.querySelector("#email-validacion input")
 let array = []
-const mail = fetch("http://localhost:3000/users/list")
+const mail = fetch("http://localhost:3001/users/list")
                     .then(mail => mail.json())
                     .then(mail => { 
                         return mail.forEach(respuesta => {

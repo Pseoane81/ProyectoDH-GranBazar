@@ -34,7 +34,7 @@ let controller = {
         
      
      },
-     favoritosGuardar:(req,res)=>{
+     favoritosGuardar: (req,res)=>{
         db.Favoritos.create({
             product_id:req.params.id,
             user_id:res.locals.userLogged.id,

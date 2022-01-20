@@ -21,6 +21,7 @@ module.exports = {
                 detail : "http://localhost:3001/api/products/" + producto.id,
                 })
             })
+
             categoria.forEach(categoria => {
                 countbyCategory.push({
                 Nombre: categoria.category,
