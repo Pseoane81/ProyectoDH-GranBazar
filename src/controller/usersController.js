@@ -29,7 +29,7 @@ module.exports = {
          
                 .then((userInDB) => {
                     if (userInDB) {
-                       return res.render("register", {
+                       return res.render("users/register", {
                            errors: {
                                email: {
                                msg: "Este EMAIL ya esta registrado"
@@ -88,7 +88,7 @@ module.exports = {
                 }
                 return res.redirect("/")
             }
-            return res.render("login", {
+            return res.render("users/login", {
                 errors: {
                     email: {
                     msg: "Datos Erroneos"
@@ -129,7 +129,7 @@ module.exports = {
     editProfile: (req,res) => { 
 
         
-        return res.render('editprofile', {
+        return res.render('users/editprofile', {
             user: req.session.userLogged,
         });
         
@@ -154,7 +154,7 @@ module.exports = {
         });
     
          if(resultValidation.errors.length > 0){
-            res.render('editprofile',{
+            res.render('users/editprofile',{
                 errors:resultValidation.mapped(),
                 oldData:req.body
             });
@@ -163,7 +163,7 @@ module.exports = {
         
          res.clearCookie("email")
          req.session.destroy();
-          res.redirect("/login")
+          res.redirect("/users/login")
         },
     
 
@@ -175,7 +175,7 @@ module.exports = {
                 })
                 res.clearCookie("email")
                 req.session.destroy();
-                res.redirect("/register")
+                res.redirect("/users/register")
 
           
         },
