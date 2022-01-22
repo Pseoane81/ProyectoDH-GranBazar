@@ -40,6 +40,7 @@ let controller = {
             user_id:res.locals.userLogged.id,
             
         })
+        res.redirect("/products/favoritos")
      },
 
     
