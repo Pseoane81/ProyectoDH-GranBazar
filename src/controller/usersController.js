@@ -168,11 +168,20 @@ module.exports = {
     
 
         delete:(req,res) => {
+
+            db.Favoritos.destroy({
+                where: {
+                    product_id: req.params.id
+                }
+            })
+
+            .then(function(borrado) {
                 db.User.destroy({
                     where:{
                         id:req.params.id
                     }
                 })
+            })
                 res.clearCookie("email")
                 req.session.destroy();
                 res.redirect("/users/register")
