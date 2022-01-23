@@ -23,7 +23,14 @@
                         <div class="precio-products">
                         <p>$<%= product.price%></p>
                         <p><%= product.name%></p>
-                    </div>
+                        <% if (locals.isLogged) { %>
+                            <div class="botones">                              
+                                <form action="/products/favoritos/<%= product.id  %>?_method=DELETE" method="POST">
+                                <button type="submit" class="action-buttondelete">ELIMINAR</button>
+                                </form>
+                            </div>
+                            <% } %> 
+                        </div>
                     </div>
                    <% }) %> 
                 

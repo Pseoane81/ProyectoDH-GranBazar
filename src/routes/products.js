@@ -24,6 +24,7 @@ router.post('/favoritos/:id',controller.favoritosGuardar);
 router.post('/', upload.single('image'),validation, controller.store); //Ruta que crea y guarda
 router.put("/editproduct/:id",upload.single('image'),validationUpate,adminMiddelware, controller.update); //Edita productos?
 router.delete("/:id",adminMiddelware, controller.delete); // Ruta que elimina el producto
+router.delete("/favoritos/:id",adminMiddelware, controller.deleteFavorito); // Ruta que elimina el producto
 
 
 /*envio de vistas*/

@@ -305,6 +305,18 @@ let controller = {
         .catch(error => console.log(error));    
         res.redirect('/');
     },
+    deleteFavorito (req, res) {
+        
+        db.Favoritos.destroy({
+            where: {
+                product_id: req.params.id,
+                user_id: res.locals.userLogged.id
+            }
+        })
+        
+        .catch(error => console.log(error));    
+        res.redirect('/products/favoritos');
+    },
     busqueda: (req, res) => {
                 
         db.Product.findAll({       
