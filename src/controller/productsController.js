@@ -281,6 +281,12 @@ let controller = {
                 product_id: req.params.id
             }
         })
+
+        db.Favoritos.destroy({
+            where: {
+                product_id: req.params.id
+            }
+        })
         
         db.ProductCategory.destroy({
             where: {
@@ -294,6 +300,7 @@ let controller = {
                     id:req.params.id
                 }
         }) 
+        
         })
         .catch(error => console.log(error));    
         res.redirect('/');
