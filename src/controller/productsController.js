@@ -304,6 +304,12 @@ let controller = {
                 product_id: req.params.id
             }
         })
+
+        db.Cart.destroy({
+            where: {
+                product_id: req.params.id
+            }
+        })
         
         db.ProductCategory.destroy({
             where: {

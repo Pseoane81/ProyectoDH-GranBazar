@@ -16,7 +16,7 @@
                 <% inventory.forEach(product => { %>
                     <div class="highlight-prod">
                         <% if (locals.isLogged) { %>
-                        <a href="/products/favoritos"><i  class="agreagar-favoritos far fa-heart"></i></a>
+                        <i  class="agreagar-favoritos far fa-heart"></i>
                         <a href="/products/<%= product.id %> " class="unit-product">
                             <img src="/img/productos/<%= product.img %>" width="200" alt="taza" class="producto_img"></a> 
                             <div class="precio-products">
@@ -38,6 +38,7 @@
         </div>     
         
    </main>
+   <script src="/js/favoritosHeart.js"></script>
    <%- include('../partials/footer')  %> 
    
 </body>

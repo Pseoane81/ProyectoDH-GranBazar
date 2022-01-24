@@ -175,6 +175,12 @@ module.exports = {
                 }
             })
 
+            db.Cart.destroy({
+                where: {
+                    product_id: req.params.id
+                }
+            })
+
             .then(function(borrado) {
                 db.User.destroy({
                     where:{
