@@ -68,6 +68,15 @@
                     <button type="submit" class="action-buttondelete">ELIMINAR</button>
                     </form>
                 </div>
+                <div class="boton">
+                    
+                    <!-- <input type="button" value="AGREGAR AL CARRITO" class="boton-compra">
+                    <p class="carrito"><i class="fas fa-shopping-cart"></i></p> -->
+                    <form action="/products/cartStore/<%= product.id  %>" method="POST" style="display: inline-flex">
+                    <button type="submit" value="<%= product.id %>" class="boton-compra">AGREGAR AL CARRITO<i class="fas fa-shopping-cart"></i></button>
+                    <button type="submit" class="boton-compra2"><i class="fas fa-shopping-cart"></i></button>
+                </form>
+                </div>
                 <% } else if (locals.isLogged) { %> 
                     <div class="botones">
                         <form action="/products/favoritos/<%= product.id  %>" method="POST" style="display: inline-flex">
@@ -75,15 +84,28 @@
                             </form> 
                     </div>
 
-                    <% } %> 
+                     
                 
                 <div class="boton">
                     
                     <!-- <input type="button" value="AGREGAR AL CARRITO" class="boton-compra">
                     <p class="carrito"><i class="fas fa-shopping-cart"></i></p> -->
+                    <form action="/products/cartStore/<%= product.id  %>" method="POST" style="display: inline-flex">
                     <button type="submit" value="<%= product.id %>" class="boton-compra">AGREGAR AL CARRITO<i class="fas fa-shopping-cart"></i></button>
                     <button type="submit" class="boton-compra2"><i class="fas fa-shopping-cart"></i></button>
+                </form>
                 </div>
+                <% } else { %>
+                    <div class="boton">
+                    
+                        <!-- <input type="button" value="AGREGAR AL CARRITO" class="boton-compra">
+                        <p class="carrito"><i class="fas fa-shopping-cart"></i></p> -->
+                        <form action="/users/login" method="get" style="display: inline-flex">
+                        <button type="submit" class="boton-compra">AGREGAR AL CARRITO<i class="fas fa-shopping-cart"></i></button>
+                       
+                    </form>
+                    </div>
+                    <% } %>
                 
             </div> 
     </div>

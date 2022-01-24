@@ -27,6 +27,7 @@ router.delete("/:id",adminMiddelware, controller.delete); // Ruta que elimina el
 router.delete("/favoritos/:id",adminMiddelware, controller.deleteFavorito); // Ruta que elimina el producto
 
 
+
 /*envio de vistas*/
 router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
 router.get('/favoritos', controller.favoritos);
@@ -39,6 +40,7 @@ router.get('/viajes', controller.viajes); // Te lleva a la vista VIAJES
 router.get('/muebles', controller.muebles); // Te lleva a la vista muebles
 
 router.get('/cart',controller.comprar);
+router.post('/cartStore/:id',controller.cartStore);
 router.get('/inventory',adminMiddelware, controller.inventory); // Te lleva a la vista de todos los productos
 router.get("/createproduct",adminMiddelware, controller.create); // Vista de crear
 router.get("/editproduct/:id",adminMiddelware, controller.edit); //vista de editar

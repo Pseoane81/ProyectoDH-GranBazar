@@ -103,9 +103,26 @@ let controller = {
     },
 
     comprar: (req,res) => {
-        res.render('cart');
+        db.User.findOne( 
+            {where: { id:res.locals.userLogged.id}, 
+            include: [{all:true}]}) 
+        
+        .then(function(resultado){console.log(resultado)
+            res.render('cart',{resultado:resultado.cart})
+        })
 
     },
+
+    cartStore: (req,res)=>{
+        db.Cart.create({
+            product_id:req.params.id,
+            user_id:res.locals.userLogged.id,
+            
+        })
+        res.redirect("/products/cart")
+     },
+
+
     create: (req,res) => {
         let categoria = db.Category.findAll()
         let color =db.Color.findAll()
