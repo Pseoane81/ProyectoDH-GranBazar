@@ -6,6 +6,7 @@ const multer = require('multer');
 const validation=require ('../middleware/validatorProductsMiddleware');
 const validationUpate=require ('../middleware/validatorProductsUpdateMiddleware');
 const adminMiddelware = require("../middleware/adminMidleware")
+const authmiddelware = require("../middleware/authmiddleware");
 
 /* Configuracion de multer */
 const storage = multer.diskStorage({
@@ -20,7 +21,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 /* proceso datos */
-router.post('/favoritos/:id',controller.favoritosGuardar);
+router.post('/favoritos/:id',authmiddelware,controller.favoritosGuardar);
 router.post('/', upload.single('image'),validation, controller.store); //Ruta que crea y guarda
 router.put("/editproduct/:id",upload.single('image'),validationUpate,adminMiddelware, controller.update); //Edita productos?
 router.delete("/:id",adminMiddelware, controller.delete); // Ruta que elimina el producto
@@ -30,7 +31,7 @@ router.delete("/favoritos/:id",adminMiddelware, controller.deleteFavorito); // R
 
 /*envio de vistas*/
 router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
-router.get('/favoritos', controller.favoritos);
+router.get('/favoritos',authmiddelware, controller.favoritos);
 
 router.get('/all', controller.allproducts);
 router.get("/busqueda", controller.busqueda); // busqueda
@@ -39,8 +40,8 @@ router.get('/usopersonal', controller.usopersonal); // Te lleva a la vista USO P
 router.get('/viajes', controller.viajes); // Te lleva a la vista VIAJES
 router.get('/muebles', controller.muebles); // Te lleva a la vista muebles
 
-router.get('/cart',controller.comprar);
-router.post('/cartStore/:id',controller.cartStore);
+router.get('/cart',authmiddelware,controller.comprar);
+router.post('/cartStore/:id',authmiddelware,controller.cartStore);
 router.get('/inventory',adminMiddelware, controller.inventory); // Te lleva a la vista de todos los productos
 router.get("/createproduct",adminMiddelware, controller.create); // Vista de crear
 router.get("/editproduct/:id",adminMiddelware, controller.edit); //vista de editar
