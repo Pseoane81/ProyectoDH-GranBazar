@@ -16,9 +16,8 @@ module.exports = {
                 descripcion : producto.description,
                 color: producto.colors,
                 categoria: producto.categories,
-                //material: producto.materials.material,
-                //Origen : producto.Country.country,
-                detail : "http://localhost:3001/api/products/" + producto.id,
+                img : "http://localhost:3001/img/productos/" + producto.img, 
+                detail : "http://localhost:3001/products/" + producto.id,
                 })
             })
 
