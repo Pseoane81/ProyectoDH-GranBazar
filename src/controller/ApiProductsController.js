@@ -30,6 +30,7 @@ module.exports = {
             })
 
             return res.status(200).json({
+                name: "Cantidad de productos",
                 count :  productos.length,
                 CountByCategory : countbyCategory,
                 products : detail,
@@ -53,6 +54,7 @@ module.exports = {
 
 
             return res.status(200).json({
+                name: "Cantidad de Categorias",
                 count :  categorias.length,
                 category: categorias.category,
                 categorias: detail,

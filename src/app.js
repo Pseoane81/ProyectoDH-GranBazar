@@ -6,6 +6,7 @@ const methodOverride = require('method-override'); // agregamos method override
 const session = require("express-session"); // requerimos session para usuarios
 const usserloggedmiddleware = require("./middleware/userloggedmiddleware");
 const cookies = require("cookie-parser");
+const cors = require("cors")
 require("dotenv").config()
 
 
@@ -29,6 +30,8 @@ app.use(cookies())
 
 /*chequeando si hay usuarios logueados */
 app.use(usserloggedmiddleware);
+
+app.use(cors())
 
 
 /*Config express */

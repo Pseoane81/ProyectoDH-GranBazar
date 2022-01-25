@@ -17,6 +17,7 @@ module.exports = {
             })
 
             return res.status(200).json({
+                name: "Cantidad de Usuarios",
                 count :  usuarios.length,
                 users : detail,
                 status : 200  
