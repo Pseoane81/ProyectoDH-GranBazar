@@ -12,7 +12,8 @@ router.get('/users/:id', controllerUser.detail);
 router.get('/products', controllerProducts.list);
 router.get('/products/:id', controllerProducts.detail);
 
-
+//Rutas a Api Categorias
+router.get('/categories', controllerProducts.show);
 
 
 

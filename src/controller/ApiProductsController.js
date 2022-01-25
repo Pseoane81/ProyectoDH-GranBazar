@@ -38,6 +38,30 @@ module.exports = {
         })
         
     },
+    show: (req,res) => {
+        let categorias = db.Category.findAll({include: {all: true}})
+        
+        Promise.all([categorias])
+        .then(function([categorias]){
+            let detail = []
+            categorias.forEach(categoria => {
+                detail.push({
+                id : categoria.id,
+                category : categoria.category,
+                })
+            })
+
+
+            return res.status(200).json({
+                count :  categorias.length,
+                category: categorias.category,
+                categorias: detail,
+                status : 200  
+            })
+        })
+        
+
+    },
     detail : (req , res) => {
         db.Product.findByPk(req.params.id,{include:{all: true}})
         .then(producto => {
