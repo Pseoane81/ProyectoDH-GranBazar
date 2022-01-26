@@ -66,6 +66,14 @@ Meet 16/01
     Nos pusimos al dia, acomodamos tareas y prioridades en trello. Nos tiramos flores por el laburo realizado. Quedamos en investigar carritos! 
 
 
+Meet 22/01
 
+Levantamos proyecto en React en funcion del Dashboard de Movies. Dividimos tareas para dejarlo maquetado
+
+Meet 23/01
+En clase de practica comenzamos a darle estados a los componentes para consumir las apis necesarias
+
+Meet 26/01
+Recorrimos lo hecho fuera de las meet, punteamoslos elementos a realizar para completar el sprint 8, dividimos algunas tareas y dejamos claro las dudas con respecto a los puntos opcionales del sprint.
 
 
