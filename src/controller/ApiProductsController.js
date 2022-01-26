@@ -33,6 +33,7 @@ module.exports = {
                 count :  productos.length,
                 CountByCategory : countbyCategory,
                 products : detail,
+                icon : "fas fa-gift",
                 status : 200  
             })
         })
@@ -57,6 +58,7 @@ module.exports = {
                 count :  categorias.length,
                 category: categorias.category,
                 categorias: detail,
+                icon : "fas fa-sitemap",
                 status : 200  
             })
         })

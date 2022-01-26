@@ -20,6 +20,7 @@ module.exports = {
                 name: "Cantidad de Usuarios",
                 count :  usuarios.length,
                 users : detail,
+                icon : "fas fa-users",
                 status : 200  
             })
         })
