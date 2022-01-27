@@ -15,6 +15,7 @@ module.exports = {
                 name : producto.name,
                 descripcion : producto.description,
                 color: producto.colors,
+                origen:producto.Country,
                 categoria: producto.categories,
                 img : "http://localhost:3001/img/productos/" + producto.img, 
                 detail : "http://localhost:3001/products/" + producto.id,
