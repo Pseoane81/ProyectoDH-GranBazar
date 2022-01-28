@@ -10,6 +10,7 @@ router.get('/users/:id', controllerUser.detail);
 
 //Rutas a Api de Productos//
 router.get('/products', controllerProducts.list);
+router.get('/products/page/:offset', controllerProducts.productList);
 router.get('/products/:id', controllerProducts.detail);
 
 //Rutas a Api Categorias

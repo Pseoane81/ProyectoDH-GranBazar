@@ -3,8 +3,15 @@ const db = require ('../database/models')
 
 module.exports = {
     list : (req, res) => {
+        
+        
         let categoria = db.Category.findAll({include: {all: true}})
-        let productos = db.Product.findAll({include:{all: true}})
+        let productos = db.Product.findAll(
+            {
+            include:{all: true},
+            }
+        )
+        console.log(req.params.offset)
         Promise.all([productos,categoria])
         .then(function([productos,categoria]){
             let detail = []
@@ -19,6 +26,7 @@ module.exports = {
                 categoria: producto.categories,
                 img : "http://localhost:3001/img/productos/" + producto.img, 
                 detail : "http://localhost:3001/products/" + producto.id,
+                
                 })
             })
 
@@ -30,7 +38,7 @@ module.exports = {
             })
 
             return res.status(200).json({
-                name: "Cantidad de productos",
+               name: "Cantidad de productos",
                 count :  productos.length,
                 CountByCategory : countbyCategory,
                 products : detail,
@@ -92,5 +100,22 @@ module.exports = {
             })
         })
     },
+    productList : (req , res) => {
+        db.Product.findAll(
+            {
+            include:{all: true},
+            limit: 5,
+            offset : parseInt(req.params.offset)*5,
+            }
+        )
+        .then(productos => {
+            return res.status(200).json({
+                products : productos,
+                status : 200  
+            })
+        })
+    },
+
+
 
 }
