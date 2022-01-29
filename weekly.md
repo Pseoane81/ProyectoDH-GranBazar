@@ -76,4 +76,12 @@ En clase de practica comenzamos a darle estados a los componentes para consumir 
 Meet 26/01
 Recorrimos lo hecho fuera de las meet, punteamoslos elementos a realizar para completar el sprint 8, dividimos algunas tareas y dejamos claro las dudas con respecto a los puntos opcionales del sprint.
 
+Meet 27/01
+
+Instalamos react-router-dom y comenzamos a armar las rutas
+Nos pusimos de acuerdo si agregar algun otro panel, pactamos siguiente meet
+
+Meet 29/01
+Revisamos todas las rutas, nos pusimos de acuerdo para revisar todos los links/botones de la app para el lunes tener pulido todo lo q no funciona o funciona mal.
+
 
