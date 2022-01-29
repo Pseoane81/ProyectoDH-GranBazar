@@ -277,7 +277,7 @@ let controller = {
             let material =db.Material.findAll()
                 Promise.all([color,categoria,country,material])
                     .then(function([color,categoria,country,material]){
-			            return res.render('createproduct', {
+			            return res.render('products/createproduct', {
 			            	errors: resultValidation.mapped(),
 			            	oldData: req.body,
                             Colors:color,
