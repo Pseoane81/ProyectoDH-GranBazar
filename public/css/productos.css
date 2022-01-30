@@ -83,6 +83,14 @@ table thead.encabezado {
 div.action-buttonedit.creaprod{
     width: 200px;
     display: flex;
+    text-align: center;
+}
+.botones-inventory{
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
