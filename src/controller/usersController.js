@@ -13,7 +13,7 @@ module.exports = {
         
     },
     processRegister:(req,res)=>{
-        const resultValidation=validationResult(req); console.log(resultValidation)
+        const resultValidation=validationResult(req); 
            
     
          if(resultValidation.errors.length > 0){
@@ -168,6 +168,11 @@ module.exports = {
     
 
         delete:(req,res) => {
+
+            db.User.findOne( 
+                {where: { id:req.params.id}})
+                .then(borrarImg => {
+                    fs.unlinkSync(path.resolve(__dirname,'../../public/img/avatars/'+ borrarImg.avatar))})
 
             db.Favoritos.destroy({
                 where: {
