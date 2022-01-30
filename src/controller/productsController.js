@@ -226,7 +226,7 @@ let controller = {
     },
 
     store: (req, res) => {
-        let resultValidation = validationResult(req);console.log(resultValidation)
+        let resultValidation = validationResult(req);
         if (resultValidation.isEmpty() ) {
             db.Product.create({
                 name:req.body.name,
@@ -290,8 +290,14 @@ let controller = {
         }
         
     },
-
+    
     delete (req, res) {
+        db.Product.findOne( 
+            {where: { id:req.params.id}})
+            .then(borrarImg => {
+                fs.unlinkSync(path.resolve(__dirname,'../../public/img/productos/'+ borrarImg.img))})
+        
+        
         
         db.ProductColor.destroy({
             where: {
@@ -334,12 +340,14 @@ let controller = {
         })
 
         .then(function(borrado) {
-            db.Product.destroy({
+           db.Product.destroy({
                 where: {
                     id:req.params.id
                 }
         })
-        //console.log(borrado)
+        
+        
+
         
         })
         .catch(error => console.log(error));    
