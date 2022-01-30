@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const controllerUser = require('../controller/ApiUsersController');
 const controllerProducts = require('../controller/ApiProductsController');
+const controllerFavoritos = require('../controller/ApiControllerFavoritos');
+const controllerCompras = require('../controller/ApiControllerCompras');
 
 
 //Rutas a Api de Usuarios//
@@ -15,6 +17,14 @@ router.get('/products/:id', controllerProducts.detail);
 
 //Rutas a Api Categorias
 router.get('/categories', controllerProducts.show);
+
+//Rutas a Api Favoritos
+router.get('/favoritos', controllerFavoritos.favoritos);
+
+//Rutas a Api Compras
+router.get('/compras', controllerCompras.compras);
+
+
 
 
 

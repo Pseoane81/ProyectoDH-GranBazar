@@ -12,6 +12,7 @@ module.exports = {
                 id : usuario.id,
                 name : usuario.first_name + " " + usuario.last_name,
                 email : usuario.email,
+                imagen : "http://localhost:3001/img/avatars/" + usuario.avatar,
                 detail : "http://localhost:3001/api/users/" + usuario.id,
                 })
             })

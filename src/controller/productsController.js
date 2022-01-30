@@ -299,17 +299,33 @@ let controller = {
             }
         })
 
-        db.Favoritos.destroy({
-            where: {
-                product_id: req.params.id
-            }
-        })
+        let fav = db.Favoritos.findOne( 
+            {where: { product_id:req.params.id}} 
+                //.then(borrar => {borrar})
+                )
+        
+        if (fav) {
 
+                db.Favoritos.destroy({
+                    where: {
+                        product_id: req.params.id
+                    }
+                })
+            }
+
+
+        let cart = db.Cart.findOne( 
+            {where: { product_id:req.params.id}} 
+                //.then(borrar => {borrar})
+                )
+       
+        if (cart) {
         db.Cart.destroy({
             where: {
                 product_id: req.params.id
             }
         })
+    }
         
         db.ProductCategory.destroy({
             where: {
@@ -322,7 +338,8 @@ let controller = {
                 where: {
                     id:req.params.id
                 }
-        }) 
+        })
+        //console.log(borrado)
         
         })
         .catch(error => console.log(error));    
