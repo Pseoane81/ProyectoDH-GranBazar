@@ -218,7 +218,7 @@ let controller = {
         let material =db.Material.findAll()
             Promise.all([pedidoproducto,color,categoria,country,material])
                 .then(function([product,color,categoria,country,material]){ 
-                    res.render('editproduct', {errors: resultValidation.mapped(),
+                    res.render('products/editproduct', {errors: resultValidation.mapped(),
                         oldData: req.body,product,color,categoria,country,material});
         
         }).catch(error => console.log(error));
