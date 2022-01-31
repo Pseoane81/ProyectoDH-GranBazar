@@ -1,10 +1,10 @@
-require ("dotenv").config()
 module.exports= {
  "development": {
     "username": "root",
     "password": "",
     "database": "granbazardb",
     "host": "127.0.0.1",
+    "port": "3306",
     "dialect": "mysql"
   },
   /*Config de DB para Meli

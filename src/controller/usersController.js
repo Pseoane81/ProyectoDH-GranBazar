@@ -168,31 +168,44 @@ module.exports = {
     
 
         delete:(req,res) => {
-
-            db.User.findOne( 
-                {where: { id:req.params.id}})
-                .then(borrarImg => {
-                    fs.unlinkSync(path.resolve(__dirname,'../../public/img/avatars/'+ borrarImg.avatar))})
-
+            //Busca el usuario y borra la foto
+        db.User.findOne( 
+            {where: { id:req.params.id}})
+            .then(borrarImg => {
+                fs.unlinkSync(path.resolve(__dirname,'../../public/img/avatars/'+ borrarImg.avatar))
+            })
+            
+            //busca si el usuario tiene favoritos y los borra
+        let fav = db.Favoritos.findOne( 
+            {where: { user_id:req.params.id}
+            })
+                    
+        if (fav) {
             db.Favoritos.destroy({
                 where: {
-                    product_id: req.params.id
+                    user_id: req.params.id
                 }
             })
+        }
+        //busca si el usuario tiene algo en el carrito y los borra
+        let cart = db.Cart.findOne( 
+            {where: { user_id:req.params.id}})
 
+        if (cart) {   
             db.Cart.destroy({
-                where: {
-                    product_id: req.params.id
-                }
+                 where: {
+                    user_id: req.params.id
+                        }
             })
+        }
 
-            .then(function(borrado) {
+            //Borra el usuario
                 db.User.destroy({
                     where:{
                         id:req.params.id
                     }
                 })
-            })
+            
                 res.clearCookie("email")
                 req.session.destroy();
                 res.redirect("/users/register")

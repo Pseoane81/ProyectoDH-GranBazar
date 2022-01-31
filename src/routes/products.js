@@ -30,7 +30,7 @@ router.delete("/favoritos/:id",adminMiddelware, controller.deleteFavorito); // R
 
 
 /*envio de vistas*/
-router.get('/', controller.mostrarProductos); // Te lleva a la vista de todos los productos
+router.get('/', controller.allproducts); // Te lleva a la vista de todos los productos
 router.get('/favoritos',authmiddelware, controller.favoritos);
 
 router.get('/all', controller.allproducts);

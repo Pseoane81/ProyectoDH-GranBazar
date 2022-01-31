@@ -31,7 +31,7 @@ const expresiones = {
                     text:'EL archivo no es de los permitidos!',
                     footer:'Solo acepta .png, .jpg, .jpeg .gif'
                   })
-                  form.reset();
+                  e.target.value = ""
                 
             }
         

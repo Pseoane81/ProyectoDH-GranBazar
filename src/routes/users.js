@@ -4,6 +4,7 @@ const controller = require('../controller/usersController');
 const guestmiddelware = require("../middleware/guestMiddleware");
 const authmiddelware = require("../middleware/authmiddleware");
 const changemiddleware = require("../middleware/validatorchangeMiddleware")
+const adminMiddleware = require("../middleware/adminMidleware")
 
 
 
@@ -38,6 +39,6 @@ router.put("/edituser/:id",uploadFile.single('avatar'),changemiddleware, control
 router.delete("/:id", controller.delete);
 
 /*listado usuarios*/
-router.get("/list/", controller.list);
+router.get("/list/",guestmiddelware, controller.list); // ver si esta ok la proteccion de la vista
 
 module.exports=router; 

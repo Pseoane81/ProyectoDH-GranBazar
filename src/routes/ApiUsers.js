@@ -4,6 +4,7 @@ const controllerUser = require('../controller/ApiUsersController');
 const controllerProducts = require('../controller/ApiProductsController');
 const controllerFavoritos = require('../controller/ApiControllerFavoritos');
 const controllerCompras = require('../controller/ApiControllerCompras');
+const adminMiddleware = require("../middleware/adminMidleware")
 
 
 //Rutas a Api de Usuarios//
