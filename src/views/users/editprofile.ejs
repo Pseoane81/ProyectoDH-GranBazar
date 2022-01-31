@@ -12,7 +12,7 @@
               <% } %>
                  
                   <% } %>
-        <div class="crea">Editando al usuario <%= locals.oldData ? oldData.firstname: user.first_name %></div>
+        <div class="crea">Editando al usuario <%= locals.oldData ? oldData.first_name: user.first_name %></div>
         
         <form action="/users/edituser/<%= locals.oldData ? oldData.id : user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">              
                 <div class="form-control">

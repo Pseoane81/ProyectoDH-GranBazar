@@ -3,8 +3,8 @@ const router = express.Router();
 const controller = require('../controller/usersController');
 const guestmiddelware = require("../middleware/guestMiddleware");
 const authmiddelware = require("../middleware/authmiddleware");
-const changemiddleware = require("../middleware/validatorchangeMiddleware")
-const adminMiddleware = require("../middleware/adminMidleware")
+const changemiddleware = require("../middleware/validatorchangeMiddleware");
+const adminMiddleware = require("../middleware/adminMidleware");
 
 
 
@@ -33,7 +33,7 @@ router.get("/logout/", controller.logout);
 
 /*Editar Usuario*/ 
 router.get("/edituser/:id", controller.editProfile);
-router.put("/edituser/:id",uploadFile.single('avatar'),changemiddleware, controller.savechangesprofile);
+router.put("/edituser/:id",uploadFile.single('avatar'), changemiddleware, controller.savechangesprofile);
 
 /*Borrar Usuario*/
 router.delete("/:id", controller.delete);
@@ -41,4 +41,4 @@ router.delete("/:id", controller.delete);
 /*listado usuarios*/
 router.get("/list/",guestmiddelware, controller.list); // ver si esta ok la proteccion de la vista
 
-module.exports=router; 
+module.exports = router; 

@@ -17,7 +17,7 @@ module.exports = {
            
     
          if(resultValidation.errors.length > 0){
-            res.render('register',{
+            res.render('users/register',{
                 errors:resultValidation.mapped(),
                 oldData:req.body
             });
@@ -49,8 +49,8 @@ module.exports = {
             password:bcrypt.hashSync(req.body.password, 10),
             email: req.body.email,
             dob: req.body.dob,
-            avatar : req.file == undefined ? 'avatar-by-default.png' : req.file.filename,
-           
+          //  avatar : req.file == undefined ? 'avatar-by-default.png' : req.file.filename,
+          avatar :  req.file.filename
             
             
         })
@@ -96,7 +96,7 @@ module.exports = {
             },
             });    
         };
-        return res.render("login", {
+        return res.render("users/login", {
             errors: {
                 email: {
                 msg: "No se encuentra este usuario registrado"
@@ -144,7 +144,7 @@ module.exports = {
             last_name: req.body.lastname,
             email: req.body.email,
             dob: req.body.dob,
-            avatar: req.file.filename,
+            avatar : req.file == undefined ? 'avatar-by-default.png' : req.file.filename,
             password: bcrypt.hashSync(req.body.password, 10),
         },
          {
