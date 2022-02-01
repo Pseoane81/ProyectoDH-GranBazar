@@ -29,8 +29,7 @@
                                                 value="<%= locals.oldData ? oldData.name : null %>">
                                             <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                         </div>
-                                        <p class="formulario_input_error">El nombre debe tener minimo 5 caracteres y solo
-                                            puede contener letras y números</p>
+                                        <p class="formulario_input_error">El nombre debe tener minimo 2 caracteres</p>
                                         <samp style="color:#b60b0b" id="name"></samp>
                                         <% if (locals.errors && errors.name ) { %>
                                             <div class="text-danger">
@@ -48,8 +47,7 @@
                                                 value="<%= locals.oldData ? oldData.lastname : null %>">
                                             <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                         </div>
-                                        <p class="formulario_input_error">El nombre debe tener minimo 5 caracteres y solo
-                                            puede contener letras y números</p>
+                                        <p class="formulario_input_error">El nombre debe tener minimo 2 caracteres</p>
                                         <samp style="color:#b60b0b" id="lastname"></samp>
     
                                         <% if (locals.errors && errors.lastname ) { %>
@@ -68,8 +66,7 @@
                                                 value="<%= locals.oldData ? oldData.email : null %>">
                                             <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                         </div>
-                                        <p class="formulario_input_error">El nombre debe tener minimo 5 caracteres y solo
-                                            puede contener letras y números</p>
+                                        <p class="formulario_input_error">Debe ser un formato de mail valido</p>
                                         <samp style="color:#b60b0b" id="email"></samp>
                                         <% if (locals.errors && errors.email ) { %>
                                             <div class="text-danger">
@@ -105,8 +102,7 @@
                                                 placeholder="Debe contener 8 caracteres y un numero">
                                             <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                         </div>
-                                        <p class="formulario_input_error">El nombre debe tener minimo 5 caracteres y solo
-                                            puede contener letras y números</p>
+                                        <p class="formulario_input_error">Debe contener 8 caracteres y un numero</p>
                                         <span class="fas fa-eye-slash" id="ojito"></span>
                                         <samp style="color:#b60b0b" id="repassword"></samp>
                                         <% if (locals.errors && errors.password ) { %>

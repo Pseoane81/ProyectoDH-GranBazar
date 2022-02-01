@@ -28,8 +28,7 @@
                                             user.first_name %>>
                                         <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                     </div>
-                                    <p class="formulario_input_error">El nombre debe tener minimo 5 caracteres y solo
-                                        puede contener letras y números</p>
+                                    <p class="formulario_input_error">El nombre debe tener minimo 2 caracteres</p>
                                     <% if (locals.errors && errors.first_name ) { %>
                                         <div class="text-danger">
                                             <p>
@@ -47,8 +46,7 @@
                                         oldData.last_name : user.last_name %>>
                                     <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="formulario_input_error">El nombre debe tener minimo 5 caracteres y solo
-                                    puede contener letras y números</p>
+                                <p class="formulario_input_error">El nombre debe tener minimo 2 caracteres</p>
                                 <% if (locals.errors && errors.last_name ) { %>
                                     <div class="text-danger">
                                         <p>
@@ -83,9 +81,7 @@
                                                     placeholder="Debe contener 8 caracteres y un numero">
                                                 <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                             </div>
-                                            <p class="formulario_input_error">El nombre debe tener minimo 5 caracteres y
-                                                solo
-                                                puede contener letras y números</p>
+                                            <p class="formulario_input_error">Debe contener 8 caracteres y un numero</p>
                                             <% if (locals.errors && errors.password ) { %>
                                                 <div class="text-danger">
                                                     <p>
