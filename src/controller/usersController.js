@@ -138,32 +138,36 @@ module.exports = {
 
     savechangesprofile: (req,res) => { 
         
-        const resultValidation=validationResult(req)
-        db.User.update({
-            first_name: req.body.name,
-            last_name: req.body.lastname,
-            email: req.body.email,
-            dob: req.body.dob,
-            avatar : req.file == undefined ? 'avatar-by-default.png' : req.file.filename,
-            password: bcrypt.hashSync(req.body.password, 10),
-        },
-         {
-            where: {
-                id: req.params.id
-            }
-        });
-    
+        const resultValidation=validationResult(req) 
+        
          if(resultValidation.errors.length > 0){
-            res.render('users/editprofile',{
+            return res.render('users/editprofile',{
+                
                 errors:resultValidation.mapped(),
                 oldData:req.body
-            });
-         }
+            })}
+            
+            else {
+                console.log(resultValidation)
+                db.User.update({
+                    first_name: req.body.name,
+                    last_name: req.body.lastname,
+                    dob: req.body.dob,
+                    avatar : req.file == undefined ? 'avatar-by-default.png' : req.file.filename,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                },
+                 {
+                    where: {
+                        id: req.params.id
+                    }
+                });
+                res.clearCookie("email")
+                req.session.destroy();
+                 res.redirect("/users/login")
+            }
          
         
-         res.clearCookie("email")
-         req.session.destroy();
-          res.redirect("/users/login")
+        
         },
     
 

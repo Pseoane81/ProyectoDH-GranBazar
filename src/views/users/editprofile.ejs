@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-control">
                     <label for="">Apellido</label>
-                    <input type="text" name="lastname" value=<%= locals.oldData ? oldData.last_name : user.last_name %>>
+                    <input type="text" name="lastname" autocomplete="off" value=<%= locals.oldData ? oldData.last_name : user.last_name %>>
                     <% if (locals.errors && errors.last_name ) { %>
                         <div class="text-danger">
                           <p> <%= errors.last_name.msg %> </p>
@@ -52,7 +52,7 @@
                 
                 <div class="form-control">
                     <label for="">Contraseña</label>
-                    <input type="password" name="password" placeholder="Debe contener 8 caracteres y un numero">
+                    <input type="password" name="password" autocomplete="off"  placeholder="Debe contener 8 caracteres y un numero">
                     <% if (locals.errors && errors.password ) { %>
                         <div class="text-danger">
                           <p> <%= errors.password.msg %> </p>
