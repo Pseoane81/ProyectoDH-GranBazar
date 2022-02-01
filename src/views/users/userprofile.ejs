@@ -34,12 +34,12 @@
                     <div class="buttons">
                     <a href="/users/edituser/<%= user.id %>" class="action-buttonedit">Editar</a>
                     </form> 
-                    <form action="/users/<%=user.id %>?_method=DELETE" method="post" >
+                    <form action="/users/<%=user.id %>?_method=DELETE" method="post" class="borrado" user="<%=user.first_name %>">
                         <button class="action-buttondelete">Borrar</button>
                 </form>       
         </main>
 
-
+        <script src="/js/AlertaBorradoUser.js"></script>
         <%- include('../partials/footer')  %> 
        
     </body>
