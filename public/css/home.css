@@ -294,6 +294,10 @@ img.product-img {
         transform:translate3d(calc(-100% *2),0 ,0);
     }
 }
+.linkverde {
+  
+    color: #81B29A;
+}
 @media (min-width:361px) {
     
    .productos{

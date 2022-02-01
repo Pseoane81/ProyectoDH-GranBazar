@@ -4,7 +4,11 @@
     <body>
         <%- include('../partials/header')  %> 
         <main>
-                <h3 class="addedit">EDITANDO PRODUCTO: <%= product.name%> </h3>
+            <section class="visita">
+                <h3 class="addedit">EDITANDO PRODUCTO: <%= product.name%></h3>
+            </section>
+            
+            
             <form action="/products/editproduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-edit">
         
             <div class="form-control">
