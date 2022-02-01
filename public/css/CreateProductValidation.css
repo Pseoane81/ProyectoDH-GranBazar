@@ -47,11 +47,17 @@
 	font-size: 16px;
 	opacity: 0;
 }
+.formulario_validacion_estado.repass{
+	bottom: 25px;
+}
 
 /*validaciones*/
 .formulario_grupo_correcto .formulario_validacion_estado {
 	color: #1ed12d;
 	opacity: 1;
+}
+.formulario_grupo_correcto .formulario_validacion_estado.repass {
+	bottom: 12px;
 }
 
 .formulario_grupo_incorrecto .formulario_label {

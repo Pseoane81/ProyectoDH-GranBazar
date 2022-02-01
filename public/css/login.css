@@ -20,8 +20,8 @@ main {
 /*ojo del registro*/
 #ojito{
     position: absolute;
-    top:43px;
-    right: 20px;
+    top:49px;
+    right: 40px;
     font-size: 15px;
     }
     .position-2{
@@ -57,23 +57,7 @@ main {
 
 /*sobre los formulario*/
    
-.form-control-incorrecto .formulario_validacion{
-    color: #bb2929;
-    opacity: 1;
-}
-.form-control-incorrecto .exclamation-circle{
-    color:#bb2929;
-}
-.form-control-incorrecto .formulario__input{
-    border: 1px solid #bb2929;
-}
- .form-control-correcto .formulario_validacion{
-    color: #1ed12d;
-    opacity: 1;
-}
-.form-control-correcto .formulario__input{
-    border: 1px solid #1ed12d;;
-}
+
 
 
 
