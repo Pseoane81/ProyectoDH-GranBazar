@@ -8,8 +8,8 @@ const textarea = document.querySelectorAll("#formulario-product textarea")
 
 const expresiones = {
 	name: /^[a-zA-Z0-9\s]{5,30}$/, // Letras, numeros
-	description: /^[a-zA-ZÀ-ÿ-0-9\s]{20,3000}$/, // Letras y espacios, pueden llevar acentos.
-	measurements:/^[a-zA-ZÀ-ÿ-0-9\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.	
+	description: /^[a-zA-ZÀ-ÿ-0-9-!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~\s]{20,3000}$/, // Letras y espacios, pueden llevar acentos.
+	measurements:/^[a-zA-ZÀ-ÿ-0-9-!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.	
 	price: /^[0-9]*$/, // 7 a 14 numeros.
     img: /\.(jpg|png|gif|jpeg)$/i
 }

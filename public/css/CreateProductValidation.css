@@ -11,11 +11,17 @@
 	width: 100%;
 	background: #fff;
 	border: 3px solid transparent;
-	border-radius: 3px;
+	border-radius: 10px;
 	height: 35px;
 	line-height: 35px;
 	transition: .3s ease all;
-}
+	}
+
+.formulario_input.textarea{
+	height: 105px;
+	line-height: 25px;
+	vertical-align: text-top;
+	}
 
 .formulario_input:focus {
 	border: 3px solid #0075FF;
