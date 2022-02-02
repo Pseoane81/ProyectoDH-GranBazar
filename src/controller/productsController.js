@@ -107,7 +107,7 @@ let controller = {
             {where: { id:res.locals.userLogged.id}, 
             include: [{all:true}]}) 
         
-        .then(function(resultado){console.log(resultado)
+        .then(function(resultado){
             res.render('cart',{resultado:resultado.cart})
         })
 
@@ -370,6 +370,18 @@ let controller = {
         
         .catch(error => console.log(error));    
         res.redirect('/products/favoritos');
+    },
+    deleteCompra (req, res) {
+        
+        db.Cart.destroy({
+            where: {
+                product_id: req.params.id,
+                user_id: res.locals.userLogged.id
+            }
+        })
+        
+        .catch(error => console.log(error));    
+        res.redirect('/products/cart');
     },
     busqueda: (req, res) => {
                 

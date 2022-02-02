@@ -26,6 +26,7 @@ router.post('/', upload.single('image'),validation, controller.store); //Ruta qu
 router.put("/editproduct/:id",upload.single('image'),validationUpate,adminMiddelware, controller.update); //Edita productos?
 router.delete("/:id",adminMiddelware, controller.delete); // Ruta que elimina el producto
 router.delete("/favoritos/:id",adminMiddelware, controller.deleteFavorito); // Ruta que elimina el producto
+router.delete("/cart/:id",adminMiddelware, controller.deleteCompra); // Ruta que elimina el producto
 
 
 
