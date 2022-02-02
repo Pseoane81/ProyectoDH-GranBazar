@@ -151,7 +151,7 @@ let controller = {
         // Editamos el producto buscandolo con una condición
         let productoid = req.params.id
         let resultValidation = validationResult(req); 
-        console.log(validationResult(req))
+        
         if (resultValidation.isEmpty() ) {
         db.Product.update({
             name:req.body.name,
@@ -210,9 +210,15 @@ let controller = {
                 }).catch(error => console.log(error)); 
             
         res.redirect('/');
-    } else {console.log(resultValidation)
-        let pedidoproducto = db.Product.findByPk(req.params.id)
-        let categoria = db.Category.findAll()
+    } else {
+        let pedidoproducto = db.Product.findByPk(req.params.id, {
+            include:{all: true}
+        })
+        
+        let categoria = db.Category.findAll({
+            include:{all: true}
+        })
+        
         let color =db.Color.findAll()
         let country =db.Country.findAll()
         let material =db.Material.findAll()
