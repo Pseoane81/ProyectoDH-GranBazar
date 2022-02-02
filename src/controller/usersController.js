@@ -137,14 +137,15 @@ module.exports = {
     },
 
     savechangesprofile: (req,res) => { 
-        
+        console.log(req.params.id)
         const resultValidation=validationResult(req) 
         
          if(resultValidation.errors.length > 0){
             return res.render('users/editprofile',{
                 
                 errors:resultValidation.mapped(),
-                oldData:req.body
+                oldData:req.body,
+                id:req.params.id
             })}
             
             else {

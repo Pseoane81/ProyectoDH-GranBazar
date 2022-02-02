@@ -14,13 +14,13 @@
                     <% } %>
 
                         <% } %>
-                            <div class="crea">Editando al usuario <%= locals.oldData ? oldData.first_name:
+                            <div class="crea">Editando al usuario <%= locals.oldData ? oldData.name:
                                     user.first_name %>
                             </div>
 
-                            <form action="/users/edituser/<%= locals.oldData ? oldData.id : user.id %>?_method=PUT"
+                            <form action="/users/edituser/<%= locals.id ? id : user.id %>?_method=PUT"
                                 method="POST" enctype="multipart/form-data" class="add-edit" id="formulario-register">
-
+                                <%= console.log(locals.oldData) %>
                                 <div class="form-control" id="grupo_name">
                                     <label for="nombre" class="formulario_label">Nombre</label>
                                     <div class="formulario_grupo_input">
@@ -29,10 +29,10 @@
                                         <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                     </div>
                                     <p class="formulario_input_error">El nombre debe tener minimo 2 caracteres</p>
-                                    <% if (locals.errors && errors.first_name ) { %>
+                                    <% if (locals.errors && errors.name ) { %>
                                         <div class="text-danger">
                                             <p>
-                                                <%= errors.first_name.msg %>
+                                                <%= errors.name.msg %>
                                             </p>
                                         </div>
                                         <% } %>
@@ -47,10 +47,10 @@
                                     <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="formulario_input_error">El nombre debe tener minimo 2 caracteres</p>
-                                <% if (locals.errors && errors.last_name ) { %>
+                                <% if (locals.errors && errors.lastname ) { %>
                                     <div class="text-danger">
                                         <p>
-                                            <%= errors.last_name.msg %>
+                                            <%= errors.lastname.msg %>
                                         </p>
                                     </div>
                                     <% } %>
