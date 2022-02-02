@@ -14,6 +14,8 @@ main {
 /*aviso del register-validetor*/
 .text-danger{
     color:red;
+    font-size: 12px;
+    font-style: italic;
 }
 /*Aca empieza las Validaciones del Registro*/ 
 
