@@ -37,27 +37,30 @@ module.exports = {
                        },
                        oldData:req.body
                        });            
+                    } else {
+                        db.User.create({
+                            first_name: req.body.name,
+                            last_name: req.body.lastname,
+                            password:bcrypt.hashSync(req.body.password, 10),
+                            email: req.body.email,
+                            dob: req.body.dob,
+                          //  avatar : req.file == undefined ? 'avatar-by-default.png' : req.file.filename,
+                          avatar :  req.file.filename
+                            
+                            
+                        })
+                         
+                        return res.render('users/login')
+                         
+                       
                     }
+
                    })
 
 
          // intento de  CRUD de user
 
-        db.User.create({
-            first_name: req.body.name,
-            last_name: req.body.lastname,
-            password:bcrypt.hashSync(req.body.password, 10),
-            email: req.body.email,
-            dob: req.body.dob,
-          //  avatar : req.file == undefined ? 'avatar-by-default.png' : req.file.filename,
-          avatar :  req.file.filename
-            
-            
-        })
-         
-        return res.render('users/login')
-         
-       
+        
         },
 
     login: (req,res) => {
