@@ -105,15 +105,43 @@ a{
 
 div.burger-menu{
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 div.burger-menu i{
     background-color: #3D405B;
     border-radius: 5px  ;
-    color: #3D405B;
+    color: #fafafa;
     font-size: 20px;
     margin: 10px 0px 20px 0px;
     padding: 10px;
 }
+.listado li {
+    list-style-type: none;
+}
+.listado {
+    width: 170px;
+    height: 250px;
+    background-color:#3D405B;
+    border-radius: 10px;
+    
+ 
+    
+}
+
+.burguer-menu-responsive {
+    position: absolute;
+    color:rgb(255, 0, 0);
+    top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+   
+    
+    
+    
+}
+
+
 
 /*la barra de los ul*/
 .main-navbar{
@@ -324,6 +352,8 @@ header.abajo ul li {
         display:flex;
         flex-direction:column;
      }
+     
+
 }
 
 @media (min-width:769px) {
@@ -396,6 +426,12 @@ header.abajo ul li {
         div.burger-menu i{
             display: none;
            }
+           .listado {
+            display: none;
+            
+        }
+           
+           
    
        div.enlaces-1, div.enlaces-2 {
                display: block;

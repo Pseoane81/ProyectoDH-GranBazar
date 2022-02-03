@@ -62,8 +62,59 @@
         <% } %>
     </nav>
     </div>    
-    <div class="burger-menu">
-        <i class="fa fa-bars burger"></i>
+    <div class="burger-menu ">
+        <i class="fa fa-bars burger"   onmouseenter="showBurguer(this)" onclick="closeBurguer()"></i>
+        <div  class="burguer-menu-responsive" id="burguer-menu-show">
+            <% if (locals.isLogged && locals.userLogged.rol == "admin") { %>
+            <ul class="listado">
+                <li><a href="/users/userprofile"><%= locals.userLogged.first_name %> <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;"class="img-avatar"> </li></a>
+                <li><a href="/products/all">Todo</a></li>          
+                <li><a href="/products/decoracion">Decoracion</a></li>
+                <li><a href="/products/usopersonal">Uso personal</a></li> 
+                <li><a href="/products/viajes">Viajes</a></li>
+                <li><a href="/products/muebles">Muebles</a></li>
+                <li><a href="/products/createproduct">Crear producto nuevo</a></li>
+                <li><a href="/products/inventory">Todos los productos</a></li>
+                <li><a href="/products/favoritos">Favoritos </a></li>
+                <li><a href="/products/cart">Carrito </i></a></li>
+                <li><a href="/users/logout">Salir </i></a></li>
+            </ul>
+            <% } else if (locals.isLogged){ %>
+                <ul class="listado">   
+                    <li><a href="/users/userprofile"><%= locals.userLogged.first_name %></a> <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;"class="img-avatar"> </li>
+                    <li><a href="/products/all">Todo</a></li>       
+                    <li><a href="/products/decoracion">Decoracion</a></li>
+                    <li><a href="/products/usopersonal">Uso personal</a></li> 
+                    <li><a href="/products/viajes">Viajes</a></li>
+                    <li><a href="/products/muebles">Muebles</a></li>
+                    <li><a href="/products/favoritos">Favoritos </i></a></li>
+                    <li><a href="/products/cart">Carrito </i></a></li>
+                    <li><a href="/users/logout">Salir </i></a></li>
+                </ul>
+                <% } else { %>
+                <ul class="listado"> 
+                <li><a href="/products/all">Todo</a></li>            
+                <li><a href="/products/decoracion">Decoracion</a></li>
+                <li><a href="/products/usopersonal">Uso personal</a></li> 
+                <li><a href="/products/viajes">Viajes</a></li>
+                <li><a href="/products/muebles">Muebles</a></li>
+                <li><a href="/users/register">Registrate </i></a></li>
+                <li><a href="/users/login">Mi cuenta </i></a></li>
+                <li><a href="/users/login">Favoritos </i></a></li>
+                <li><a href="/users/login">Carrito </i></a></li>
+            </ul>
+            <% } %>
+        </div>
     </div> 
+
+    <script>
+        function showBurguer(x){
+            document.getElementById("burguer-menu-show").style.display = "block";
+        }
+        function closeBurguer(x){
+             document.getElementById("burguer-menu-show").style.display = "none";
+        }
+
+    </script>
     
     </header>
