@@ -6,12 +6,13 @@ formBorrado.forEach(elemento => {
     e.preventDefault()
     Swal.fire({
         title: 'Estas seguro?',
-        text: "No podes revertir el BORRADO!",
-        icon: 'warning',
+        text: "No podes revertir esta acción!",
+        icon: 'question',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, BORRAR!'       
+        confirmButtonColor: '#81B29A',
+        cancelButtonColor: '#E07A5F',
+        confirmButtonText: 'Si, BORRAR!',
+        cancelButtonText: 'Atras'          
       }).then((result) => {
         if (result.isConfirmed) {     
           Swal.fire(

@@ -46,7 +46,8 @@ const validarFormularioImg = (e) => {
                     icon: 'error',
                     title: 'Oops...',
                     text: 'EL archivo no es de los permitidos!',
-                    footer: 'Solo acepta .png, .jpg, .jpeg .gif'
+                    footer: 'Solo acepta .png, .jpg, .jpeg .gif',
+                    confirmButtonColor: '#81B29A',
                   })
                   e.target.value = ""
                 

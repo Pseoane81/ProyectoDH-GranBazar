@@ -26,7 +26,7 @@ const expresiones = {
         case "avatar":
             if(!expresiones.img.test(e.target.files[0].name)){
                 Swal.fire({
-                    icon:'error',
+                    icon:'warning',
                     title:'Oops...',
                     text:'EL archivo no es de los permitidos!',
                     footer:'Solo acepta .png, .jpg, .jpeg .gif'
@@ -111,7 +111,7 @@ form.addEventListener("submit",function(e){
         spanPassword.style.fontStyle ='italic';
         qs("#repassword").innerText=errors.password;
     }else if(form.password.value.length <8){
-        errors.password='El campo del password contener 8 caracteres y un numero';
+        errors.password='El campo del password contener 8 alfanumericos';
         qs("#repassword").innerText=errors.password;
     }
     

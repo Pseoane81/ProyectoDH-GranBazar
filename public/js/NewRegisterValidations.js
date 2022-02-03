@@ -45,10 +45,11 @@ const validarFormularioImg = (e) => {
         case "avatar":
             if(!expresiones.img.test(e.target.files[0].name)){
                 Swal.fire({
-                    icon: 'error',
+                    icon: 'warning',
                     title: 'Oops...',
                     text: 'EL archivo no es de los permitidos!',
-                    footer: 'Solo acepta .png, .jpg, .jpeg .gif'
+                    footer: 'Solo acepta .png, .jpg, .jpeg .gif',
+                    confirmButtonColor: '#81B29A',
                   })
                   e.target.value = ""
                 
