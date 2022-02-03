@@ -4,7 +4,13 @@ const textarea = document.querySelectorAll("#formulario-product textarea")
 
 
 
-
+const campos = {
+	name: false,
+	description: false,
+	measurements: false,
+	price: false,
+	image: false
+}
 
 const expresiones = {
 	name: /^[a-zA-Z0-9\s]{5,30}$/, // Letras, numeros
@@ -50,7 +56,10 @@ const validarFormularioImg = (e) => {
                     confirmButtonColor: '#81B29A',
                   })
                   e.target.value = ""
+                  campos[e.target.name] = false
                 
+            }else {
+                campos[e.target.name] = true
             }
         
         break;
@@ -66,14 +75,14 @@ const validarCampo = (expresion, input, campo) => {
         document.querySelector(`#grupo_${campo} i`).classList.add("fa-check-circle")
         document.querySelector(`#grupo_${campo} i`).classList.remove("fa-times-circle")
         document.querySelector(`#grupo_${campo} .formulario_input_error`).classList.remove("formulario_input_error_activo")
-        //campos[campo]=true
+        campos[campo]=true
     } else {
         document.getElementById(`grupo_${campo}`).classList.add("formulario_grupo_incorrecto")
         document.getElementById(`grupo_${campo}`).classList.remove("formulario_grupo_correcto")
         document.querySelector(`#grupo_${campo} i`).classList.add("fa-times-circle")
         document.querySelector(`#grupo_${campo} i`).classList.remove("fa-check-circle")
         document.querySelector(`#grupo_${campo} .formulario_input_error`).classList.add("formulario_input_error_activo")
-        //campos[campo]=false
+        campos[campo]=false
 
 
     }
@@ -92,13 +101,22 @@ textarea.forEach((textarea) => {
 
 
 
+formulario.addEventListener('submit', (e) => {
+	e.preventDefault();
+    console.log(campos)
 
+	if(campos.name && campos.description && campos.measurements && campos.price && campos.image ){
+		formulario.submit();
+        formulario.reset();
 
-
-
-
-formulario.addEventListener("submit", (e) => {
-    //e.preventDefault();        
-    
+		
+	} else {
+		Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Te faltaron completar campos!',
+            confirmButtonColor: '#81B29A',
+          })
+	}
 });
 

@@ -39,6 +39,11 @@ transition: background-color 1s;
  .agreagar-favoritos:focus,.agreagar-favoritos:hover{
   color: #a20714 ;
 }
+.agreagar-favoritos.fas {
+    color: #a20714 ;
+  }
+
+
 .agreagar-favoritos{
 position: relative;
 width: 100%;
