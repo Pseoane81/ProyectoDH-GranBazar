@@ -4,9 +4,9 @@ let ojito=qs("#ojito");
 
 
 const campos = {
-	name: false,
-	lastname: false,
-	email: false,
+	name: true,
+	lastname: true,
+	email: true,
 	password: false,
 	avatar: false
 }

@@ -48,6 +48,7 @@ module.exports = {
                 name: "Cantidad de Productos Favoritos",
                 ProdUnicos: CantProductFav.length,
                 CantUserFavorito: CantUserFav.length,
+                icon: "fas fa-heart",
                 status : 200,
             })
         })

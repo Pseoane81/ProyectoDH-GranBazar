@@ -5,10 +5,10 @@ const textarea = document.querySelectorAll("#formulario-product textarea")
 
 
 const campos = {
-	name: false,
-	description: false,
-	measurements: false,
-	price: false,
+	name: true,
+	description: true,
+	measurements: true,
+	price: true,
 	image: false
 }
 
@@ -101,6 +101,7 @@ textarea.forEach((textarea) => {
 
 
 
+
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
     console.log(campos)
@@ -120,10 +121,9 @@ formulario.addEventListener('submit', (e) => {
 		Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Te faltaron completar campos!',
-            footer: `${estado}`,
+            text: `Te faltaron completar los campos`,
+            footer:`${estado}`,
             confirmButtonColor: '#81B29A',
           })
 	}
 });
-

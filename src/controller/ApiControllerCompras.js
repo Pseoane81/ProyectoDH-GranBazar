@@ -44,9 +44,9 @@ module.exports = {
 
             return res.status(200).json({
                 name: "Cantidad de Productos Comprados",
-                ProdUnicos: CantProductComprado.length,
-                UnidadesCompradas: productos.length,  
+                ProdUnicos: productos.length,  
                 CantUserCompraron: CantUserCompraron.length,
+                icon: "fas fa-cart-arrow-down",
                 status : 200,
 
             })
